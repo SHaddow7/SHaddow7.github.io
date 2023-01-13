@@ -7,6 +7,8 @@ nav_order: 0
 {: .warning }
 Attention ce site web est toujours en cours de construction
 
+This is **strong**,
+
 ## Aides
 
 ```bash
@@ -60,6 +62,7 @@ type    # Obtenir les informations d'une commande
 
 ```bash
 date    # Affiche la date du jour
+date --date="2 year ago"
 cal     # Affiche le calendrier
 uptime  # Affiche la disponibilité
 whoami  # Affiche le nom de l'utilisateur
@@ -71,25 +74,4 @@ df -h # Espace disque libre
 du -h # Espace disque occupé par un fichier
 free  # Etat de la mémoire et de la swap
 wget  # Utiliser pour télécharger des fichier depuis un serveur
-```
-
-```bash
-# Exemple (s) pour la commande "Date"
-
-#  Res. : Lundi 09 janvier 2023 20:52 ...
-date
-#  Permet de changer la date de l'os
-date -d "2000-11-22 09:10:15"
-#  Res. : Annee: 2023, Mois: 01, Jour: 09
-date +"Annee: %Y, Mois: %m, Jour: %d"
-#  Res.: DATE: 09/01/23 \n HEURE: 20:56:..
-date "+DATE: %D%nHEURE: %T"
-#  Res : Nombre de semaine: .. Annee: 23
-date +"Nombre de semaine: %V Annee: %y"
-#  Affiche les dates passées
-date --date="2 year ago"
-#  Remplacer un fuseau horaire
-TZ='America/New_York' date
-#
-date +'%Y-%m-%d.%H.%M.%S'
 ```

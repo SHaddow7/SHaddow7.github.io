@@ -1,30 +1,24 @@
 ---
 layout: default
 title: Les filtres et flux
-#nav_order: 1
 ---
 
 ## Les flux
 
-| Descriptions            | Flux | Alternative | Exemples  |
-| ----------------------- | :--: | ----------- | :-------: |
-| Flux d'entrée           |  0   | STDIN       |  > ou >>  |
-| Flux de sortie standard |  1   | STDOUT      | 1> ou 1>> |
-| Flux de sortie d'erreur |  2   | STDERR      | 2> ou 2>> |
+| Descriptions            | Flux | Alternative |   Exemples   |
+| ----------------------- | :--: | ----------- | :----------: |
+| Flux d'entrée           |  0   | STDIN       |  > ou \>\>   |
+| Flux de sortie standard |  1   | STDOUT      | 1> ou 1 \>\> |
+| Flux de sortie d'erreur |  2   | STDERR      | 2> ou 2 \>\> |
 
 ```bash
-# Exemple (s)
+# Exemples
+cat < /etc/passwd             #  Redirection de l'entrée depuis un fichier
+cat /etc/passwd 1> fic        #  Redirige (copie) les éléments de "passwd" dans "fic"
+cat musique.mp3 > /dev/audio  #  Redirige du fichier musique.mp3 vers des appareils
+echo toto 1>> fic             #  Redirige le flux d'entree les éléments de "toto" dans "fic"
+ls rep 2> erreur.log          #  Redirige le flux de sortie d'erreur de "rep" dans "erreur.log"
 
-#  Redirection de l'entrée depuis un fichier
-cat < /etc/passwd
-#  Redirige (copie) les éléments de "passwd" dans "fic"
-cat /etc/passwd 1> fic
-#  Redirige du fichier musique.mp3 vers des appareils
-cat musique.mp3 > /dev/audio
-#  Redirige le flux d'entree les éléments de "toto" dans "fic"
-echo toto 1>> fic
-#  Redirige le flux de sortie d'erreur de "rep" dans "erreur.log"
-ls rep 2> erreur.log
 #  Entrelacement des 2 sorties
 ls rep 1> fic_resultats 2>&1
 ls rep &> fic_resultats
@@ -33,17 +27,12 @@ ls rep &> fic_resultats
 ## Les filtres
 
 ```bash
-# Afficher l'ensemble du flux passé en entrée :
-cat fic
-more fic
-less fic
-
-# Afficher les n premières / dernières lignes du flux en entrée
-head [ -n ] fic
-tail [ -n ] fic
-
-# Compter le nombre de lignes / mots / caractères
-wc /etc/services
+cat fic           #  Lit le contenu des fichiers et l'affiche sur la sortie standard
+more fic          #  Permet de se déplacer dans un texte
+less fic          #  Permet de visualiser un fichier texte page par page
+head [ -n ] fic   #  Afficher les n premières lignes du flux en entrée
+tail [ -n ] fic   #  Afficher les n dernières lignes du flux en entrée
+wc /etc/services  #  Compter le nombre de lignes / mots / caractères
 ```
 
 ```bash
@@ -57,21 +46,17 @@ cut [OPTIONS] fichier
 #    -b : ensemble d'octets ou une plage d'octets
 
 # Exemple(s)
-#  Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
-cut -d ":" -f 1,3 fichier.txt
-#  Afficher le 1er et le 3ème champs
-cut fichier.txt -f 1,3
-#  Afficher du 1er au 4ème champs
-cut fichier.txt -f -4
-#  Utilise le caractère ' ' comme délimiteur et affiche le 2e champs
-echo "Lorem ipsum dolor sit amet" | cut -d ' ' -f 2
-#  Selectionne les 5e, 9e et 13e octets
-echo 'drüberspringen' | cut -b 5,9,13
-# Affiche les 10 commandes les plus fréquemment utilisées
-history | cut -c8- | sort | uniq -c | sort -rn | head
+cut -d ":" -f 1,3 fichier.txt  # Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
+cut fichier.txt -f 1,3         # Afficher le 1er et le 3ème champs
+cut fichier.txt -f -4          # Afficher du 1er au 4ème champs
+
+echo "L rem i sum" | cut -d ' ' -f 2   # Utilise le caractère ' ' comme délimiteur et affiche le 2e champs
+echo 'drüberspringen' | cut -b 5,9,13  # Selectionne les 5e, 9e et 13e octets
 ```
 
-> [!tldr] > `uniq` : tri sur un fichier ne ramenant qu’une occurrence unique d’une ligne donnée dans le fichier à trier.
+### Uniq
+
+> `uniq` : tri sur un fichier ne ramenant qu’une occurrence unique d’une ligne donnée dans le fichier à trier.
 
 ```shell
 # Syntaxe
@@ -83,7 +68,9 @@ uniq [ -udc ] fic
 #    –c : liste toutes les lignes + nombre d’occurrence(s) de la ligne affichée.
 ```
 
-> [!tldr] > `sort` : tri des lignes d’un fichier sur des critères de tri donné
+### Sort
+
+> `sort` : tri des lignes d’un fichier sur des critères de tri donné
 
 ```shell
 # Syntaxe
@@ -99,21 +86,14 @@ sort [ -r ] [ -o fic_out ] [ -t ca r] [ -k num_champ[n] ] fic.txt
 
 ```bash
 # Exemples
-sort fic.txt       # Trie un fichier dans l'ordre croissant
-
-sort ­-u fic.txt    # Affiche qu'une fois les lignes identiques
-sort -r fic.txt    # Trie un fichier dans l'ordre inverse
-sort -b fic.txt    # Trie un fichier en ignorant les espaces blancs de début et de fin
-sort -f fic.txt    # Trie un fichier en ignorant la casse
-
-#  Trie un fichier en fonction du deuxième champ (délimité par un espace)
-sort -k 2 file.txt
-#  Trie un fichier en fonction du deuxième champ dans l'ordre inverse
-sort -k 2,2 -r fic.txt
-#  Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
-sort -n -t":" -k4,4 fic.txt
-#  Trie un fichier et supprimer les lignes en double
-sort fic.txt | uniq
-#  Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
-sort -f fic.txt | uniq
+sort fic.txt                  # Trie un fichier dans l'ordre croissant
+sort ­-u fic.txt               # Affiche qu'une fois les lignes identiques
+sort -r fic.txt               # Trie un fichier dans l'ordre inverse
+sort -b fic.txt               # Trie un fichier en ignorant les espaces blancs de début et de fin
+sort -f fic.txt               # Trie un fichier en ignorant la casse
+sort -k 2 file.txt            # Trie un fichier en fonction du 2e champ (délimité par un espace)
+sort -k 2,2 -r fic.txt        # Trie un fichier en fonction du 2e champ dans l'ordre inverse
+sort -n -t":" -k4,4 fic.txt   # Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
+sort fic.txt | uniq           # Trie un fichier et supprimer les lignes en double
+sort -f fic.txt | uniq        #  Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
 ```
