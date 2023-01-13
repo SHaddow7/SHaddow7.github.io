@@ -2,7 +2,7 @@
 layout: default
 title: Editions des fichiers
 parent: Les Bases
-nav_order: 5
+nav_order: 3
 ---
 
 ## Edition de fichiers

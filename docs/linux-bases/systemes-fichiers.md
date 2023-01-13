@@ -2,7 +2,7 @@
 layout: default
 title: Le système des fichiers
 parent: Les Bases
-nav_order: 2
+nav_order: 1
 ---
 
 ## Le système des fichiers et les droits standards

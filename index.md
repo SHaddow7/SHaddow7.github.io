@@ -13,11 +13,14 @@ Attention ce site web est toujours en cours de construction
 # Syntaxe
 man [ -s X ] nom-de-commande
 
-# Exemple (s)
+# Exemples
 man man # Obtient le manuel de man
-man 5 passwd <=> man passwd.5
+man 5 passwd
+man passwd.5
 man 1 bash
+```
 
+```bash
 # Lire la documentation de "info" avec `info`
 apropos info | grep '^info.*('
 man info
@@ -40,7 +43,6 @@ which commande # quelle commande sera lancer
 
 ```bash
 apropos # Liste les pages du manuel concernant un sujet
-whoami  # Affiche le nom de l'utilisateur
 passwd  # Changer son propre mot de passe
 exit    # Quitte l'interface du terminal
 man     # Affiche le manuel pour des commandes
@@ -52,24 +54,21 @@ type    # Obtenir les informations d'une commande
 ```
 
 | Catégorie de commande | Descriptions                                                                       |
-| --------------------- | ---------------------------------------------------------------------------------- |
-| Internes              | pas d'exécution d'un fichier tiers, pas de création de sous-processus associé      |
-| Externes              | exécution d'un fichier portant le nom de la commande, création d'un sous-processus |
+| :-------------------: | ---------------------------------------------------------------------------------- |
+|       Internes        | pas d'exécution d'un fichier tiers, pas de création de sous-processus associé      |
+|       Externes        | exécution d'un fichier portant le nom de la commande, création d'un sous-processus |
 
 ## Commande sur les informations systèmes
 
 ```bash
-date    # Affiche la date du jour
-date --date="2 year ago"
-cal     # Affiche le calendrier
-uptime  # Affiche la disponibilité
-whoami  # Affiche le nom de l'utilisateur
-w       # Affiche les sessions en cours
-passwd  # Changer son propre mot de passe
-uname -a # informations du noyau
-cat /proc/cpuinfo # Informations sur le cpu
-df -h # Espace disque libre
-du -h # Espace disque occupé par un fichier
-free  # Etat de la mémoire et de la swap
-wget  # Utiliser pour télécharger des fichier depuis un serveur
+date               # Affiche la date du jour
+cal                # Affiche le calendrier
+uptime             # Affiche la disponibilité
+whoami             # Affiche le nom de l'utilisateur
+uname -a           # Informations du noyau
+cat /proc/cpuinfo  # Informations sur le cpu
+df -h              # Espace disque libre
+du -h              # Espace disque occupé par un fichier
+free               # Etat de la mémoire et de la swap
+wget               # Utiliser pour télécharger des fichiers depuis un serveur
 ```

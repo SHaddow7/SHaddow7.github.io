@@ -2,7 +2,7 @@
 layout: default
 title: La substitution des commandes
 parent: Les Bases
-nav_order: 4
+nav_order: 5
 ---
 
 ## La substitution des commandes

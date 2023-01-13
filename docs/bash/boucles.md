@@ -7,7 +7,13 @@ nav_order: 3
 
 ## Les structures itératives - while, until et for
 
-> **Opération sur les boucles :** continue : on passe à la prochaine itération de la boucle break : sortie de boucle exit : sortie du script !
+{: .note }
+
+> **Opération sur les boucles :**
+>
+> - On passe à la prochaine itération de la boucle : `continue`
+> - Sortie de boucle : `break`
+> - Sortie du script : `exit`
 
 ### Les boucles While et until
 

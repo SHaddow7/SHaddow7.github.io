@@ -2,7 +2,7 @@
 layout: default
 title: Les droits standards
 parent: Les Bases
-nav_order: 3
+nav_order: 2
 ---
 
 ## La sécurité des fichiers : les droits

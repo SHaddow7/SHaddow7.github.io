@@ -2,7 +2,7 @@
 layout: default
 title: Formatages
 parent: Les Bases
-nav_order: 5
+nav_order: 6
 ---
 
 ## Formatages des dates
@@ -21,5 +21,14 @@ date +'%d-%m-%Y'                                 #  09-01-2023
 date +'%H:%M:%S'                                 #  20:52:41
 date -d @1623152000                              #  Convertis un timestamp UNIX en date
                                                  #  mar. 08 juin 2021 07:33:20 EDT
+
+```
+
+## Autres
+
+```bash
+
+# Afficher le nombre de cpu
+echo "Nombre de cpu : $(lscpu | grep ^CPU(s): | tr -s " " | cut -d" " -f2,2)"
 
 ```

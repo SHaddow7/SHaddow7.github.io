@@ -35,17 +35,25 @@ tail [ -n ] fic   #  Afficher les n dernières lignes du flux en entrée
 wc /etc/services  #  Compter le nombre de lignes / mots / caractères
 ```
 
+### Cut
+
+{: .note }
+
+> `cut` permet d'extraire des colonnes spécifiques des lignes de texte
+
 ```bash
 # Syntaxe - cut
 cut [OPTIONS] fichier
 
-# Option(s)
+# Options
 #    -c : ensemble de caractères ou une plage de caractères
 #    -d : délimiteur qui sera utilisé (par défaut "TAB")
 #    -f : ensemble de champs ou une plage de champs
 #    -b : ensemble d'octets ou une plage d'octets
+```
 
-# Exemple(s)
+```bash
+# Exemples
 cut -d ":" -f 1,3 fichier.txt  # Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
 cut fichier.txt -f 1,3         # Afficher le 1er et le 3ème champs
 cut fichier.txt -f -4          # Afficher du 1er au 4ème champs
@@ -55,6 +63,8 @@ echo 'drüberspringen' | cut -b 5,9,13  # Selectionne les 5e, 9e et 13e octets
 ```
 
 ### Uniq
+
+{: .note }
 
 > `uniq` : tri sur un fichier ne ramenant qu’une occurrence unique d’une ligne donnée dans le fichier à trier.
 
@@ -69,6 +79,8 @@ uniq [ -udc ] fic
 ```
 
 ### Sort
+
+{: .note }
 
 > `sort` : tri des lignes d’un fichier sur des critères de tri donné
 

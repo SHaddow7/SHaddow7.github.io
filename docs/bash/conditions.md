@@ -118,7 +118,9 @@ var1="hello"; var2=""
 
 ### Tests sur les entiers
 
-> A noter que ces opérateurs sont uniquement pour les entiers
+{: .note }
+
+> Ces opérateurs sont uniquement pour les entiers.
 
 | Opérateurs de comparaison | Descriptions                                                    |
 | :-----------------------: | --------------------------------------------------------------- |

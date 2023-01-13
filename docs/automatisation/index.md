@@ -6,6 +6,8 @@ title: Automatisation
 
 ## Planification de tâches
 
+{: .note }
+
 > Il existe trois méthodes pour ajouter un cron :
 >
 > 1.  En modifiant un des dossiers `/etc/cron.*`

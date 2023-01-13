@@ -2,7 +2,7 @@
 layout: default
 title: Lien Symbolique et Physique
 parent: Les Bases
-nav_order: 1
+nav_order: 4
 ---
 
 ## Lien Symbolique et Physique
