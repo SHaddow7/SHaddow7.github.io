@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Les expréssions régulières
-#nav_order: 1
+title: Les expressions régulières
 ---
 
 ## Les ancres

@@ -8,9 +8,16 @@ aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
 # fichier et répertoire à ne pas inclure
-# exclude:
+exclude:
+  - README.md
 
 search_enabled: true
 
 # For copy button on code
 enable_copy_code_button: true
+
+# initialisation des callouts
+callouts:
+  warning:
+    title: Warning
+    color: red

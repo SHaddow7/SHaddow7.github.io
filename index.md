@@ -7,8 +7,6 @@ nav_order: 0
 {: .warning }
 Attention ce site web est toujours en cours de construction
 
-This is **strong**,
-
 ## Aides
 
 ```bash

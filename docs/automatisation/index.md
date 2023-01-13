@@ -42,9 +42,9 @@ title: Automatisation
 # Pour soumettre une action à exécuter il faut que l'utilisateur en ait la permission
 # fichiers **/etc/cron.allow** ou /et **/etc/cron.deny**
 
-$ crontab -e # édition
-$ crontab -l # visualisation (list)
-$ crontab -r # suppression de toutes les tâches (remove)
+crontab -e  # édition
+crontab -l  # visualisation (list)
+crontab -r  # suppression de toutes les tâches (remove)
 ```
 
 ### Exemples de fichiers Cron

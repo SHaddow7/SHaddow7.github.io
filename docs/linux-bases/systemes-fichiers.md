@@ -35,16 +35,15 @@ cp fichier1 fichier2 rép      # Copier des fichiers dans un rep.
 cp [-r] source destination    # copie de fichiers
 cp ­-r rép_orig rép_dest       # Copier des répertoires entiers (rec.)
 
-rsync ­a rép_orig/ rép_dest/   # Se comporte comme la précédente
 mv fichier_orig fichier_dest  # Renommer un fichier, lien ou  répertoire
 
-rm [-r] fichier           # Effacer fichier
+rm [-r] fichier           # Effacer un ou plusieurs fichiers
 rm fichier1 fichier2      # Supprimer des fichiers ou des liens
-rmdir rép                 # Supprimer un répertoire (remove dir)
 rm ­-rf rép                # Supprimer un répertoire non vide (force)
+rmdir rép                 # Supprimer un répertoire (remove dir)
 
-stat fichier # Afficher les méta-données du fichier
-touch fic # "Création" d'un fichier fic - modification de l'horodatage
+stat fichier              # Afficher les méta-données du fichier
+touch fic                 # "Création" d'un fichier fic - modification de l'horodatage
 diff fic_a.txt fic_b.txt  # Affiche les diff. entre les deux fichiers
-pwd  # Afficher répertoire courant (print working dir)
+pwd                       # Afficher répertoire courant (print working dir)
 ```
