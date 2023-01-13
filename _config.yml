@@ -1,8 +1,33 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+# Paramètres du site
+title: Le raccourcis
+description: Un site qui sert uniquement de raccourcis pour quelques commandes Linux, etc ...
 theme: just-the-docs
-
 url: https://just-the-docs.github.io
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+# fichier et répertoire à ne pas inclure
+exclude:
+  - .jekyll-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+  # plus spécifique au theme du site:
+   - bin/
+   - lib/
+   - "*.gemspec"
+   - "*.gem"
+   - LICENSE.txt
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - README.md
+
+search_enabled: true

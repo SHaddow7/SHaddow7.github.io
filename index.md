@@ -1,30 +1,95 @@
 ---
 title: Home
 layout: home
+nav_order: 0
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+{: .warning }
+Attention ce site web est toujours en cours de construction
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## Aides
 
-More specifically, the created site:
+```bash
+# Syntaxe
+man [ -s X ] nom-de-commande
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+# Exemple (s)
+man man # Obtient le manuel de man
+man 5 passwd <=> man passwd.5
+man 1 bash
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+# Lire la documentation de "info" avec `info`
+apropos info | grep '^info.*('
+man info
+info info
+info 5 info
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+# Lire la documentation d'informations bash
+info bash
+info bash 'Bash Features'
+info bash 6
+info --apropos bash
 
-To get started with creating a site, just click "[use this template]"!
+# Autres commandes
+whatis nom-de-commande # Obtenir des informations sur des commandes
+apropos "chaîne de recherche"
+which commande # quelle commande sera lancer
+```
 
-----
+## Quelques commandes Unix
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+```bash
+apropos # Liste les pages du manuel concernant un sujet
+whoami  # Affiche le nom de l'utilisateur
+passwd  # Changer son propre mot de passe
+exit    # Quitte l'interface du terminal
+man     # Affiche le manuel pour des commandes
+who     # Affiche qui est connecté
+mount   # Affiche les systèmes de fichiers qui sont montés
+echo    # Affiche le texte « texte » passé en argument
+cat     # Affiche le contenu du fichier «fichier» passé en argument
+type    # Obtenir les informations d'une commande
+```
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+| Catégorie de commande | Descriptions                                                                       |
+| --------------------- | ---------------------------------------------------------------------------------- |
+| Internes              | pas d'exécution d'un fichier tiers, pas de création de sous-processus associé      |
+| Externes              | exécution d'un fichier portant le nom de la commande, création d'un sous-processus |
+
+## Commande sur les informations systèmes
+
+```bash
+date    # Affiche la date du jour
+cal     # Affiche le calendrier
+uptime  # Affiche la disponibilité
+whoami  # Affiche le nom de l'utilisateur
+w       # Affiche les sessions en cours
+passwd  # Changer son propre mot de passe
+uname -a # informations du noyau
+cat /proc/cpuinfo # Informations sur le cpu
+df -h # Espace disque libre
+du -h # Espace disque occupé par un fichier
+free  # Etat de la mémoire et de la swap
+wget  # Utiliser pour télécharger des fichier depuis un serveur
+```
+
+```bash
+# Exemple (s) pour la commande "Date"
+
+#  Res. : Lundi 09 janvier 2023 20:52 ...
+date
+#  Permet de changer la date de l'os
+date -d "2000-11-22 09:10:15"
+#  Res. : Annee: 2023, Mois: 01, Jour: 09
+date +"Annee: %Y, Mois: %m, Jour: %d"
+#  Res.: DATE: 09/01/23 \n HEURE: 20:56:..
+date "+DATE: %D%nHEURE: %T"
+#  Res : Nombre de semaine: .. Annee: 23
+date +"Nombre de semaine: %V Annee: %y"
+#  Affiche les dates passées
+date --date="2 year ago"
+#  Remplacer un fuseau horaire
+TZ='America/New_York' date
+#
+date +'%Y-%m-%d.%H.%M.%S'
+```
