@@ -8,26 +8,8 @@ aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
 # fichier et répertoire à ne pas inclure
-exclude:
-  - .jekyll-cache/
-   - .jekyll-cache/
-   - gemfiles/
-   - Gemfile
-   - Gemfile.lock
-   - node_modules/
-   - vendor/bundle/
-   - vendor/cache/
-   - vendor/gems/
-   - vendor/ruby/
-  # plus spécifique au theme du site:
-   - bin/
-   - lib/
-   - "*.gemspec"
-   - "*.gem"
-   - LICENSE.txt
-   - package.json
-   - package-lock.json
-   - Rakefile
-   - README.md
 
 search_enabled: true
+
+# For copy button on code
+enable_copy_code_button: true
