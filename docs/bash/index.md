@@ -50,4 +50,3 @@ chmod u=rwx,g=rwx,o=rwx /home/user/script.sh
 ## Liens
 
 [regex101: build, test, and debug regex](https://regex101.com/) <br/>
-[Vim - Cheatsheet](https://devhints.io/vim) <br/>

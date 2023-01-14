@@ -14,19 +14,22 @@ nav_order: 3
 
 ```bash
 # Syntaxe
-find chemin [ option(s) ] [ action(s) ]
+find chemin [ OPTIONS ] [ ACTIONS ]
 
 # Options
-#    -iname : nom insensible à la casse
-#    -name : reconnaît les métacaractères du bash, -o -a
-#    -type : f (fichier), d (repertoire) ou l (lien)
-#    -user -group
-#    -mtime +15 : modifier il y a plus de 15 jours
-#    -atime
-#    -ctime
-#    -size 30k : taille de 30 ko
-#    -size +5M  : taille plus de 5 Mo
-#    -maxdepth / -mindepth : profondeur de la recherche
+#    -iname     :  nom insensible à la casse
+#    -name      :  reconnaît les métacaractères du bash, -o -a
+#    -type      :  le type de fichier : f (fichier), d (repertoire) ou l (lien)
+#    -user      :  rechercher tous les fichiers et répertoires appartenant à un utilisateur
+#    -group     :  rechercher tous les fichiers et répertoires appartenant à un groupe
+#    -mtime +15 :  modifier il y a plus de 15 jours
+#    -atime     :  recherche les fichiers non consultés au cours des n derniers jours (-n ou +n)
+#    -ctime     :  date de la derniere modification du fichier, il y a - de, + de ou exactement n*24 h
+#    -cmin      :  rechercher tous les fichiers modifiés au cours des n minutes (-n ou +n)
+#    -size 30k  :  la taille du fichier est de 30 ko
+#    -size +5M  :  la taille du fichier est + de 5 Mo
+#    -maxdepth  :  la profondeur maximale de la recherche dans les répertoires
+#    -mindepth  :  la profondeur minimale de la recherche dans les répertoires
 
 # Actions
 #    -print (action par défaut)

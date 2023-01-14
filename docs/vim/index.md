@@ -86,3 +86,7 @@ title: Vim
 | :1,$s/chaîne/CHAINE/g | remplace chaîne par CHAINE partout    |
 | :! cmd                | exécute la commande cmd               |
 | :r! cmd               | insère le résultat de la commande cmd |
+
+## Liens
+
+[Vim - Cheatsheet](https://devhints.io/vim) <br/>

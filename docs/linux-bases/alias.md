@@ -26,5 +26,5 @@ unalias ll
 ```bash
 alias ll='ls -la'             #  Créer un alias pour la commande ls -la
 alias rmd='rm -rfv'           #  Créer un alias pour la commande rm -rfv
-alias go='cd $HOME/document'  # Créer un alias en utilisant des variables
+alias go='cd $HOME/document'  #  Créer un alias en utilisant des variables
 ```
