@@ -7,8 +7,11 @@ nav_order: 5
 
 ## La substitution des commandes
 
-> [!tldr] TLDR
-> Le Bash propose plusieurs mécanismes de substitution qui permettent de manipuler et de transformer des chaînes de caractères. Voici quelques exemples de substitution couramment utilisés :
+{: .note }
+
+> Le Bash propose plusieurs mécanismes de substitution qui permettent de manipuler et de transformer des chaînes de caractères
+>
+> Voici quelques exemples de substitution couramment utilisés :
 
 ```bash
 # La substitution de commande

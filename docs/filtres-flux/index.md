@@ -107,5 +107,5 @@ sort -k 2 file.txt            # Trie un fichier en fonction du 2e champ (délimi
 sort -k 2,2 -r fic.txt        # Trie un fichier en fonction du 2e champ dans l'ordre inverse
 sort -n -t":" -k4,4 fic.txt   # Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
 sort fic.txt | uniq           # Trie un fichier et supprimer les lignes en double
-sort -f fic.txt | uniq        #  Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
+sort -f fic.txt | uniq        # Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
 ```

@@ -8,7 +8,9 @@ title: Recherches de fichiers
 
 ### find
 
-> [!tldr] > **`find`** - permet de rechercher des fichiers et des répertoires en fonction de divers critères.
+{: .note }
+
+> `find` - permet de rechercher des fichiers et des répertoires en fonction de divers critères.
 
 ```bash
 # Syntaxe
@@ -32,34 +34,45 @@ find chemin [ option(s) ] [ action(s) ]
 #    -exec ex : -exec commande {} \\;
 ```
 
-```bash
-# Exemples
+#### Exemples - Recherche de fichier par nom
 
-# ---- [ Recherche de fichier par nom ]
+```bash
 #  Trouve tous les fichiers qui ont pour nom 'file.txt'
 find . -name 'file.txt'
 #  Trouve tous les fichiers en .txt dans le répertoire
 find . -name '*.txt'
+```
 
-# ---- [ Recherche de fichiers par type ]
+#### Exemples - Recherche de fichiers par type
+
+```bash
 #  Trouve tous les répertoires
 find . -type d
 #  Trouve tous les liens symboliques
 find . -type l
+```
 
-# ---- [ Recherche de fichiers par taille ]
+#### Exemples - Recherche de fichiers par type
+
+```bash
 #  Trouve tous les fichiers ayant un poid supérieurs à 100 MB
 find . -size +100M
 #  Trouve tous les fichiers ayant un poid inférieur à 1 KB
 find . -size -1k
+```
 
-# ---- [ Recherche de fichiers par heure de modification ]
+#### Exemples - Recherche de fichiers par type
+
+```bash
 #  Trouver tous les fichiers modifiés au cours de la dernière journée
 find . -mtime -1
 #  Trouver tous les fichiers modifiés il y a plus de 30 jours
 find . -mtime +30
+```
 
-# ---- [ Combinaison de plusieurs critères ]
+#### Exemples - Combinaison de plusieurs critères
+
+```bash
 #  Trouve tous les fichiers '.txt' modifiés au cours de la semaine dernière
 #  et dont la taille est supérieure à 50 Ko
 find . -name '*.txt' -mtime -7 -size +50k
@@ -73,7 +86,9 @@ find . ­-name "*.pdf" ­-exec xpdf {} ';'
 
 ### locate
 
-> [!tldr] > **`locate`** - permet de rechercher rapidement des fichiers et des répertoires sur votre système par leur nom.
+{: .note }
+
+> **`locate`** - permet de rechercher rapidement des fichiers et des répertoires sur votre système par leur nom.
 
 ```bash
 # Syntaxe
@@ -102,12 +117,15 @@ locate -b "/home"
 locate -r "exemple"
 ```
 
-> [!note]
+{: .note }
+
 > Les fichiers qui ont été récemment créer ne serait pas encore enregistrer dans la base de données de Locate. La base de données de locate est mise à jour au moin une fois par jour. Il est possible de mettre à jour cette base de données en utilisant la commade : `updatedb`
 
 ### grep
 
-> [!tldr] > `grep` - permet de rechercher un / des patterne(s) dans un fichier
+{: .note }
+
+> `grep` - permet de rechercher un / des patterne(s) dans un fichier
 
 ```bash
 # Syntaxe
@@ -122,9 +140,9 @@ grep [OPTIONS] [-e MOTIF | -f FICHIER] [FICHIER...]
 #    -n : Affiche les lignes sélectionnées et leur n° de ligne
 ```
 
-```bash
-# Exemples
+#### Exemples
 
+```bash
 #  Recherche un motif dans un fichier
 grep pattern fic
 #  Recherche un motif dans plusieurs fichiers
@@ -148,7 +166,9 @@ grep "root" /etc/passwd
 
 ### whereis
 
-> [!tldr] > **`whereis`** - utilisée pour localiser les fichiers binaires, source et de page de manuel pour une commande donnée.
+{: .note }
+
+> **`whereis`** - utilisée pour localiser les fichiers binaires, source et de page de manuel pour une commande donnée.
 
 ```bash
 # Syntaxe
@@ -161,9 +181,9 @@ whereis [options] commande
 #    -m : Recherche uniquement les fichiers man
 ```
 
-```bash
-# Exemples
+#### Exemples
 
+```bash
 #  Localise les fichiers binaires, source et de page de manuel pour la commande "ls"
 whereis ls
 #  Recherche uniquement le fichier binaire pour la commande "ls"

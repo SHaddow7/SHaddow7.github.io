@@ -10,3 +10,5 @@
 - [ ] # Remplacer un fuseau horaire TZ='America/New_York' date
 - [ ] Ajouter des exemples en plus avec le "read" / normal / password
 - [ ] http://www.man-linux-magique.net/index.html
+- [ ] Changer le propriétaire et le groupe d'un répertoire et tout ce qu'il contient (chown)
+- [ ] Equivalent à (because 0666 & ~022 = 0644; i.e. rw-r--r--).

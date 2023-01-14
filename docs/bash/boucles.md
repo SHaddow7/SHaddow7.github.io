@@ -17,23 +17,26 @@ nav_order: 3
 
 ### Les boucles While et until
 
-```bash
-#!/bin/bash
+#### Syntaxes
 
+```bash
 # La boucle while : faire tant que la condition est vraie
 while condition do
     commande(s)
 done
+```
 
+```bash
 # La boucle until : faire jusqu'à ce que la condition soit vraie
 until condition do
     commande(s)
 done
 ```
 
+#### Exemples
+
 ```bash
 #!/bin/bash
-# Exemple
 x=0
 while [ $x -lt 10 ] do
     echo "Hello"
@@ -44,19 +47,17 @@ done
 ### Les boucles for
 
 ```bash
-#!/bin/bash
-
-# Boucles for
 # Forme 1 :
 for variable in valeur1 valeur2 ... do
     commande(s)
 done
+```
 
+```bash
 # Forme 2 : args passés au script
 for variable in $@ do
     commande(s)
 done
-
 ```
 
 ```bash
@@ -64,7 +65,9 @@ done
 for variable in /etc/* do
     commande(s)
 done
+```
 
+```bash
 # Forme 4 :
 for ((i=0; i<9; i++)) do
     commande(s)

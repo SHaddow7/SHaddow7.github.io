@@ -7,6 +7,8 @@ nav_order: 2
 
 ## La sécurité des fichiers : les droits
 
+{: .note }
+
 > La commande `chmod` permet de changer des permissions à l’aide de la notation de texte
 
 ```bash
@@ -14,41 +16,34 @@ nav_order: 2
 chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] fic
 
 # Options
-#    -c : signale uniquement lorsqu'une modification est apportée
-#    -f : supprimer la plupart des messages d'erreur
+#    -r : (Récursif) inclut les mêmes droits dans les sous répertoires
 #    -R : modifier les fichiers et les répertoires de manière récursive
+#    -c : signale uniquement lorsqu'une modification est apportée
+#    -f : (Force) supprimer la plupart des messages d'erreur
 ```
 
 ```bash
 # Exemples
 
 # ---- [ Ajouter des permissions ]
-# Attribut droits lecture / écriture au propriétaire (read, write)
-# Ajouter droits d'exécution aux à tous (all)
+# Attribut droits lecture / écriture au propriétaire et ajoute droit d'exécution à tous
 chmod u=rw,a+x fic
-# Attribut tous les droits lecture/écriture/exécution à tous (u, g, o)
-chmod u=rwx,g=rwx,o=rwx fic
-chmod 777 fic  # Attribut tous les droits sur fic à tous
-chmod u+w fic  # Ajouter droits en écriture au propriétaire
-chmod g+r fic  # Ajouter droits en lecture au groupe du fichier
-chmod o+x fic  # Ajouter droits d'exécution aux autres utilisateurs
-chmod a+rw fic # Ajouter droits lecture / écriture à tous (all)
-chmod a+rX *   # Rendre fic. exécutables exécutables par tous
+chmod u=rwx,g=rwx,o=rwx fic    #  Attribut tous les droits (lecture/écriture/exécution) à tous (u, g, o)
+chmod u+w fic                  #  Ajouter droits en écriture au propriétaire
+chmod g+r fic                  #  Ajouter droits en lecture au groupe du fichier
+chmod o+x fic                  #  Ajouter droits d'exécution aux autres utilisateurs
+chmod a+rw fic                 #  Ajouter droits lecture / écriture à tous (all)
+chmod 777 fic                  #  Attribut tous les droits sur fic à tous (forme octal)
 
 # ---- [ Supprimer les permissions ]
-# Retire les permissions de lecture et d'exécution pour le propriétaire du fichier
-chmod u-rx fic
-# Retire les permissions de modification et d'exécution pour le groupe du fichier
-chmod g-wx fic
-# Retire toutes les permissions pour les autres utilisateurs
-chmod o= fic
+chmod u-rx fic  #  Retire les droits de lecture et d'exécution pour le propriétaire
+chmod g-wx fic  #  Retire les droits de modification et d'exécution pour le groupe
+chmod o= fic    #  Retire toutes les droits pour les autres utilisateurs
 
 # ---- [ Autres ]
 # Rendre le répertoire et tous les fichiers qu'il contient accessibles
 # par tous les utilisateurs (recursive)
-chmod -­R a+rX rép
-# Changer le propriétaire et le groupe d'un répertoire et tout ce qu'il contient
-chown -­R nouvproprio:nouvgroupe rép
+chmod -­R a+rx rép/
 ```
 
 Numéros d'autorisation de fichier
@@ -63,8 +58,9 @@ Numéros d'autorisation de fichier
 |    `--x`    |    1    | Exécution ( execute )                                   |
 |    `---`    |    0    | Aucun accès                                             |
 
-> [!tldr] TLDR
-> Pour les débutant, il est conseiller d’écrire les permissions sous ce format :
+{: .note }
+
+> Pour les débutants, il est conseiller d’écrire les permissions sous ce format :
 >
 > ```bash
 > chmod u=rwx,g=rwx,o=rwx fic
@@ -78,19 +74,19 @@ chown nom_utilisateur [fic | rep]
 umask [ droits ]
 
 # Exemples
-umask 000 # (ne fait rien)
-umask 022 # (rw-r—r--)
-umask 027 # (rw-r-----)
+umask 000  #  ( ne fait rien )
+umask 022  #  ( rw-r—-r-- )
+umask 027  #  ( rw-r----- )
 
-#  Retire les permissions de lecture et d'exécution pour le propriétaire du fichier
+#  Retire les droits de lecture et d'exécution pour le propriétaire
 umask u-rx
-#  Retire les permissions de modification et d'exécution pour le groupe du fichier
+#  Retire les droits de modification et d'exécution pour le groupe
 umask g-wx
-#  Retire les permissions de modification et de lecture pour les autres utilisateurs
+#  Retire les droits de modification et de lecture pour les autres utilisateurs
 umask o-rw
-
 ```
 
-> [!NOTE] Notes
+{: .note }
+
 > Il est important de noter que la commande "umask" ne modifie pas les permissions des fichiers et répertoires existants, mais uniquement celles des nouveaux fichiers et répertoires créés par la suite.
 > Par défaut, les droits pour utilisateur sont à 777 (rwxrwxrwx) pour les répertoire, 666 (-wx-wx-wx) pour les fichiers.

@@ -7,31 +7,78 @@ nav_order: 4
 
 ## Les fonctions
 
-### _Définition des fonctions_
+### Définition des fonctions
 
 ```bash
-#!/bin/bash
-# Definitions des fonctions
-
 # Forme 1 : cette version est un bug pour les autres shell
 maFontion() {
     echo "hello $1"
 }
+```
 
-# Forme 2
+```bash
+# Forme 2 :
 function maFontion {
     echo "hello $1"
 }
 ```
 
-### _Retourner des valeurs_
+### Appel de la fonction
 
 ```bash
 #!/bin/bash
-# Retourner des valeurs
 function maFontion {
-    local myresult='some value'
-    echo "$myresult"
+    local mon_argument=$1
+    echo "$mon_argument"
+}
+maFontion "Hello world!"
+```
+
+### Retourner des valeurs
+
+```bash
+#!/bin/bash
+# 1 - Retourner des valeurs
+function maFontion {
+    local code_retour=80
+    exit $code_retour
+}
+maFontion
+```
+
+```bash
+#!/bin/bash
+# 2 - Retourner des valeurs
+function maFontion {
+    local mon_resultat='Une valeur'
+    echo "$mon_resultat"
 }
 result=$(maFontion)
+```
+
+### La fonction d'usage - Trés utile ;)
+
+```bash
+#!/bin/bash
+
+# Fonctions : Usage
+#   s1 : code retour
+#   s2 : argument attendu
+#   s3 : message d'erreur
+#   s4 : message complémentaire
+function usage {
+    local code_retour=$1
+    local arg_attendu=$2
+    local msg_err=$3
+    local msg_cmp=$4
+    local nom_programme=$(basename "$0")
+
+    echo -e "${msg_err}"
+    echo -e "USAGE : ${nom_programme} ${arg_attendu}\n" >$2
+
+    [ -n "$msg_cmp" ] && echo -e "${msg_cmp}"
+
+    # code retour
+    exit "$code_retour"
+}
 ```

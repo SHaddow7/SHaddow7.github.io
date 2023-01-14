@@ -8,13 +8,13 @@ nav_order: 2
 ## Structure conditionnelle - if, if … else, etc
 
 ```bash
-#!/bin/bash
-
 # if then ... fi
 if [ condition ]; then
     commande
 fi
+```
 
+```bash
 # if then... else… fi
 if [ condition ]; then
     commande
@@ -68,12 +68,13 @@ case $variable in
     "anakin") commande(s) ;;
     *) commande(s) ;;
 esac
-
 ```
 
 ## La commande test - Fichiers, variables, chaînes
 
 ### Test sur un fichier
+
+#### Les opérateurs
 
 | Opérateurs de comparaison | Descriptions                           |
 | :-----------------------: | -------------------------------------- |
@@ -86,8 +87,9 @@ esac
 |            -x             | vrai si fichier est exécuter           |
 |            -s             | vrai si fichier a une taille > 0       |
 
+#### Exemples
+
 ```bash
-# Exemples
 [ -f "fic1" ]           # vrai s'il s'agit d'un fichier ordinaire
 [[ FILE1 -nt FILE2 ]]	# vrai si fichier 1 est plus récent que fichier 2
 [[ FILE1 -ot FILE2 ]]	# vrai si fichier 2 est plus récent que fichier 1
@@ -96,15 +98,18 @@ esac
 
 ### Test sur les chaînes de caractères
 
+#### Les opérateurs
+
 | Opérateurs de comparaison | Descriptions                         |
-| :-----------------------: | ------------------------------------ |
+| :-----------------------: | :----------------------------------- |
 |             =             | vrai si les deux valeurs sont égales |
 |            !=             | vrai si les deux valeurs différents  |
 |            -n             | vrai si la chaine n'est pas vide     |
 |            -z             | vrai si la chaîne est vide           |
 
+#### Exemples
+
 ```bash
-# Exemple
 var1="velo" ; var2="voiture"
 
 [ "$var1" == "$var2" ]   # le test retourne faux
@@ -122,8 +127,10 @@ var1="hello"; var2=""
 
 > Ces opérateurs sont uniquement pour les entiers.
 
+#### Les opérateurs
+
 | Opérateurs de comparaison | Descriptions                                                    |
-| :-----------------------: | --------------------------------------------------------------- |
+| :-----------------------: | :-------------------------------------------------------------- |
 |            -eq            | vrai si les deux valeurs sont égales                            |
 |            -ne            | vrai si les deux valeurs sont différentes                       |
 |            -lt            | vrai si la première valeur est inférieure à la seconde          |
@@ -131,8 +138,9 @@ var1="hello"; var2=""
 |            -gt            | vrai si la première valeur est supérieure à la seconde          |
 |            -ge            | vrai si la première valeur est supérieure ou égale à la seconde |
 
+#### Exemples
+
 ```bash
-# Exemple
 var1=13 ; var2=37
 
 [ $var1 -eq $var2 ]   # "==" : "a égale à b"
