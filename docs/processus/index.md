@@ -92,15 +92,16 @@ gedit & # lance en arrière plan l'application gedit
 jobs    # affiche les processus lancés par Bash (liste avec des « jobs ID »)
 fg      # sert à placer un processus en premier plan,
 bg      # sert à placer en arrière plan un processus endormi (et donc le réveille).
-          # fg et bg utilisent les « jobs ID »
+        # fg et bg utilisent les « jobs ID »
 ```
 
 ### nice et renice
 
 ```bash
 # Gestion des priorités des processus (de -20 à +19)
-# -20 : très forte à 19 : très faible
-#   0 : priorité par défaut (ou celle du père)
+#     0 : normal
+#  0-19 : basse priorité
+# -20-0 : haute priorité (root uniquement)
 nice -n 19 commande # nouveau processus
 renice -n 19 PID    # processus déjà lancé
 ```
@@ -114,12 +115,14 @@ echo $$
 echo $PPID
 ```
 
-## Quelques raccourcis
+## Quelques signaux
 
 | Numéro | Descriptions                           | Forme 1 | Forme 2  |
 | ------ | -------------------------------------- | ------- | -------- |
 | 1      | Instruction (HANG UP) - Fin de session | SIGHUP  |          |
-| 2      | Interruption                           | SIGINT  | Ctrl + C |
+| 2      | Interruption d'un processu             | SIGINT  | Ctrl + C |
+| 9      | Termine violemment un processus        | SIGKILL |          |
+| 18     | Continuer un processus mis en pause    | SIGCONT |          |
 | 19     | Demande de suspension imbloquable      | SIGSTOP | Ctrl + Z |
 
 ## Liens

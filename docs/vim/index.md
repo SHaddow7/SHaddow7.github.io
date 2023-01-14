@@ -81,8 +81,8 @@ title: Vim
 
 ### Divers
 
-|       Commandes       | Descriptions                          |
-| :-------------------: | ------------------------------------- |
+| Commandes             | Descriptions                          |
+| :-------------------- | ------------------------------------- |
 | :1,$s/chaîne/CHAINE/g | remplace chaîne par CHAINE partout    |
-|        :! cmd         | exécute la commande cmd               |
-|        :r! cmd        | insère le résultat de la commande cmd |
+| :! cmd                | exécute la commande cmd               |
+| :r! cmd               | insère le résultat de la commande cmd |
