@@ -22,31 +22,36 @@ chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] fic
 #    -f : (Force) supprimer la plupart des messages d'erreur
 ```
 
-```bash
-# Exemples
+#### Exemples - Ajouter des permissions
 
-# ---- [ Ajouter des permissions ]
-# Attribut droits lecture / écriture au propriétaire et ajoute droit d'exécution à tous
-chmod u=rw,a+x fic
+```bash
 chmod u=rwx,g=rwx,o=rwx fic    #  Attribut tous les droits (lecture/écriture/exécution) à tous (u, g, o)
 chmod u+w fic                  #  Ajouter droits en écriture au propriétaire
 chmod g+r fic                  #  Ajouter droits en lecture au groupe du fichier
 chmod o+x fic                  #  Ajouter droits d'exécution aux autres utilisateurs
 chmod a+rw fic                 #  Ajouter droits lecture / écriture à tous (all)
 chmod 777 fic                  #  Attribut tous les droits sur fic à tous (forme octal)
+chmod u=rw,a+x fic             #  Attribut les droits de lecture/écriture au propriétaire (o)
+                               #  et ajoute droit d'exécution à tous
+```
 
-# ---- [ Supprimer les permissions ]
-chmod u-rx fic  #  Retire les droits de lecture et d'exécution pour le propriétaire
-chmod g-wx fic  #  Retire les droits de modification et d'exécution pour le groupe
-chmod o= fic    #  Retire toutes les droits pour les autres utilisateurs
+#### Exemples - Supprimer les permissions
 
-# ---- [ Autres ]
+```bash
+chmod u-rx fic  # Retire les droits de lecture et d'exécution pour le propriétaire
+chmod g-wx fic  # Retire les droits de modification et d'exécution pour le groupe
+chmod o= fic    # Retire toutes les droits pour les autres utilisateurs
+```
+
+#### Exemples - Autres
+
+```bash
 # Rendre le répertoire et tous les fichiers qu'il contient accessibles
 # par tous les utilisateurs (recursive)
 chmod -­R a+rx rép/
 ```
 
-Numéros d'autorisation de fichier
+#### Numéros d'autorisation de fichier
 
 | Permissions | Valeurs | Descriptions                                            |
 | :---------: | :-----: | ------------------------------------------------------- |
@@ -66,6 +71,8 @@ Numéros d'autorisation de fichier
 > chmod u=rwx,g=rwx,o=rwx fic
 > ```
 
+## umask et chown
+
 ```bash
 # Changement du propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
 chown nom_utilisateur [fic | rep]
@@ -74,16 +81,13 @@ chown nom_utilisateur [fic | rep]
 umask [ droits ]
 
 # Exemples
-umask 000  #  ( ne fait rien )
-umask 022  #  ( rw-r—-r-- )
-umask 027  #  ( rw-r----- )
+umask 000   #  ( ne fait rien )
+umask 022   #  ( rw-r—-r-- )
+umask 027   #  ( rw-r----- )
 
-#  Retire les droits de lecture et d'exécution pour le propriétaire
-umask u-rx
-#  Retire les droits de modification et d'exécution pour le groupe
-umask g-wx
-#  Retire les droits de modification et de lecture pour les autres utilisateurs
-umask o-rw
+umask u-rx  #  Retire les droits de lecture et d'exécution pour le propriétaire
+umask g-wx  #  Retire les droits de modification et d'exécution pour le groupe
+umask o-rw  #  Retire les droits de modification et de lecture pour les autres utilisateurs
 ```
 
 {: .note }

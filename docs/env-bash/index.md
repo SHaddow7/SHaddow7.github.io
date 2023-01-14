@@ -6,7 +6,8 @@ title: Les variables d’environnements
 
 ## Les variables d’environnements
 
-> [!tldr]
+{: .note }
+
 > Le Bash utilise des variables d'environnement pour stocker des informations sur le système et sur les préférences de l'utilisateur. Vous pouvez afficher la liste des variables d'environnement en utilisant la commande `printenv`.
 
 | Commandes         | Descriptions                                                       |

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Recherches de fichiers
-#nav_order: 1
+nav_order: 3
 ---
 
 ## La recherche de fichiers
@@ -26,7 +26,7 @@ find chemin [ option(s) ] [ action(s) ]
 #    -ctime
 #    -size 30k : taille de 30 ko
 #    -size +5M  : taille plus de 5 Mo
-#    -maxdepth / -mindepth
+#    -maxdepth / -mindepth : profondeur de la recherche
 
 # Actions
 #    -print (action par défaut)
@@ -70,6 +70,15 @@ find . -mtime -1
 find . -mtime +30
 ```
 
+#### Exemples - Recherches en fixant une profondeur
+
+```bash
+# Recherhcer les fichiers ordinaires qui ont une extension ".txt"
+# qui ont une profondeur d'au moins 3 répertoires.
+find . -type f -name "*.txt" -maxdepth 3 2>/dev/null
+
+```
+
 #### Exemples - Combinaison de plusieurs critères
 
 ```bash
@@ -84,11 +93,22 @@ find . -­name "*log*"
 find . ­-name "*.pdf" ­-exec xpdf {} ';'
 ```
 
+#### Exemples - Autres
+
+```bash
+#
+find . -type f -size +1M -exec mv -t chemin/ {} +
+#
+find /etc -type f -name "*.conf" ! -name "etc/s*" -user "root" -size +2k 2>/dev/null
+#
+find /etc -type f -name "fic*" ! -name "*.old" -size +1M -exec mv {} {}.old \;
+```
+
 ### locate
 
 {: .note }
 
-> **`locate`** - permet de rechercher rapidement des fichiers et des répertoires sur votre système par leur nom.
+> `locate` - permet de rechercher rapidement des fichiers et des répertoires sur votre système par leur nom.
 
 ```bash
 # Syntaxe
@@ -102,8 +122,9 @@ locate [ OPTIONS ] Fichier
 #    -l <Num> : Réduit le nombre d’entrée du résultat à Num
 ```
 
+#### Exemples
+
 ```bash
-# Exemples
 locate "*bar*"   # Recherche rapide dans tout système
 locate ".conf"   # Recherche tous les fichiers avec l’extension .conf
 locate "*.extf"  # Recherche tous les fichiers avec une extension particulière
@@ -116,8 +137,6 @@ locate -b "/home"
 #  Trouve tous les fichiers et répertoires qui comporte le mot "exemple" dans leur nom
 locate -r "exemple"
 ```
-
-{: .note }
 
 > Les fichiers qui ont été récemment créer ne serait pas encore enregistrer dans la base de données de Locate. La base de données de locate est mise à jour au moin une fois par jour. Il est possible de mettre à jour cette base de données en utilisant la commade : `updatedb`
 
@@ -190,6 +209,6 @@ whereis ls
 whereis -b ls
 #  Recherche uniquement le fichier de la page de manuel de la commande "ls"
 whereis -m ls
-#  Localise les fichiers binaires, source et de page de manuel pour toutes les commandes dans le /usr/binrépertoire
+#  Recherche toutes les fichiers binaires, sources et manuels de tous les commandes présent sur l'os
 whereis -b -s -m *
 ```

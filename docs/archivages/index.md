@@ -25,9 +25,9 @@ tar -x[v][P][f archive]           # Extraction de l'archive
 #    a : Concatener les fichiers d'archive
 ```
 
-```bash
-# Exemples
+#### Exemples
 
+```bash
 # Créer une archive compressée
 tar -jcvf archive.tar.bz2 /home/stag
 tar -zcvf archive.tar.gz /home/stag
@@ -42,6 +42,8 @@ tar -zxvf archive.tar.gz
 ```
 
 ### Zip et Unzip
+
+#### zip
 
 ```bash
 # Syntaxe
@@ -62,6 +64,8 @@ zip archive .*                # Créer une archive ZIP contenant tous les fichie
 zip -0 archive * .mp3         # Créez un fichier ZIP contenant tous les fichiers MP3 du répertoire actuel
                               # sans compresser les fichiers (-0).
 ```
+
+#### unzip
 
 ```bash
 # Syntaxe

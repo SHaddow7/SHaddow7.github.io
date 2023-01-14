@@ -11,12 +11,13 @@ nav_order: 4
 # Syntaxe - Lien Symbolique
 ln -s [OPTIONS] fichier lien
 
-# Syntaxe - Lien Phisyque
+# Syntaxe - Lien Physique
 ln [OPTIONS] fichier lien
 ```
 
+#### Exemples
+
 ```bash
-# Exemples
 ln -s fichier_source lien_symbolique  #  Créer un lien symbolique vers un fichier
 ln -s fichier.txt lien.txt            #  Créer le lien "lien.txt" qui pointe "fichier.txt"
 ln -s /home/stag/tp ~/mes_tp          #  Créer un lien symbolique qui pointe vers un répertoire
@@ -25,8 +26,13 @@ ln -s /home/stag/tp ~/mes_tp          #  Créer un lien symbolique qui pointe ve
 ls -l my_link.txt
 # > [SORTIE]
 lrwxrwxrwx 1 stag users  9 Jan  2 21:06  lient.txt -> fichier.txt
+```
 
-# Supprimer un lien (deux façon de le faire)
+#### Exemples - Suppression de liens
+
+```bash
+# Usage n°1
 unlink lien_a_supprimer
+# Usage n°2
 rm lien_a_supprimer
 ```

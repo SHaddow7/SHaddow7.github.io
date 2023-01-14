@@ -11,15 +11,19 @@ nav_order: 1
 
 ```bash
 #!/bin/bash
-
 # > Affectation par la commande
 # > Pas de déclaration de typage
 # > "$" devant la variable pour appeler le contenu
 
 # Synopsis
-nomVariable=valeur
+nomVariable=valeur  #  Déclaration d'une variable
+$nomVariable        #  Appel de la variable ou
+${nomVariable}
+```
 
-# Exemple(s)
+#### Exemples
+
+```bash
 var1="tutu"
 toto=2
 maVariable="alice"
@@ -46,13 +50,15 @@ ${maVariable/#from/to}	        # Remplace le prefix
 
 ### Manipulation de chaîne de caractères
 
+#### Longueur paramètre
+
 ```bash
-# Longueur paramètre
 ${#var} # affiche la longueur du contenu de la variable var
 ```
 
+#### Affichage par défaut
+
 ```bash
-# Affichage par défaut
 ${var}
 ${var:-"valdefaut"}   # si var est vide, utilise valdefaut
 ${var:="valdefaut"}   # si var est vide, affecte valdefaut à la variable variable
@@ -60,8 +66,9 @@ ${var:?"valdefaut"}   # si var est vide, sortie en erreur avec message valdefaut
 ${var:+"valdefaut"}   # si var est non vide, utilise valdefaut
 ```
 
+#### Couper une variable en fonction de la position
+
 ```bash
-# Couper une variable en fonction de la position
 ${var:position:longueur}  # Syntaxe
 ${var:5}                  # Variable var à partir du 6ème caractère
 ${var:2:1}                # 3ème caractère de var
@@ -70,23 +77,26 @@ ${var: -2:1}              # Avant dernier caractère
 ${@:2:4}                  # Affiche les paramètres positionnels 2 à 4
 ```
 
+#### Couper une variable en fonction d'un motif
+
 ```bash
-# En fonction d'un motif
 ${var#pre}  # variable var sans le préfixe
 ${var##pre} # variable var sans le préfixe
 ${var%suf}  # variable var sans le suffixe
 ${var%%suf} # variable var sans le suffixe
 ```
 
+#### Le caractère " ! "
+
 ```bash
-# le !
 ${!va*} # toutes les var. commençant par va en une seule chaîne de caractères
 ${!va@} # toutes les var. commençant par va en une multitudes de chaînes
 ${!var} # remplace var par sa valeur puis évalue la variable obtenue
 ```
 
+#### Substitution
+
 ```bash
-# Substitution
 ${var/motif/chaîne}  # 1er motif remplacé par chaîne
 ${var//motif/chaîne} # tous les motifs remplacés par chaîne
 ${var/#motif/chaîne} # si commence par motif, ce dernier est remplacé par chaîne
@@ -98,10 +108,6 @@ ${var,motif}         # modifie la chaîne, le motif en minuscule
 ${var,,motif}        # modifie la chaîne, tous les motifs en minuscule
 ${var,,}             # toute la chaîne en minuscule
 ```
-
-**Plus de détail sur la substitution des variables :**
-
-[Parameter Substitution](https://tldp.org/LDP/abs/html/parameter-substitution.html)
 
 ## Intéraction avec l’utilisateur
 
@@ -131,8 +137,12 @@ $#                      # le nombre d'arguments
 $*                      # la liste de tous les arguments du script
 $@                      # la liste de tous les arguments du script
 shift                   # décale l'affectation des numéros de variables positionnelles sur la droite
+```
 
-# exemple 1
+#### Exemples
+
+```bash
+# Exemple 1
 # $0  : monscript.sh
 # $1  : arg1
 # $2  : arg2
@@ -140,8 +150,13 @@ shift                   # décale l'affectation des numéros de variables positi
 # $#  : dans ce cas ci, il s'agit du 3
 # $@  : arg1 arg2 arg3
 ./monscript.sh arg1 arg2 arg3
-# exemple 2
+
+# Exemple 2
 ./script.sh arg1 arg2 arg3
-#  Aprés un shift
-./script.sh ~~arg1~~ arg2 arg3
+#  Aprés un shift : on se déplace vers la droite, on change d'argument
+./script.sh arg1 arg2 arg3
 ```
+
+## Liens
+
+[Parameter Substitution](https://tldp.org/LDP/abs/html/parameter-substitution.html)

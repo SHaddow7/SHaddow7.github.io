@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: home
-nav_order: 0
+nav_order: 1
 ---
 
 {: .warning }
@@ -10,10 +10,15 @@ Attention ce site web est toujours en cours de construction
 ## Aides
 
 ```bash
-# Syntaxe
+# Syntaxes
 man [ -s X ] nom-de-commande
+apropos [OPTIONS...] mot_clés
+info [OPTIONS...]...
+```
 
-# Exemples
+#### Exemples
+
+```bash
 man man # Obtient le manuel de man
 man 5 passwd
 man passwd.5
@@ -26,13 +31,17 @@ apropos info | grep '^info.*('
 man info
 info info
 info 5 info
+```
 
+```bash
 # Lire la documentation d'informations bash
 info bash
 info bash 'Bash Features'
 info bash 6
 info --apropos bash
+```
 
+```bash
 # Autres commandes
 whatis nom-de-commande # Obtenir des informations sur des commandes
 apropos "chaîne de recherche"
@@ -40,6 +49,8 @@ which commande # quelle commande sera lancer
 ```
 
 ## Quelques commandes Unix
+
+#### Commandes utiles à connaitre
 
 ```bash
 apropos # Liste les pages du manuel concernant un sujet
@@ -53,12 +64,7 @@ cat     # Affiche le contenu du fichier «fichier» passé en argument
 type    # Obtenir les informations d'une commande
 ```
 
-| Catégorie de commande | Descriptions                                                                       |
-| :-------------------: | ---------------------------------------------------------------------------------- |
-|       Internes        | pas d'exécution d'un fichier tiers, pas de création de sous-processus associé      |
-|       Externes        | exécution d'un fichier portant le nom de la commande, création d'un sous-processus |
-
-## Commande sur les informations systèmes
+#### Commande sur les informations systèmes
 
 ```bash
 date               # Affiche la date du jour
@@ -72,3 +78,10 @@ du -h              # Espace disque occupé par un fichier
 free               # Etat de la mémoire et de la swap
 wget               # Utiliser pour télécharger des fichiers depuis un serveur
 ```
+
+#### Les catégories de commandes
+
+| Catégorie de commande | Descriptions                                                                       |
+| :-------------------: | ---------------------------------------------------------------------------------- |
+|       Internes        | pas d'exécution d'un fichier tiers, pas de création de sous-processus associé      |
+|       Externes        | exécution d'un fichier portant le nom de la commande, création d'un sous-processus |

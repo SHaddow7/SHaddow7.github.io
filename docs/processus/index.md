@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Les processus
-#nav_order: 1
+nav_order: 4
 ---
 
 ## Le processus
 
-> [!tldr]
+{: .note }
+
 > La commande `ps` permet de retrouver toutes les informations utiles sur un processus.
 
 ```bash
@@ -20,8 +21,9 @@ ps [ options ]
 #    -u  : affiche les processus actifs liés à un utilisateur.
 ```
 
+#### Exemples
+
 ```bash
-# Exemples
 #  Recherche parmi l'ensemble des processus, le processus qui port le nom 'firefox'
 ps -aux | grep -i 'firefox'
 #  Afficher les informations sur les processus en cours d'exécution pour l'utilisateur courant
@@ -36,6 +38,8 @@ ps -eo pid,user,%cpu,%mem,command
 ps aux | sort -nk 4
 ```
 
+#### Descriptions des colonnes
+
 | Nom   | Descriptions                                                                                                 |
 | :---- | :----------------------------------------------------------------------------------------------------------- |
 | UID   | Uid (n° d’identifiant) de l’utilisateur                                                                      |
@@ -47,8 +51,9 @@ ps aux | sort -nk 4
 | TIME  | Temps CPU utilisé en secondes                                                                                |
 | COMD  | Ligne de commande                                                                                            |
 
+#### Obtenir des informations sur les processus
+
 ```bash
-# Obtenir des informations sur les processus
 pstree [-p] [-l] [-s]
 htop     # Classement en direct des processus
 top      # Classement en direct des processus
@@ -117,7 +122,6 @@ echo $PPID
 | 2      | Interruption                           | SIGINT  | Ctrl + C |
 | 19     | Demande de suspension imbloquable      | SIGSTOP | Ctrl + Z |
 
-## Liens utiles
+## Liens
 
-> [!tldr] Liens utiles
-> [Liste des signaux](http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm)
+[Liste des signaux](http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm)

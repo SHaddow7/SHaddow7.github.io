@@ -12,3 +12,4 @@
 - [ ] http://www.man-linux-magique.net/index.html
 - [ ] Changer le propriétaire et le groupe d'un répertoire et tout ce qu'il contient (chown)
 - [ ] Equivalent à (because 0666 & ~022 = 0644; i.e. rw-r--r--).
+- [ ] format : ps -aux | cut -d" " -f1,1 | sort | uniq | grep -v "USER"

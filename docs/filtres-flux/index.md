@@ -1,18 +1,22 @@
 ---
 layout: default
 title: Les filtres et flux
+nav_order: 5
 ---
 
 ## Les flux
 
-| Descriptions            | Flux | Alternative |   Exemples   |
-| ----------------------- | :--: | ----------- | :----------: |
-| Flux d'entrée           |  0   | STDIN       |  > ou \>\>   |
-| Flux de sortie standard |  1   | STDOUT      | 1> ou 1 \>\> |
-| Flux de sortie d'erreur |  2   | STDERR      | 2> ou 2 \>\> |
+#### Syntaxes
+
+| Descriptions            | Flux | Alternatives |   Exemples   |
+| :---------------------- | :--: | :----------: | :----------: |
+| Flux d'entrée           |  0   |    STDIN     |  > ou \>\>   |
+| Flux de sortie standard |  1   |    STDOUT    | 1> ou 1 \>\> |
+| Flux de sortie d'erreur |  2   |    STDERR    | 2> ou 2 \>\> |
+
+#### Exemples
 
 ```bash
-# Exemples
 cat < /etc/passwd             #  Redirection de l'entrée depuis un fichier
 cat /etc/passwd 1> fic        #  Redirige (copie) les éléments de "passwd" dans "fic"
 cat musique.mp3 > /dev/audio  #  Redirige du fichier musique.mp3 vers des appareils
@@ -32,7 +36,26 @@ more fic          #  Permet de se déplacer dans un texte
 less fic          #  Permet de visualiser un fichier texte page par page
 head [ -n ] fic   #  Afficher les n premières lignes du flux en entrée
 tail [ -n ] fic   #  Afficher les n dernières lignes du flux en entrée
-wc /etc/services  #  Compter le nombre de lignes / mots / caractères
+```
+
+### wc
+
+```bash
+# Syntaxe
+wc [OPTION] fichier
+
+# Options
+#    -l : Affiche le nombre de lignes
+#    -c : Affiche le nombre de caractères
+#    -w : Affiche le nombre de mots
+```
+
+#### Exemples
+
+```bash
+wc -l /etc/services  #  Compter le nombre de lignes du fichier "services"
+wc -w /etc/services  #  Compter le nombre de mots du fichier "services"
+wc -c /etc/services  #  Compter le nombre de caractères du fichier "services"
 ```
 
 ### Cut
@@ -52,8 +75,9 @@ cut [OPTIONS] fichier
 #    -b : ensemble d'octets ou une plage d'octets
 ```
 
+#### Exemples
+
 ```bash
-# Exemples
 cut -d ":" -f 1,3 fichier.txt  # Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
 cut fichier.txt -f 1,3         # Afficher le 1er et le 3ème champs
 cut fichier.txt -f -4          # Afficher du 1er au 4ème champs
@@ -96,8 +120,9 @@ sort [ -r ] [ -o fic_out ] [ -t ca r] [ -k num_champ[n] ] fic.txt
 #    -o : fichier de sortie
 ```
 
+#### Exemples
+
 ```bash
-# Exemples
 sort fic.txt                  # Trie un fichier dans l'ordre croissant
 sort ­-u fic.txt               # Affiche qu'une fois les lignes identiques
 sort -r fic.txt               # Trie un fichier dans l'ordre inverse
