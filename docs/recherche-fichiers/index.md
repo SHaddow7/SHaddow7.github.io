@@ -55,7 +55,7 @@ find . -type d
 find . -type l
 ```
 
-#### Exemples - Recherche de fichiers par type
+#### Exemples - Recherche de fichiers par taille
 
 ```bash
 #  Trouve tous les fichiers ayant un poid supérieurs à 100 MB
@@ -64,7 +64,7 @@ find . -size +100M
 find . -size -1k
 ```
 
-#### Exemples - Recherche de fichiers par type
+#### Exemples - Recherche de fichiers par date de modification
 
 ```bash
 #  Trouver tous les fichiers modifiés au cours de la dernière journée
@@ -94,17 +94,6 @@ find . -name "*.sh" -exec cat {} \\;
 find . -­name "*log*"
 #  Trouve tous les fichiers en .pdf dans rép et exécute une commande sur chacun
 find . ­-name "*.pdf" ­-exec xpdf {} ';'
-```
-
-#### Exemples - Autres
-
-```bash
-#
-find . -type f -size +1M -exec mv -t chemin/ {} +
-#
-find /etc -type f -name "*.conf" ! -name "etc/s*" -user "root" -size +2k 2>/dev/null
-#
-find /etc -type f -name "fic*" ! -name "*.old" -size +1M -exec mv {} {}.old \;
 ```
 
 ### locate

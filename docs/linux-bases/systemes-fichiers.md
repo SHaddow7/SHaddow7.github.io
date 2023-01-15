@@ -61,7 +61,7 @@ rm ­-rf rép                # Supprimer un répertoire non vide (force)
 rmdir rép                 # Supprimer un répertoire (remove dir)
 ```
 
-#### Exemples - touch
+#### Exemples - Touch
 
 ```bash
 touch fic                     # "Création" d'un fichier fic - modification de l'horodatage
@@ -69,10 +69,17 @@ touch -t 201808151213 fic.old # "Création" d'un fichier vide avec une date de d
                               # au 15 aout 2018 à 12h13
 ```
 
+#### Exemples - Stat
+
+```bash
+stat fichier              # Affiche les méta-données du fichier
+stat -c '%a %n' fichier   # Affiche la valeur numérique pour les droits du fichier
+stat --format="%U %G" fic # Affiche le propriétaire et le groupe du fichier
+```
+
 #### Exemples - autres commandes
 
 ```bash
-stat fichier              # Afficher les méta-données du fichier
 diff fic_a.txt fic_b.txt  # Affiche les diff. entre les deux fichiers
 pwd                       # Afficher répertoire courant (print working dir)
 ```

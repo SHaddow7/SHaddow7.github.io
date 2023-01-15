@@ -76,11 +76,15 @@ chmod -­R a+rx rép/
 ```bash
 # Changement du propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
 chown nom_utilisateur [fic | rep]
+```
 
+```bash
 # Positionne des droits sur les actions de l’utilisateur durant sa session.
 umask [ droits ]
 
 # Exemples
+umask       #  Affiche le masque actuel en notation octale
+
 umask 000   #  ( ne fait rien )
 umask 022   #  ( rw-r—-r-- )
 umask 027   #  ( rw-r----- )

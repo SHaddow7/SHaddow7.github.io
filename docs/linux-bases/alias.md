@@ -24,6 +24,7 @@ unalias ll
 #### Exemples - Création d'un alias
 
 ```bash
+alias                         #  Liste tous les alias
 alias ll='ls -la'             #  Créer un alias pour la commande ls -la
 alias rmd='rm -rfv'           #  Créer un alias pour la commande rm -rfv
 alias go='cd $HOME/document'  #  Créer un alias en utilisant des variables

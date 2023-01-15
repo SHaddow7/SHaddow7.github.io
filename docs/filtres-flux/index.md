@@ -102,6 +102,15 @@ uniq [ -udc ] fic
 #    –c : liste toutes les lignes + nombre d’occurrence(s) de la ligne affichée.
 ```
 
+#### Exemples
+
+```bash
+sort chemin/fichier | uniq    #  Afficher chaque ligne une fois
+sort chemin/fichier | uniq -u #  Afficher uniquement les lignes uniques
+sort chemin/fichier | uniq -d #  Afficher uniquement les lignes dupliquées
+sort chemin/fichier | uniq -c #  Afficher le nombre d'occurrences de chaque ligne
+```
+
 ### Sort
 
 {: .note }

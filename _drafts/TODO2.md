@@ -1,0 +1,3 @@
+- [ ] Mise en place d'un système de rédaction de contenu
+- [ ] Gerer les nouveaux contenu
+- [ ] Creer une interface d'administration
