@@ -44,7 +44,7 @@ ps aux | sort -nk 4
 | :---- | :----------------------------------------------------------------------------------------------------------- |
 | UID   | Uid (n° d’identifiant) de l’utilisateur                                                                      |
 | PID   | N° d’identification du processus                                                                             |
-| PIDP  | N° d’identification du processus père                                                                        |
+| PPID  | N° d’identification du processus père                                                                        |
 | C     | Utilisation du processeur pour le sheduler                                                                   |
 | STIME | Instant de démarrage du processus (H-min-sec). Si le processus a plus de 24 h, il est donné en mois et jours |
 | TTY   | Terminal de contrôle du processus                                                                            |
