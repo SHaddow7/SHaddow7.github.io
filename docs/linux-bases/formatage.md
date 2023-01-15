@@ -24,10 +24,12 @@ date -d @1623152000                              #  Convertis un timestamp UNIX 
                                                  #  mar. 08 juin 2021 07:33:20 EDT
 ```
 
-## Autres
+## Exemples de formatages
 
 ```bash
 # Afficher le nombre de cpu
 echo "Nombre de cpu : $(lscpu | grep ^CPU(s): | tr -s " " | cut -d" " -f2,2)"
-# Ajouter d'autres exemples
+# Créer une archive contenant tous les fichers/répertoire de /home/stag
+# L'archive aura un format : archive_20230115-07-18.tar.gz
+tar -zcvf /tmp/archive_$(date +"%Y%m%d-%H-%M").tar.gz /home/stag
 ```

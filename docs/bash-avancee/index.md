@@ -25,18 +25,37 @@ echo $res
 
 #### Opérateurs acceptés (ordre croissant de priorité) :
 
-|                   |
-| :---------------: |
-|      ( ) ; !      |
-| \*\* ; \* ; / ; % |
-|       + ; -       |
-|  < ; <= ; > ; >=  |
-|      == ; !=      |
+| Opérateurs | Descriptions   |
+| :--------: | -------------- |
+|    ( )     | Groupement     |
+|     !      | Pas            |
+|    \*\*    | Puissance      |
+|     /      | Division       |
+|     %      | Modulo         |
+|     +      | Addition       |
+|     -      | Soustraction   |
+|     \*     | Multiplication |
 
-| Opérateurs | Equivalent | Descriptions |
-| :--------: | :--------: | :----------: |
-|     &&     |     -a     | opérateur ET |
-|    \|\|    |     -o     | opérateur OU |
+| Opérateurs | Equivalents     |
+| :--------: | --------------- |
+|    a+=     | a = a + valeur  |
+|    a-=     | a = a - valeur  |
+|    a\*=    | a = a \* valeur |
+|    a/=     | a = a / valeur  |
+|    a%=     | a = a % valeur  |
+|    i++     | i = i + 1       |
+|    i--     | i = i - 1       |
+
+| Opérateurs | Equivalent |    Descriptions     |
+| :--------: | :--------: | :-----------------: |
+|     <      |            |     Inférieur à     |
+|     <=     |            | Inférieur ou égal à |
+|     >      |            |     Supérieur à     |
+|     >=     |            | Supérieur ou égal à |
+|     ==     |            |       Egal à        |
+|     !=     |            |    Différent de     |
+|     &&     |     -a     |    opérateur ET     |
+|    \|\|    |     -o     |    opérateur OU     |
 
 #### Exemple
 

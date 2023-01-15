@@ -19,6 +19,13 @@ ls [ OPTIONS ] # Liste les fichiers «ordinaires» dans le rép. courant
 #    -r : Liste tous les fichiers en inversant l'ordre de tri (rev.)
 ```
 
+#### Exemples - autres
+
+```bash
+.       # Répertoire courant
+..      # Répertoire parent
+```
+
 #### Exemples - mkdir
 
 ```bash
@@ -30,10 +37,10 @@ mkdir ­-p rép1/rép2            # Créer des répertoires imbriqués
 
 ```bash
 cd nouveau_rép                # Change de répertoire
-cd ..                         # Répertoire parent
-cd                            # Répertoire personnel
-cd -                          # Retourner au dernier répertoire
-cd ~alice                     # Répertoire personnel de alice
+cd ..                         # Revenir au répertoire parent
+cd                            # Revenir au répertoire personnel
+cd -                          # Revenir au dernier répertoire
+cd ~alice                     # Revenir au répertoire personnel de alice
 cd ~                          # Revenir au répertoire courrant
 ```
 
@@ -67,6 +74,8 @@ rmdir rép                 # Supprimer un répertoire (remove dir)
 touch fic                     # "Création" d'un fichier fic - modification de l'horodatage
 touch -t 201808151213 fic.old # "Création" d'un fichier vide avec une date de dernier modification
                               # au 15 aout 2018 à 12h13
+
+echo > test.txt               # On peut aussi utiliser echo pour créer un fichier vide
 ```
 
 #### Exemples - Stat

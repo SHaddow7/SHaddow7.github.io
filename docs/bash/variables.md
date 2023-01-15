@@ -111,21 +111,33 @@ ${var,,}             # toute la chaîne en minuscule
 
 ## Intéraction avec l’utilisateur
 
+#### Descriptions
+
 ```bash
-#!/bin/bash
-# Description
 #   La commande **read**
 #   Stoppe l'exécution du programme
 #   Attend une valeur
 #   Enregistre le contenu dans une ou plusieurs variables
+```
 
-# Exemple
+#### Exemples
+
+```bash
+#!/bin/bash
 echo "Donnez une note entre 0 et 20 :"
 read note
 echo "Votre note est ${note}"
-# > [SORTIE]
-Résultat du programme
+# > [SORTIE] - Résultat du programme
 _Donnez une note entre 0 et 20 : 4 Votre note est 4_
+```
+
+```bash
+#!/bin/bash
+read -p  "Quel est votre prénom ? " note
+echo "Salut ${note} !"
+# > [SORTIE] - Résultat du programme
+Quel est votre prénom ? Marc
+Salut Marc !
 ```
 
 ## Les variables positionnelles

@@ -7,6 +7,8 @@ nav_order: 2
 
 ## Structure conditionnelle - if, if … else, etc
 
+#### Syntaxes
+
 ```bash
 # if then ... fi
 if [ condition ]; then
@@ -34,9 +36,10 @@ else
 fi
 ```
 
+#### Exemples
+
 ```bash
 #!/bin/bash
-# Exemple
 #  Demande à l'utilisateur de saisir sa moyenne
 read -p "Quel est votre moyenne ?" moy
 #  Vérifie que sa moyenne est plus grand que 15 et plus petit ou égale à 20
@@ -49,8 +52,9 @@ fi
 
 ## Alternative multiple - case
 
-```bash
+#### Syntaxes
 
+```bash
 #!/bin/bash
 case $variable in
     motif1) commande(s) ;;
@@ -58,7 +62,18 @@ case $variable in
     motif3) commande(s) ;;
     *) commande(s) ;;
 esac
+```
 
+```bash
+# Mettre plusieurs motifs dans un même cas
+case $variable in
+    motif1|motif2|motif3) commande(s) ;;
+esac
+```
+
+#### Exemples
+
+```bash
 # Exemple
 variable=$(cut -d":" -f1,1 /etc/passwd) # Recupere le nom de connexion de l'utilisateur
 case $variable in

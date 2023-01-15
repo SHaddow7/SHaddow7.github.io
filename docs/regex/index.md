@@ -19,25 +19,44 @@ title: Les expressions régulières
 |     +     | 1 fois au moins          | `[0-9]+`  | Affiche uniquement les chaines avec au moins un chiffre                  |
 |     ?     | 0 ou 1 fois              | `[0-9]?`  | Affiche uniquement les chaines avec un ou zéro chiffre                   |
 
+## Les groupes
+
+| Caractère | Description                                                              |
+| :-------: | :----------------------------------------------------------------------- |
+|   (...)   | Groupe avec capture, pour récuperer le groupe on utilisera \1, \n .. etc |
+|  (?:...)  | Groupe sans capture                                                      |
+
+## Les méta séquences
+
+| Caractère | Description                                                                                     |
+| :-------: | :---------------------------------------------------------------------------------------------- |
+|   a\|b    | Correspond soit à ce qu'il y a avant le \| ou après - ex: 'a' ou 'b'.                           |
+|    \s     | Correspond aux espaces, tabulations ou de retour à la ligne                                     |
+|    \S     | Correspond à tout autre élément qu'un espaces, une tabulation ou un retour à la ligne           |
+|    \d     | Correspond à tous les entiers - equiv. : [0-9]                                                  |
+|    \D+    | Correspond à tous les caractères sauf les entiers - equiv. : [0-9]                              |
+|    \w+    | Correspond à n'importe quelle lettre, chiffre ou trait de soulignement. - equiv. : [a-zA-Z0-9_] |
+|    \W+    | Correspond à tout autre élément qu'une lettre, un chiffre ou un trait de soulignement.          |
+
 ## Les caractères de classe
 
-|   Caractère    |     Equivalent      | Description                                                         |
-| :------------: | :-----------------: | ------------------------------------------------------------------- |
-|     [abc]      |          X          | Correspond uniquement au caractère a, b ou c.                       |
-|    [\^abc]     |          X          | Correspond à tous les caractères sauf les caractères a, b et c.     |
-|     [a-z]      |          X          | Correspond à tous les caractères entre a-z .                        |
-|     [0-9]      |          X          | Correspond à tous les caractères entre 0-9.                         |
-|    [a-zA-Z]    |          X          | Correspond à tous les caractères entre a-z ou A-Z.                  |
-| [\[:alnum:]\]  |     [A-Za-z0-9]     | Correspond à n'importe quelle lettre ou chiffre.                    |
-| [\[:alpha:]\]  |      [A-Za-z]       | Correspond aux lettres de l'alphabet.                               |
-| [\[:ascii:]\]  |     [\x00-\x7F]     | Correspond à n'importe quel caractère de la plage ASCII valide.     |
-| [\[:blank:]\]  |        [ \t]        | Correspond aux espaces et aux tabulations .                         |
-| [\[:digit:]\]  |     \d ou [0-9]     | Correspond aux chiffres décimaux.                                   |
-| [\[:lower:]\]  |        [a-z]        | Correspond aux lettres minuscules.                                  |
-| [\[:space:]\]  |         \\s         | Correspond aux caractères d'espacement.                             |
-| [\[:upper:]\]  |        [A-Z]        | Correspond aux lettres majuscules.                                  |
-|  [\[:word:]\]  | \\w ou [a-zA-Z0-9_] | Correspond aux lettres, aux chiffres et aux traits de soulignement. |
-| [\[:xdigit:]\] |     [0-9a-fA-F]     | Correspond aux chiffres hexadécimaux, insensible à la casse.        |
+|   Caractère    |  Equivalent  | Description                                                         |
+| :------------: | :----------: | ------------------------------------------------------------------- |
+|     [abc]      |      X       | Correspond uniquement au caractère a, b ou c.                       |
+|    [\^abc]     |      X       | Correspond à tous les caractères sauf les caractères a, b et c.     |
+|     [a-z]      |      X       | Correspond à tous les caractères entre a-z .                        |
+|     [0-9]      |      X       | Correspond à tous les caractères entre 0-9.                         |
+|    [a-zA-Z]    |      X       | Correspond à tous les caractères entre a-z ou A-Z.                  |
+| [\[:alnum:]\]  | [A-Za-z0-9]  | Correspond à n'importe quelle lettre ou chiffre.                    |
+| [\[:alpha:]\]  |   [A-Za-z]   | Correspond aux lettres de l'alphabet.                               |
+| [\[:ascii:]\]  | [\x00-\x7F]  | Correspond à n'importe quel caractère de la plage ASCII valide.     |
+| [\[:blank:]\]  |    [ \t]     | Correspond aux espaces et aux tabulations .                         |
+| [\[:digit:]\]  | \d ou [0-9]  | Correspond aux chiffres décimaux.                                   |
+| [\[:lower:]\]  |    [a-z]     | Correspond aux lettres minuscules.                                  |
+| [\[:space:]\]  |     \\s      | Correspond aux caractères d'espacement.                             |
+| [\[:upper:]\]  |    [A-Z]     | Correspond aux lettres majuscules.                                  |
+|  [\[:word:]\]  | [a-zA-Z0-9_] | Correspond aux lettres, aux chiffres et aux traits de soulignement. |
+| [\[:xdigit:]\] | [0-9a-fA-F]  | Correspond aux chiffres hexadécimaux, insensible à la casse.        |
 
 ## Les quantificateurs
 

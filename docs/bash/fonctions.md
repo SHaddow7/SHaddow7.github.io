@@ -7,6 +7,15 @@ nav_order: 4
 
 ## Les fonctions
 
+### A savoir
+
+| Opérateurs | Equivalents                                                            |
+| :--------: | ---------------------------------------------------------------------- |
+|     $?     | Variable contenant le code retour de la fonction                       |
+|     $0     | Conserve le nom du script                                              |
+|  $1 - $n   | Il est possible d'intégrer des paramètres à l'appel de la fonction     |
+|  return n  | Permet de définir manuellement le code retour de la fonction [0 - 255] |
+
 ### Définition des fonctions
 
 ```bash
@@ -28,10 +37,12 @@ function maFontion {
 ```bash
 #!/bin/bash
 function maFontion {
+    #  Définit une variable LOCALE à la fonction
+    #  son utilisation se fera uniquement à l'intérieur de la fonction
     local mon_argument=$1
     echo "$mon_argument"
 }
-maFontion "Hello world!"
+maFontion "Hello world!" #  Appel de la fonction + utilisation d'un argument
 ```
 
 ### Retourner des valeurs
@@ -54,6 +65,16 @@ function maFontion {
     echo "$mon_resultat"
 }
 result=$(maFontion)
+```
+
+```bash
+#!/bin/bash
+# 3 - Retourner des valeurs
+function maFontion {
+    local code_retour=80
+    return $code_retour  #  Retourne uniquement des valeurs comprise entre [0-255]
+}
+maFontion
 ```
 
 ### La fonction d'usage - Trés utile ;)
