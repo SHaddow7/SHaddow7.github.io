@@ -17,14 +17,13 @@ parent: Linux
 
 ```bash
 # Syntaxe Crontab
-* * * * * command(s)
-- - - - -
-| | | | |
-| | | | ----- Jour de la semaine (0 - 7) (Dimanche=0 or 7)
-| | | ------- Mois (1 - 12)
-| | --------- Jour du mois (1 - 31)
-| ----------- Heure (0 - 23)
-------------- Minute (0 - 59)
+*    *    *    *    *  command(s)
+┬    ┬    ┬    ┬    ┬
+│    │    │    │    └─  Jour de la semaine   (0=Dimanche .. 6=Samedi)
+│    │    │    └──────  Mois                 (1..12)
+│    │    └───────────  Jour du mois         (1..31)
+│    └────────────────  Heure                (0..23)
+└─────────────────────  Minute               (0..59)
 ```
 
 #### Les opérateurs :
