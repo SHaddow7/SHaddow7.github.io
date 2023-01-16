@@ -77,7 +77,6 @@ FROM nom_table ;
 ```sql
 --  Afficher la date système en clair
 SELECT to_char(now(),'tmday dd tmmonth yyyy') as "Date";
-
 --  Afficher l'heure des commandes
 SELECT to_char(date_comm,'hh24:mi:ss') as "Heure" FROM commande ;
 ```

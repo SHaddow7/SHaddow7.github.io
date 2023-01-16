@@ -30,9 +30,3 @@ SELECT [ ALL | DISTINCT ]
 |  MAX(exp)  | maximum             |
 |  MIN(exp)  | minimum             |
 |  SUM(exp)  | somme               |
-
-#### Exemples
-
-```
-
-```

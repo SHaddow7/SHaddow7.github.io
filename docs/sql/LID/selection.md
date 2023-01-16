@@ -5,7 +5,9 @@ parent: LID
 grand_parent: Postgresql
 ---
 
-## Syntaxe - La clause WHERE
+## La clause WHERE
+
+#### Syntaxe
 
 ```sql
 SELECT [ ALL | DISTINCT ]
@@ -34,7 +36,7 @@ WHERE codepostal = '31000' ;
 
 ## Opérateurs
 
-### Opérateur IN
+#### Syntaxe - opérateur IN
 
 ```sql
 SELECT nom_colonne

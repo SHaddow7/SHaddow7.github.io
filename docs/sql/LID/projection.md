@@ -6,7 +6,9 @@ grand_parent: Postgresql
 # nav_order: 5
 ---
 
-### Syntaxe - Liste SELECT
+## La projection
+
+#### Syntaxe - Liste SELECT
 
 ```sql
 --  Affiche tous les éléments présent dans la table
@@ -15,20 +17,20 @@ SELECT * FROM nom_table ;
 SELECT nom, prenom FROM nom_table ;
 ```
 
-### Syntaxe - Nommage d'une colonne -- alias
+#### Syntaxe - Nommage d'une colonne -- alias
 
 ```sql
 SELECT nom_col1, nom_col2 AS TEL FROM nom_table ;
 SELECT nom_col1, nom_col2 AS "TEL" FROM nom_table ;
 ```
 
-### Syntaxe - Traitement des doublons
+#### Syntaxe - Traitement des doublons
 
 ```sql
 SELECT DISTINCT nom_col FROM nom_table ;
 ```
 
-### Syntaxe - Tri du résultat
+#### Syntaxe - Tri du résultat
 
 ```sql
 SELECT nom_col1, nom_col2, nom_col3
@@ -38,10 +40,14 @@ ORDER BY nom_col_a_trier DESC ;
 
 ### Exécuter des requêtes avec psql
 
+#### Syntaxe
+
 ```sql
 --  Lancer la commande psql à partir d'un terminal
 psql [ option... ] [ nombase [ nomutilisateur ] ]
 ```
+
+#### Commandes psql
 
 | Commandes | Descriptions                    |
 | :-------: | :------------------------------ |
