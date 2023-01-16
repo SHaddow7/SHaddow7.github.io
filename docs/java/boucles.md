@@ -2,8 +2,7 @@
 layout: default
 title: Java
 nav_order: 3
-# has_children: true
-parent: java
+parent: Java
 has_toc: true
 ---
 
