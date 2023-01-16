@@ -10,40 +10,33 @@ has_toc: false
 
 ## Les vues
 
-### Créer une vue
+{: .note}
+
+> Définition - Une vue est une sorte de table virtuelle qui contient uniquement le résultat d'une requête SQL que l'on aura définit lors de la création de la vue.
+
+#### Commande psql
+
+| Commande | Description                      |
+| :------: | :------------------------------- |
+|   \dv    | Liste les vues du schéma courant |
+
+#### **Syntaxe** - Création d'une vue
 
 ```sql
 CREATE [ OR REPLACE ]
-VIEW nom [ ( nom_colonne [, ...] ) ]
-AS requête
-;
+    VIEW nom [ ( nom_colonne [, ...] ) ]
+    AS requête ;
 ```
 
-## Utiliser une vue
-
-```sql
-SELECT client_id, nb_cmdes, derniere_cmde
-FROM v_commande ;
-```
+#### **Syntaxe** - Suppression d'une vue
 
 ```sql
 DROP VIEW v_commande ;
 ```
 
-##
+#### **Syntaxe** - Utilisation de la vue
 
 ```sql
-
-```
-
-##
-
-```sql
-
-```
-
-##
-
-```sql
-
+SELECT client_id, nb_cmdes, derniere_cmde
+FROM v_commande ;
 ```

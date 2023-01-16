@@ -19,8 +19,7 @@ CONSTRAINT pk_nom_pk PRIMARY KEY (nom_colonne)
 ### Contrainte de type Clé Étrangère
 
 ```sql
-CONSTRAINT fk_nom_fk FOREIGN KEY (nom_colonne)
-    REFERENCES nom_table (nom_colonne)
+CONSTRAINT fk_nom_fk FOREIGN KEY (nom_colonne) REFERENCES nom_table (nom_colonne)
 ```
 
 ### Contrainte de type CHECK
@@ -63,48 +62,40 @@ CREATE TABLE client (
     date_inscrit date NOT NULL,
     adresse varchar(30),
     CONSTRAINT pk_client PRIMARY KEY (client_id),
-    CONSTRAINT fk_client_ville
-    FOREIGN KEY (codepostal)
-    REFERENCES ville (codepostal)
+    CONSTRAINT fk_client_ville FOREIGN KEY (codepostal) REFERENCES ville (codepostal)
 ) ;
 ```
 
 ## Ajouter des contraintes
 
-```sql
-ALTER TABLE client ADD
-    CONSTRAINT pk_cli PRIMARY KEY (num);
-```
+#### Syntaxe
 
 ```sql
-ALTER TABLE client ADD
-    CONSTRAINT uk_cli_tel UNIQUE (tel);
+ALTER TABLE client ADD [ CONTRAINTE ];
 ```
 
-```sql
-ALTER TABLE client ADD
-    CONSTRAINT fk_cli_dep FOREIGN KEY (dept)
-        REFERENCES departement(id);
-```
+#### ExempleS
 
 ```sql
-ALTER TABLE film ADD
-    CONSTRAINT ck_fil_cat CHECK (categorie BETWEEN 10 AND 100);
+--  Contrainte de clé primaire
+ALTER TABLE client ADD CONSTRAINT pk_cli PRIMARY KEY (num);
+--  Contrainte de clé primaire étrangère
+ALTER TABLE client ADD  CONSTRAINT fk_cli_dep FOREIGN KEY (dept) REFERENCES departement(id);
+--  Contrainte d'unicité des valeurs de la colonne
+ALTER TABLE client ADD CONSTRAINT uk_cli_tel UNIQUE (tel);
+--  Contrainte qui permet de vérifier une valeur avant ajout dans la table
+ALTER TABLE film ADD CONSTRAINT ck_fil_cat CHECK (categorie BETWEEN 10 AND 100);
 ```
 
 ## Modifier des colonnes
 
-````sql
-ALTER TABLE nom_table ADD [COLUMN] colonne type ;
-```sql
-````
+#### Syntaxe
 
-ALTER TABLE nom_table ALTER [COLUMN] colonne SET … ;
-
-````
 ```sql
-ALTER TABLE nom_table DROP [COLUMN] colonne ;
-````
+ALTER TABLE nom_table ADD [ COLUMN ] colonne type ;
+ALTER TABLE nom_table ALTER [ COLUMN ] colonne SET … ;
+ALTER TABLE nom_table DROP [ COLUMN ] colonne ;
+```
 
 #### Exemple
 
@@ -115,12 +106,16 @@ ALTER TABLE client ALTER COLUMN date_inscrit SET DEFAULT current_date;
 
 ## Supprimer des contraintes
 
+#### Syntaxe
+
 ```sql
 ALTER TABLE nom_table
 DROP CONSTRAINT nom_contrainte ;
 ```
 
 ## Supprimer des tables
+
+#### Syntaxe
 
 ```sql
 DROP TABLE nom_table ;
@@ -129,16 +124,18 @@ DROP TABLE nom_table CASCADE ;
 
 ## Créer une table à partir d’une requête
 
+#### Syntaxe
+
 ```sql
-CREATE TABLE clients_parisiens
-( numero, nom, mail, tel )
-AS
-SELECT client_id, nom, email, telephone
-FROM client
-WHERE substr(codepostal,1,2) = '75' ;
+CREATE TABLE clients_parisiens ( numero, nom, mail, tel ) AS
+    SELECT client_id, nom, email, telephone
+    FROM client
+    WHERE substr(codepostal,1,2) = '75' ;
 ```
 
 ## Séquence - Création
+
+#### Syntaxe
 
 ```sql
 --  valeur_incrément : 1 par défaut
@@ -147,8 +144,7 @@ CREATE SEQUENCE nom_séquence
 [ INCREMENT [ BY ] valeur_incrément ]
 [ MINVALUE valeur_min | NO MINVALUE ]
 [ MAXVALUE valeur_max | NO MAXVALUE ]
-[ START [ WITH ] valeur_début ]
-;
+[ START [ WITH ] valeur_début ] ;
 ```
 
 #### Exemples

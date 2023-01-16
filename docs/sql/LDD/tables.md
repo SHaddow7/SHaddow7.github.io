@@ -4,22 +4,39 @@ title: Création de tables
 parent: LDD
 grand_parent: Postgresql
 has_children: true
-nav_order: 2
+nav_order: 1
 has_toc: false
 ---
 
-# Création de tables
+## Création de tables
+
+#### Syntaxe
 
 ```sql
 CREATE TABLE nom_table (
-colonne1 type,
-colonne2 type NOT NULL,
-colonne3 type DEFAULT valeur,
-...
+    colonne1 type,
+    colonne2 type NOT NULL,
+    colonne3 type DEFAULT valeur,
+    ...
 );
 ```
 
+#### Exemple
+
+```sql
+CREATE TABLE client (
+    client_id int NOT NULL,
+    codepostal char(5),
+    nom varchar(30) NOT NULL,
+    prenom varchar(30) NOT NULL,
+    date_inscrit date NOT NULL,
+    adresse varchar(30)
+) ;
+```
+
 ## Les types de données
+
+### Le type entier
 
 | Opérateurs                  | Descriptions                                          |
 | :-------------------------- | :---------------------------------------------------- |
@@ -48,18 +65,5 @@ colonne3 type DEFAULT valeur,
 {: .note}
 
 > Existe aussi en fonction des besoins (voir documentation de Postgres -
-> chapitre 8) : smallint, bigint, real, double precision, smallserial,
-> bigserial
-
-#### Exemple
-
-```sql
-CREATE TABLE client (
-    client_id int NOT NULL,
-    codepostal char(5),
-    nom varchar(30) NOT NULL,
-    prenom varchar(30) NOT NULL,
-    date_inscrit date NOT NULL,
-    adresse varchar(30)
-) ;
-```
+> chapitre 8) : **smallint, bigint, real, double precision, smallserial,
+> bigserial**

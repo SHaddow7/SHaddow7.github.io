@@ -6,7 +6,7 @@ has_children: true
 nav_order: 3
 ---
 
-# Langage deManipulation desDonnées
+# Langage de Manipulation desDonnées
 
 ## Insertion de lignes
 
