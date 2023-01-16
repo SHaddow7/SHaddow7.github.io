@@ -20,11 +20,11 @@
 - [ ] Modifier test sur les fichiers
 - [ ] Ajouter les opérateurs pour les chaînes
 - [ ] Ajouter une partie flashcard
-
+- [ ] Ajouter cette ligne dans la partie gestion des processus
 ```bash
 *    *    *    *    *  command(s)
 ┬    ┬    ┬    ┬    ┬
-│    │    │    │    └─  Jour de la semaine   (0=Sun .. 6=Sat)
+│    │    │    │    └─  Jour de la semaine   (0=Dimanche .. 6=Samedi)
 │    │    │    └──────  Mois                 (1..12)
 │    │    └───────────  Jour du mois         (1..31)
 │    └────────────────  Heure                (0..23)
