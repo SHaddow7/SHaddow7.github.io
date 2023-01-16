@@ -2,7 +2,6 @@
 layout: default
 title: Find
 parent: Recherches de fichiers
-# nav_order: 7
 grand_parent: Linux
 ---
 
@@ -17,8 +16,8 @@ grand_parent: Linux
 find chemin [ OPTIONS ] [ ACTIONS ]
 
 # Options
+#    -name      :
 #    -iname     :  nom insensible à la casse
-#    -name      :  reconnaît les métacaractères du bash, -o -a
 #    -type      :  le type de fichier : f (fichier), d (repertoire) ou l (lien)
 #    -user      :  rechercher tous les fichiers et répertoires appartenant à un utilisateur
 #    -group     :  rechercher tous les fichiers et répertoires appartenant à un groupe
@@ -32,9 +31,9 @@ find chemin [ OPTIONS ] [ ACTIONS ]
 #    -mindepth  :  la profondeur minimale de la recherche dans les répertoires
 
 # Actions
-#    -print (action par défaut)
-#    -delete
-#    -exec ex : -exec commande {} \\;
+#    -print   :  Afficher le nom complet du fichier sur la sortie standard - (action par défaut)
+#    -exec    :  Exécuter la commande
+#    -delete  :  Effacer les fichiers ou les repertoires - (ATTENTION AVEC CETTE COMMANDE)
 ```
 
 #### Exemples

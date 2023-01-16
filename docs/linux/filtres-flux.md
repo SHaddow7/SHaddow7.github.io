@@ -25,8 +25,10 @@ echo toto 1>> fic             #  Redirige le flux d'entree les éléments de "to
 ls rep 2> erreur.log          #  Redirige le flux de sortie d'erreur de "rep" dans "erreur.log"
 
 #  Entrelacement des 2 sorties
-ls rep 1> fic_resultats 2>&1
-ls rep &> fic_resultats
+ls rep 1> fic_resultats 2>&1  #  Liste le contenu du répertoire
+                              #  puis redirige la sortie standard vers "fic_resultats"
+                              #  et la sortie d'erreur dans le même endroit que la sortie standard
+ls rep &> fic_resultats       #  Equivalent de la commande précédente
 ```
 
 ## Les filtres
@@ -54,9 +56,11 @@ wc [OPTION] fichier
 #### Exemples
 
 ```bash
-wc -l /etc/services  #  Compter le nombre de lignes du fichier "services"
-wc -w /etc/services  #  Compter le nombre de mots du fichier "services"
-wc -c /etc/services  #  Compter le nombre de caractères du fichier "services"
+wc -l /etc/services                  #  Compter le nombre de lignes du fichier "services"
+wc -w /etc/services                  #  Compter le nombre de mots du fichier "services"
+wc -c /etc/services                  #  Compter le nombre de caractères du fichier "services"
+wc -l < fichier.txt                  #  1 - Affiche uniquement le nombre de ligne dans un fichier
+wc -l fichier.txt | cut -d" " -f1,1  #  2 - Affiche uniquement le nombre de ligne dans un fichier
 ```
 
 ### Cut
@@ -143,4 +147,29 @@ sort -k 2,2 -r fic.txt        # Trie un fichier en fonction du 2e champ dans l'o
 sort -n -t":" -k4,4 fic.txt   # Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
 sort fic.txt | uniq           # Trie un fichier et supprimer les lignes en double
 sort -f fic.txt | uniq        # Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
+```
+
+### Tee
+
+{: .note }
+
+> `tee` - Permet de lire depuis l'entrée standard et écrire sur la sortie standard et dans des fichiers
+
+```shell
+# Syntaxe
+tee [OPTION] [FICHIER]
+
+# Options
+#    -a : ajoute aux fichiers indiqués la données, sans les écraser
+```
+
+#### Exemples
+
+```bash
+#  Affiche la sortie `ls` à l'utilisateur, mais l'écrit également dans le fichier donné
+ls | tee outfile.txt
+#  Copie l'entrée standard dans chaque fichier, ainsi que dans la sortie standard
+echo "example" | tee chemin/mon_fichier
+#  Ajoute aux fichiers la chaine donné sans écraser le contenu du fichier
+echo "example" | tee -a chemin/mon_fichier
 ```

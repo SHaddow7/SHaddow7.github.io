@@ -2,7 +2,6 @@
 layout: default
 title: Grep
 parent: Recherches de fichiers
-# nav_order: 7
 grand_parent: Linux
 ---
 

@@ -34,6 +34,8 @@ until condition do
 done
 ```
 
+[Voir + d'exemples - Lecture / Ecriture fichiers](fichiers.html)
+
 #### Exemples
 
 ```bash

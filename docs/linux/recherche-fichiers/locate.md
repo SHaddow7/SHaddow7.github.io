@@ -3,7 +3,6 @@ layout: default
 title: Locate
 parent: Recherches de fichiers
 grand_parent: Linux
-# nav_order: 7
 ---
 
 ### locate

@@ -20,8 +20,8 @@ tar -x[v][P][f archive]           # Extraction de l'archive
 #    t : Tester / Lister
 #    x : Extraire
 #    j : (dé)compression bzip2 / bunzip2 à la volée
-#    z : (dé)compression gzip / gunzip à la volée
 #    J : xz / unxz
+#    z : (dé)compression gzip / gunzip à la volée
 #    v : Affiche une description verbeuse de la progression de la compression
 #    a : Concatener les fichiers d'archive
 ```

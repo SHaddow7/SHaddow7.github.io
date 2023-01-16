@@ -3,7 +3,6 @@ layout: default
 title: Whereis
 parent: Recherches de fichiers
 grand_parent: Linux
-# nav_order: 7
 ---
 
 ### whereis

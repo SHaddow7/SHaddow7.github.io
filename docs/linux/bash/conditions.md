@@ -6,7 +6,17 @@ grand_parent: Linux
 nav_order: 2
 ---
 
-## Structure conditionnelle - if, if … else, etc
+## Les structures conditionnels
+
+#### Opérateurs avancées :
+
+{: .note}
+
+> Vous pouvez vous rendre sur ce lien pour voir les autres opérateurs :
+>
+> [ Liens - Les opérateurs avancées ](bash-avancee.html#opérateurs-acceptés-ordre-croissant-de-priorité-)
+
+## Syntaxes - if, if … else, etc
 
 #### Syntaxes
 
@@ -92,50 +102,39 @@ esac
 
 #### Les opérateurs
 
-| Opérateurs de comparaison | Descriptions                           |
-| :-----------------------: | -------------------------------------- |
-|            -e             | vrai si fichier existe                 |
-|            -f             | vrai si fichier ordinaire              |
-|            -d             | vrai si fichier est répertoire         |
-|            -h             | vrai si fichier est un lien symbolique |
-|            -r             | vrai si fichier est lue                |
-|            -w             | vrai si fichier peut être écrite       |
-|            -x             | vrai si fichier est exécuter           |
-|            -s             | vrai si fichier a une taille > 0       |
+| Opérateurs |                        Exemples                        | Descriptions                                |
+| :--------: | :----------------------------------------------------: | :------------------------------------------ |
+|     -e     | <span style='font-size:18px'>`[[ -e Fichier ]]`</span> | Vrai, si fichier **existe**                 |
+|     -f     | <span style='font-size:18px'>`[[ -f Fichier ]]`</span> | Vrai, si fichier **ordinaire**              |
+|     -d     | <span style='font-size:18px'>`[[ -d Fichier ]]`</span> | Vrai, si fichier est **répertoire**         |
+|     -h     | <span style='font-size:18px'>`[[ -h Fichier ]]`</span> | Vrai, si fichier est un **lien symbolique** |
+|     -r     | <span style='font-size:18px'>`[[ -r Fichier ]]`</span> | Vrai, si fichier est **lue**                |
+|     -w     | <span style='font-size:18px'>`[[ -w Fichier ]]`</span> | Vrai, si fichier peut être **écrite**       |
+|     -x     | <span style='font-size:18px'>`[[ -x Fichier ]]`</span> | Vrai, si fichier est **exécuter**           |
+|     -s     | <span style='font-size:18px'>`[[ -s Fichier ]]`</span> | Vrai, si fichier a une taille > 0           |
 
-#### Exemples
+#### Exemples - Tests sur des fichiers
 
 ```bash
-[ -f "fic1" ]           # vrai s'il s'agit d'un fichier ordinaire
-[[ FILE1 -nt FILE2 ]]	# vrai si fichier 1 est plus récent que fichier 2
-[[ FILE1 -ot FILE2 ]]	# vrai si fichier 2 est plus récent que fichier 1
-[[ FILE1 -ef FILE2 ]]	# si les deux fichiers sont les mêmes
+[ -f "fichier1" ]               #  Vrai, s'il s'agit d'un fichier ordinaire
+[[ fichier1 -nt fichier2 ]]     #  Vrai, si fichier 1 est plus récent que fichier 2
+[[ fichier1 -ot fichier2 ]]     #  Vrai, si fichier 2 est plus récent que fichier 1
+[[ fichier1 -ef fichier2 ]]     #  Vrai, si les deux fichiers sont les mêmes
+[[ ! -w fichier ]]              #  Vrai, si le fichier ne peut être écrite
+[[ -r fichier -a -x fichier ]]  #  Vrai, si le fichier peut être lue ET être exécuter
+[[ -r fichier -o -w fichier ]]  #  Vrai, si le fichier peut être lue ET être écrite
 ```
 
 ### Test sur les chaînes de caractères
 
 #### Les opérateurs
 
-| Opérateurs de comparaison | Descriptions                         |
-| :-----------------------: | :----------------------------------- |
-|             =             | vrai si les deux valeurs sont égales |
-|            !=             | vrai si les deux valeurs différents  |
-|            -n             | vrai si la chaine n'est pas vide     |
-|            -z             | vrai si la chaîne est vide           |
-
-#### Exemples
-
-```bash
-var1="velo" ; var2="voiture"
-
-[ "$var1" == "$var2" ]   # le test retourne faux
-[ "$var1" != "$var2" ]   # le test retourne vrai
-
-var1="hello"; var2=""
-
-[ -n var1 ]   # vrai si variable n'est pas vide
-[ -z var2 ]   # vrai si variable vide
-```
+| Opérateurs |                         Exemples                         | Descriptions                              |
+| :--------: | :------------------------------------------------------: | :---------------------------------------- |
+|     ==     | <span style='font-size:18px'>`[[ "$a" == "$b" ]]`</span> | Vrai, si les deux valeurs **sont égales** |
+|     !=     | <span style='font-size:18px'>`[[ "$a" != "$b" ]]`</span> | Vrai, si les deux valeurs **différents**  |
+|     -n     |  <span style='font-size:18px'>`[[ -n chaine1 ]]`</span>  | Vrai, si la chaine **n'est pas vide**     |
+|     -z     |  <span style='font-size:18px'>`[[ -z chaine2 ]]`</span>  | Vrai, si la chaîne est **vide**           |
 
 ### Tests sur les entiers
 
@@ -145,38 +144,11 @@ var1="hello"; var2=""
 
 #### Les opérateurs
 
-| Opérateurs de comparaison | Descriptions                                                    |
-| :-----------------------: | :-------------------------------------------------------------- |
-|            -eq            | vrai si les deux valeurs sont égales                            |
-|            -ne            | vrai si les deux valeurs sont différentes                       |
-|            -lt            | vrai si la première valeur est inférieure à la seconde          |
-|            -le            | vrai si la première valeur est inférieure ou égale à la seconde |
-|            -gt            | vrai si la première valeur est supérieure à la seconde          |
-|            -ge            | vrai si la première valeur est supérieure ou égale à la seconde |
-
-#### Exemples
-
-```bash
-var1=13 ; var2=37
-
-[ $var1 -eq $var2 ]   # "==" : "a égale à b"
-[ $var1 -ne $var2 ]   # "!=" : "a différent de b"
-[ $var1 -lt $var2 ]   # "<"  : "a strictement inférieur à b"
-[ $var1 -gt $var2 ]   # ">"  : "a strictement supérieur à b"
-[ $var1 -le $var2 ]   # "<=" : "a inférieur ou égale à b"
-[ $var1 -ge $var2 ]   # ">=" : "a supérieur ou égale à b"
-```
-
-```bash
-#!/bin/bash
-
-# Combinaison de tests avec des opérateurs logiques
-# !  : Négation
-# -a : ET logique (and)
-# -o : OU logique (or)
-
-# Exemple
-[ ! -w fichier ]
-[ -r fichier -a -x fichier ]
-[ -r fichier -o -w fichier ]
-```
+| Opérateurs |                        Exemples                        | Equiv. | Descriptions                             |
+| :--------: | :----------------------------------------------------: | :----: | ---------------------------------------- |
+|    -eq     | <span style='font-size:18px'>`[[  $a -eq $b ]]`</span> |   ==   | Vrai, si a **égale à** b                 |
+|    -ne     | <span style='font-size:18px'>`[[ $a -ne $b ]]`</span>  |   !=   | Vrai, si a **différent de** b            |
+|    -lt     | <span style='font-size:18px'>`[[ $a -lt $b ]]`</span>  |   <    | Vrai, si a **strictement inférieur à** b |
+|    -le     | <span style='font-size:18px'>`[[ $a -gt $b ]]`</span>  |   >    | Vrai, si a **strictement supérieur à** b |
+|    -gt     | <span style='font-size:18px'>`[[ $a -le $b ]]`</span>  |   <=   | Vrai, si a **inférieur ou égale à** b    |
+|    -ge     | <span style='font-size:18px'>`[[ $a -ge $b ]]`</span>  |   >=   | Vrai, si a **supérieur ou égale à** b    |

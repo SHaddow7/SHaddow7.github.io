@@ -14,22 +14,12 @@ nav_order: 5
 
 ```bash
 #!/bin/bash
-cat /etc/passwd | while read -r line; do
-    # Traitement
-    echo "$line"
-done
-```
-
-#### Solution 2
-
-```bash
-#!/bin/bash
 while read -r line; do
     echo "$line"
 done </etc/passwd
 ```
 
-#### Solution 3
+#### Solution 2
 
 ```bash
 #!/bin/bash
@@ -41,7 +31,7 @@ done
 IFS=$old_IFS # rétablissement du séparateur de champ par défaut
 ```
 
-#### Solution 4
+#### Solution 3
 
 ```bash
 #!/bin/bash
@@ -51,6 +41,19 @@ while IFS=$'\n' read -r line; do
     echo "$line"
 done </etc/passwd
 IFS=$old_IFS # rétablissement du séparateur de champ par défaut
+```
+
+#### Solution 4
+
+{: .warning}
+Faite attention à cette solution. Cette solution créera deux processus, **toutes les variables** qui seront traitées à l'intérieur de la boucle while ne pourront pas être utilisées après la boucle.
+
+```bash
+#!/bin/bash
+cat /etc/passwd | while read -r line; do
+    # Traitement
+    echo "$line"
+done
 ```
 
 ### Ecriture dans des fichiers

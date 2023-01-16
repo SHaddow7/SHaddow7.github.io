@@ -2,31 +2,38 @@
 
 - [x] Ajouter des exemples des syntaxes des conditions / boucles
 - [x] Ajouter des exemples de lecture de fichier
-- [ ] Exclure les répertoires et fichiers qui ne sont pas utiles à la prod
 - [x] Ajouter le formatage des dates
 - [x] Récupération de l'heure, du jour, avec un format numérique afin de pouvoir travailler dessus
 - [x] Ajouter une section de formatage
 - [x] Regler le probleme avec eclude dans le fichier \_config.xml
-- [ ] # Remplacer un fuseau horaire TZ='America/New_York' date
 - [ ] Ajouter des exemples en plus avec le "read" / normal / password
 - [ ] http://www.man-linux-magique.net/index.html
-- [ ] Changer le propriétaire et le groupe d'un répertoire et tout ce qu'il contient (chown)
-- [ ] Equivalent à (because 0666 & ~022 = 0644; i.e. rw-r--r--).
 - [ ] format : ps -aux | cut -d" " -f1,1 | sort | uniq | grep -v "USER"
 - [x] Ajouter les alias
 - [ ] Ajouter des expressions régulières
 - [ ] Ajouter lire une seule caractere > read -n 1 reponse
-- [ ] Ajouter random : $(($RANDOM%200))  # Random number 0..199
+- [ ] Ajouter random : $(($RANDOM%200)) # Random number 0..199
 - [ ] Modifier test sur les fichiers
 - [ ] Ajouter les opérateurs pour les chaînes
 - [ ] Ajouter une partie flashcard
-- [ ] Ajouter cette ligne dans la partie gestion des processus
-```bash
-*    *    *    *    *  command(s)
-┬    ┬    ┬    ┬    ┬
-│    │    │    │    └─  Jour de la semaine   (0=Dimanche .. 6=Samedi)
-│    │    │    └──────  Mois                 (1..12)
-│    │    └───────────  Jour du mois         (1..31)
-│    └────────────────  Heure                (0..23)
-└─────────────────────  Minute               (0..59)
-```
+
+### Propre à java
+
+- [ ] Ajouter une partie java
+- [ ] Ajouter une partie boucle
+- [ ] Ajouter une partie variables
+- [ ] Ajouter une partie méthodes
+- [ ] Ajouter une partie les génériques
+- [ ] Architecture :
+  - Les bases du langages (variables, boucles, fonctions, etc...)
+  - Enumérations, héritages et tris
+  - Accés au données
+  - Eventuellement le projet java
+
+### Propre à POSTGRES
+
+- [ ] Réfléchir à l'architecture de cette section
+- [ ] Architecture :
+  - LID
+  - LDD
+  - LMD
