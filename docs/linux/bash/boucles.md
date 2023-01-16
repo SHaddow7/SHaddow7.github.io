@@ -3,7 +3,7 @@ layout: default
 title: Les boucles
 parent: Bash
 grand_parent: Linux
-nav_order: 3
+nav_order: 2
 ---
 
 ## Les structures itératives - while, until et for

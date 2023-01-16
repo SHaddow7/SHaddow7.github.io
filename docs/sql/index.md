@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Postgres
-nav_order: 5
-# has_children: true
-has_toc: false
+title: Postgresql
+nav_order: 4
+has_children: true
+has_toc: true
 ---
 
 {: .warning }

@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Les conditions
-nav_order: 1
 parent: Les bases
 grand_parent: Java
-has_toc: false
+nav_order: 2
 ---
 
 ## Les opérateurs
@@ -31,8 +30,11 @@ has_toc: false
 ## Syntaxes - if, if … else, etc
 
 ```java
-if( condition ) {
+if( boolean ) {
     // Traitement
+}
+else if ( boolean ) {
+    // Traitement, cas échéant
 }
 else {
     // Traitement, cas échéant
@@ -42,12 +44,12 @@ else {
 ## Syntaxes - Switch
 
 ```java
-switch(...) {
-    case ... :
+switch( expression ) {
+    case constante1 :
         // Traitement
         break;
     break;
-    case ... :
+    case constante2 :
         // Traitement
     break;
     default :

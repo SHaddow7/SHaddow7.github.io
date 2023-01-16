@@ -26,6 +26,10 @@
 - [ ] Ajouter une partie les génériques
 - [ ] Architecture :
   - Les bases du langages (variables, boucles, fonctions, etc...)
+    - Les variables
+    - Les boucles
+    - Les fonctions
+    - etc
   - Enumérations, héritages et tris
   - Accés au données
   - Eventuellement le projet java
