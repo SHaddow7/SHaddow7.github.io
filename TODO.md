@@ -20,9 +20,13 @@
 - [ ] Modifier test sur les fichiers
 - [ ] Ajouter les opérateurs pour les chaînes
 - [ ] Ajouter une partie flashcard
-- [ ] d
-- [ ] d
-- [ ] d
-- [ ] d
-- [ ] d
-- [ ] d
+
+```bash
+*    *    *    *    *  command(s)
+┬    ┬    ┬    ┬    ┬
+│    │    │    │    └─  Jour de la semaine   (0=Sun .. 6=Sat)
+│    │    │    └──────  Mois                 (1..12)
+│    │    └───────────  Jour du mois         (1..31)
+│    └────────────────  Heure                (0..23)
+└─────────────────────  Minute               (0..59)
+```
