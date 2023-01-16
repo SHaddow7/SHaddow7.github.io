@@ -15,3 +15,14 @@
 - [ ] format : ps -aux | cut -d" " -f1,1 | sort | uniq | grep -v "USER"
 - [x] Ajouter les alias
 - [ ] Ajouter des expressions régulières
+- [ ] Ajouter lire une seule caractere > read -n 1 reponse
+- [ ] Ajouter random : $(($RANDOM%200))  # Random number 0..199
+- [ ] Modifier test sur les fichiers
+- [ ] Ajouter les opérateurs pour les chaînes
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
