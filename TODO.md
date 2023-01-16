@@ -19,7 +19,7 @@
 - [ ] Ajouter random : $(($RANDOM%200))  # Random number 0..199
 - [ ] Modifier test sur les fichiers
 - [ ] Ajouter les opérateurs pour les chaînes
-- [ ] d
+- [ ] Ajouter une partie flashcard
 - [ ] d
 - [ ] d
 - [ ] d
