@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Les variables
-nav_order: 4
-parent: java
+#nav_order: 4
+parent: Java
 has_toc: false
 ---
  
