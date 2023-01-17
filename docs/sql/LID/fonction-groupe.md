@@ -5,7 +5,7 @@ parent: LID
 grand_parent: Postgresql
 ---
 
-## Agissent sur un ensemble de lignes
+## Fonctions de groupe
 
 #### Syntaxe
 
@@ -20,13 +20,18 @@ SELECT [ ALL | DISTINCT ]
 ;
 ```
 
-#### Les fonctions
+### Les fonctions
 
-| Fonctions  | Descriptions        |
-| :--------: | :------------------ |
-|  AVG(col)  | moyenne             |
-| COUNT(\*)  | anombre             |
-| COUNT(exp) | Pour sortir de psql |
-|  MAX(exp)  | maximum             |
-|  MIN(exp)  | minimum             |
-|  SUM(exp)  | somme               |
+| Fonctions      | Descriptions                 |
+| :------------- | :--------------------------- |
+| AVG(col)       | moyenne                      |
+| COUNT(nom_col) | nombre de valeurs non nulles |
+| COUNT(exp)     | Pour sortir de psql          |
+| MAX(exp)       | maximum                      |
+| MIN(exp)       | minimum                      |
+| SUM(exp)       | somme                        |
+
+| Fonctions        | Descriptions          |
+| :--------------- | :-------------------- |
+| GROUP BY nom_col |                       |
+| HAVING fonction  | éliminer des agrégats |
