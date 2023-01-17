@@ -5,7 +5,7 @@ parent: LID
 grand_parent: Postgresql
 ---
 
-## Les jointures internes
+## Les jointures externe
 
 ### INNER JOIN
 
@@ -20,6 +20,8 @@ SELECT * FROM nom_table1
 INNER JOIN nom_table2
 ON nom_table1.key = nom_table2.key ;
 ```
+
+## Les jointures internes
 
 ### LEFT JOIN
 
@@ -48,5 +50,3 @@ SELECT * FROM nom_table1
 RIGHT JOIN nom_table2
 ON nom_table1.key = nom_table2.key ;
 ```
-
-## Les jointures internes
