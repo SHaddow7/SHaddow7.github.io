@@ -8,43 +8,37 @@ has_toc: false
 
 ## Aides
 
+#### Syntaxes
+
 ```bash
-# Syntaxes
-man [ -s X ] nom-de-commande
-apropos [OPTIONS...] mot_clés
-info [OPTIONS...]...
+# Syntaxes                    #  Descriptions :
+man [ OPTIONS ] commande      #  Affiche le manuel d'une commande
+apropos [ OPTIONS ] mot_cle   #  Cherche le nom et la description des pages de manuel en utilisant des mots-clés
+info [ OPTIONS ] commande     #  Affiche des info. sur un logiciels/commandes
+whatis commande               #  Affiche une courte description d'une commande/programme
+which commande                #  Affiche le chemin d'accès complet d'une commande/programme exécutable
 ```
 
 #### Exemples
 
 ```bash
-man man # Obtient le manuel de man
-man 5 passwd
-man passwd.5
-man 1 bash
+man man              # Obtient le manuel de man
+man 5 passwd         # Affiche la section 5 du manuel de passwd
+man passwd.5         # Similaire à la commande précédente
+man 1 bash           # Affiche la section 1 du manule de bash
 ```
 
 ```bash
-# Lire la documentation de "info" avec `info`
-apropos info | grep '^info.*('
-man info
-info info
-info 5 info
+apropos alice                  # Recherche des commandes contenant le mot "alice"
+apropos reseau                 # Recherche des commandes contenant le mot "reseau"
+apropos info | grep '^info.*(' # Recherche des commandes contenant le mot "info"
+                               # et filtre uniquement les commandes commençant par "info."
 ```
 
 ```bash
-# Lire la documentation d'informations bash
-info bash
-info bash 'Bash Features'
-info bash 6
-info --apropos bash
-```
-
-```bash
-# Autres commandes
-whatis nom-de-commande # Obtenir des informations sur des commandes
-apropos "chaîne de recherche"
-which commande # quelle commande sera lancer
+info info                  # Affiche la page d'aide le commande "info"
+info bash                  # Affiche la page d'aide le commande "bash"
+info bash 6                # Affiche les informations relatives à la section 6 du manuel bas
 ```
 
 ## Quelques commandes Unix
@@ -52,30 +46,29 @@ which commande # quelle commande sera lancer
 #### Commandes utiles à connaitre
 
 ```bash
-apropos # Liste les pages du manuel concernant un sujet
-passwd  # Changer son propre mot de passe
-exit    # Quitte l'interface du terminal
-man     # Affiche le manuel pour des commandes
-who     # Affiche qui est connecté
-mount   # Affiche les systèmes de fichiers qui sont montés
-echo    # Affiche le texte « texte » passé en argument
-cat     # Affiche le contenu du fichier «fichier» passé en argument
-type    # Obtenir les informations d'une commande
+cat           #  Affiche le contenu du fichier «fichier» passé en argument
+echo          #  Affiche le texte « texte » passé en argument
+exit          #  Quitte l'interface du terminal
+mount         #  Affiche les systèmes de fichiers qui sont montés
+passwd        #  Change son propre mot de passe
+passwd  alice #  Change le mot de passe d'alice
+type          #  Obtenir les informations d'une commande
 ```
 
 #### Commande sur les informations systèmes
 
 ```bash
-date               # Affiche la date du jour
-cal                # Affiche le calendrier
-uptime             # Affiche la disponibilité
-whoami             # Affiche le nom de l'utilisateur
-uname -a           # Informations du noyau
-cat /proc/cpuinfo  # Informations sur le cpu
-df -h              # Espace disque libre
-du -h              # Espace disque occupé par un fichier
-free               # Etat de la mémoire et de la swap
-wget               # Utiliser pour télécharger des fichiers depuis un serveur
+date               #  Affiche la date du jour
+cal                #  Affiche le calendrier
+uptime             #  Affiche la disponibilité
+whoami             #  Affiche le nom de l'utilisateur
+who                #  Affiche qui est connecté
+uname -a           #  Informations du noyau
+cat /proc/cpuinfo  #  Informations sur le cpu
+df -h              #  Espace disque libre
+du -h              #  Espace disque occupé par un fichier
+free               #  Etat de la mémoire et de la swap
+wget               #  Utiliser pour télécharger des fichiers depuis un serveur
 ```
 
 #### Les catégories de commandes

@@ -112,13 +112,23 @@ ${var,,}             # toute la chaîne en minuscule
 
 ## Intéraction avec l’utilisateur
 
-#### Descriptions
+#### Syntaxes
+
+{: .note}
+
+> La commande `read` permet de lire une ligne d'entrée à partir de l'entrée standard et de stocker les données lues dans une variable. Elle va arreter l'exécution du programme en attendant la valeur avant de poursuivre l'exécution de celle-ci.
 
 ```bash
-#   La commande **read**
-#   Stoppe l'exécution du programme
-#   Attend une valeur
-#   Enregistre le contenu dans une ou plusieurs variables
+# Syntaxe
+read [OPTIONS] [ VARIABLE | TABLEAU ]
+
+# Options
+#    -p : Affiche un message à l'utilisateur avant de lire l'entrée
+#    -a : Lit l'entrée dans un tableau de varaible plutôt qu'une variable unique
+#    -r : Lit l'entrée brute, sans interpréter les caractères spéciaux (ex : les antislashs)
+#    -n : Lit un certain nombre de caractères seulement
+#    -s : Lit l'entrée (en mode silencieux) sans afficher les caractères entrés
+#    -d : Spécifie un caaractère de fiin de ligne différent de celui par défaut ('\n')
 ```
 
 #### Exemples

@@ -55,7 +55,9 @@ zip [options] archive.zip fichier1 fichier2 ...
 #    -r : Créer une archive en traversant la structure de répertoire entière récursive
 #    -[0-9] : Permet de spécifier le niveau de compression (par défaut = -6)
 #    -e : Créer un fichier ZIP protégé par un mot de passe
+```
 
+```bash
 # Exemples
 zip archive.zip fichier1.txt fichier2.txt
 zip -­r archive.zip repertoire
@@ -74,7 +76,9 @@ unzip [options] archive.zip fichier1 fichier2 ...
 
 # Options
 #    -t : Teste les fichiers archive
+```
 
+```bash
 # Exemples
 unzip archive.zip      # Liste, Teste ou Extrait des fichiers à partir d'une archive ZIP
 unzip -­t archive.zip   # Teste tous les fichiers archive

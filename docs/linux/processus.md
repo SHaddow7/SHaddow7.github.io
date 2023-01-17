@@ -56,30 +56,41 @@ ps aux | sort -nk 4
 
 ```bash
 pstree [-p] [-l] [-s]
-htop     # Classement en direct des processus
-top      # Classement en direct des processus
-free     # Afficher la mémoire libre
-vmstat n # Afficher la mémoire virtuelle toutes les n secs:
+htop        # Classement en direct des processus
+top         # Classement en direct des processus
+free        # Afficher la mémoire libre
+vmstat n    # Afficher la mémoire virtuelle toutes les n secs:
 ```
 
 ### Intéraction avec des processus
 
+#### Syntaxes
+
+```bash
+# Syntaxe - Info : envoie un signal au processus
+kill [ OPTIONS ] processus_id         # La forme la plus simple
+kill [ -SIGTERM | -15 ] processus_id  # Demande l'arret du processus
+kill [ -SIGKILL | -9 ] processus_id   # Demande au processus de se terminer
+
+# Options
+#   -s <signal>      : Spécifier le signal à envoyer au processus
+#   -l [signal]      : Affiche la liste des signaux disponibles sur l'os et leut numéro associé.
+#   -<signal_name>   : Spécifier le nom du signal à envoyer au processus
+#   -<signal_number> : Spécifier le numéro du signal à envoyer au processus
+```
+
 ```bash
 # Syntaxes
-kill [-s signal_name] pid
+killall [ OPTIONS ] nom_processus   #  Tue un processus par son nom
+pkill nom_processus                 #  Tue un processus par son nom
+xkill [ OPTIONS ]                   #  Tue une application en mode graphique
+```
 
-kill -l [exit_status]
-kill -signal_name pid ...
-kill -signal_number pid ...
+#### Exemples
 
-kill [ -SIGTERM | -15 ] PID  # Demande l'arret du processus
-kill [ -SIGKILL | -9 ] PID   # Demande au processus de se terminer
-kill ­-9 -­1                   # Tue tous processus que l'on a le droit de tuer
-killall name                 # Tue tous les processsus qui commence par le nom
-xkill                        # Tue une application en mode graphique
-pkill nom_processus          # Tue un processus par son nom
-
-# Exemples
+```bash
+kill -s INT 123   # Demande au processus 123 de s'arrêter de manière propre
+kill ­-9 -­1        # Tue tous processus que l'on a le droit de tuer
 kill %numero_job  # Terminer un job en arrière-plan en indiquant son n° de job
 kill %+           # Terminer le job courant
 kill %-           # Terminer le job précédent

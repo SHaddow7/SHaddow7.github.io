@@ -1,6 +1,6 @@
 ---
 layout: default
-title: String
+title: L'API String
 parent: Les bases
 grand_parent: Java
 nav_order: 3
@@ -11,6 +11,11 @@ nav_order: 3
 ###
 
 ### Quelques méthodes de String - Creer un tableau qui liste quelques methodes de l'api string
+
+String first = "John";
+String last = "Doe";
+String name = first + " " + last;
+System.out.println(name);
 
 ```java
 // Exemples                           Résultats
