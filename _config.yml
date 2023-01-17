@@ -56,3 +56,8 @@ callouts:
   custom:
     color: blue
     opacity: 0.3
+  # callout definition
+  definition:
+    title: definition
+    color: purple
+    opacity: 0.3
