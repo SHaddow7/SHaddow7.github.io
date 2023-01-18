@@ -22,6 +22,7 @@ parent: Linux
 | export LC_ALL=    | Efface le contenu de la variable                                   |
 | unset LCALL       | Supprimer complètement une variable d'environnement                |
 | $MANPATH          | Liste de dossiers où le système doit chercher les pages de manuel. |
+| $LOGNAME          | Nom utilisateur                                                    |
 
 ### Quelques variables de paramètres régionaux
 
