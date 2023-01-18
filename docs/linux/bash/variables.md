@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Les variables
-parent: Bash
+parent: Bash - Mémo
 grand_parent: Linux
 nav_order: 1
 ---
@@ -30,6 +30,78 @@ toto=2
 maVariable="alice"
 var="toto"
 echo "bonjour $var, il y a $(who | wc -l) utilisateurs connectés"
+```
+
+## Les variables positionnelles
+
+```bash
+$0                     #  Contient le nom du script
+$1, $2 … $9, ${10}...  #  Contiennent les arguments d'appel du script
+$#                     #  Correspond au nombre d'arguments
+$@                     #  La liste de tous les arguments du script
+$*                     #  La liste de tous les arguments du script
+shift                  #  Décale l'affectation des numéros de variables positionnelles sur la droite
+```
+
+#### Exemples
+
+```bash
+# $0  : monscript.sh
+# $1  : arg1
+# $2  : arg2
+# $3  : arg3
+# $#  : dans ce cas ci, il s'agit du 3
+# $@  : arg1 arg2 arg3
+./monscript.sh arg1 arg2 arg3
+```
+
+```bash
+./script.sh arg1 arg2 arg3
+#  Aprés un shift : on se déplace vers la droite, on change d'argument
+./script.sh arg2 arg3
+```
+
+## Intéraction avec l’utilisateur
+
+#### Syntaxes
+
+{: .note}
+
+> La commande `read` permet de lire une ligne d'entrée à partir de l'entrée standard et de stocker les données lues dans une variable. Elle va arreter l'exécution du programme en attendant la valeur avant de poursuivre l'exécution de celle-ci.
+
+```bash
+# Syntaxe
+read [OPTIONS] [ VARIABLE | TABLEAU ]
+
+# Options
+#    -p :  Affiche un message à l'utilisateur avant de lire l'entrée
+#    -a :  Lit l'entrée dans un tableau de varaible plutôt qu'une variable unique
+#    -r :  Lit l'entrée brute, sans interpréter les caractères spéciaux (ex : les antislashs)
+#    -n :  Lit un certain nombre de caractères seulement
+#    -s :  Lit l'entrée (en mode silencieux) sans afficher les caractères entrés
+#    -d :  Spécifie un caaractère de fiin de ligne différent de celui par défaut ('\n')
+```
+
+#### Exemples
+
+```bash
+#  Attend que l'utilisateur saisisse une valeur avant de continuer le script,
+#  et l'affecte dans la variable "variable"
+read variable
+```
+
+```bash
+#  Affiche la chaîne et attends que l'utilisateur saisît une valeur avant de continuer le script,
+#  et l'affecte dans la variable "note"
+read -p  "Saisir une valeur : " variable
+```
+
+```bash
+read entree_utilisateur
+while [ condition ]; do
+    #  Traitment
+    read entree_utilisateur
+done
 ```
 
 ### Substitution des variables
@@ -108,76 +180,6 @@ ${var^^}             # toute la chaîne en majuscule
 ${var,motif}         # modifie la chaîne, le motif en minuscule
 ${var,,motif}        # modifie la chaîne, tous les motifs en minuscule
 ${var,,}             # toute la chaîne en minuscule
-```
-
-## Intéraction avec l’utilisateur
-
-#### Syntaxes
-
-{: .note}
-
-> La commande `read` permet de lire une ligne d'entrée à partir de l'entrée standard et de stocker les données lues dans une variable. Elle va arreter l'exécution du programme en attendant la valeur avant de poursuivre l'exécution de celle-ci.
-
-```bash
-# Syntaxe
-read [OPTIONS] [ VARIABLE | TABLEAU ]
-
-# Options
-#    -p : Affiche un message à l'utilisateur avant de lire l'entrée
-#    -a : Lit l'entrée dans un tableau de varaible plutôt qu'une variable unique
-#    -r : Lit l'entrée brute, sans interpréter les caractères spéciaux (ex : les antislashs)
-#    -n : Lit un certain nombre de caractères seulement
-#    -s : Lit l'entrée (en mode silencieux) sans afficher les caractères entrés
-#    -d : Spécifie un caaractère de fiin de ligne différent de celui par défaut ('\n')
-```
-
-#### Exemples
-
-```bash
-#!/bin/bash
-echo "Donnez une note entre 0 et 20 :"
-read note
-echo "Votre note est ${note}"
-# > [SORTIE] - Résultat du programme
-_Donnez une note entre 0 et 20 : 4 Votre note est 4_
-```
-
-```bash
-#!/bin/bash
-read -p  "Quel est votre prénom ? " note
-echo "Salut ${note} !"
-# > [SORTIE] - Résultat du programme
-Quel est votre prénom ? Marc
-Salut Marc !
-```
-
-## Les variables positionnelles
-
-```bash
-$0                      # contient le nom du script
-$1, $2 … $9, ${10}...   # contiennent les arguments d'appel du script
-$#                      # le nombre d'arguments
-$*                      # la liste de tous les arguments du script
-$@                      # la liste de tous les arguments du script
-shift                   # décale l'affectation des numéros de variables positionnelles sur la droite
-```
-
-#### Exemples
-
-```bash
-# Exemple 1
-# $0  : monscript.sh
-# $1  : arg1
-# $2  : arg2
-# $3  : arg3
-# $#  : dans ce cas ci, il s'agit du 3
-# $@  : arg1 arg2 arg3
-./monscript.sh arg1 arg2 arg3
-
-# Exemple 2
-./script.sh arg1 arg2 arg3
-#  Aprés un shift : on se déplace vers la droite, on change d'argument
-./script.sh arg1 arg2 arg3
 ```
 
 ## Liens

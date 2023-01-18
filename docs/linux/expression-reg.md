@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Les expressions régulières
+title: Expressions régulières
 parent: Linux
+nav_order: 7
 ---
 
 ## Les ancres

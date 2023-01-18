@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Les variables d’environnements
-#nav_order: 1
+title: Variables d’environnements
 parent: Linux
+nav_order: 8
 ---
 
 ## Les variables d’environnements
@@ -19,10 +19,10 @@ parent: Linux
 | $PATH             | Affiche le chemin de recherche                                     |
 | $HOME             | Affiche le répertoire d’accueil                                    |
 | $SHELL            | Le shell courant                                                   |
+| $MANPATH          | Liste de dossiers où le système doit chercher les pages de manuel. |
+| $LOGNAME          | Affiche le nom d'utilisateur courant                               |
 | export LC_ALL=    | Efface le contenu de la variable                                   |
 | unset LCALL       | Supprimer complètement une variable d'environnement                |
-| $MANPATH          | Liste de dossiers où le système doit chercher les pages de manuel. |
-| $LOGNAME          | Nom utilisateur                                                    |
 
 ### Quelques variables de paramètres régionaux
 

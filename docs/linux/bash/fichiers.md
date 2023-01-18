@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Les fichiers
-parent: Bash
+parent: Bash - Mémo
 grand_parent: Linux
-nav_order: 5
+nav_order: 4
 ---
 
 ## Opérations avec les fichiers

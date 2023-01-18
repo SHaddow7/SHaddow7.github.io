@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Vim
+title: Vim - Mémo
 parent: Linux
+nav_order: 10
 ---
 
 ## Aides mémoire vim

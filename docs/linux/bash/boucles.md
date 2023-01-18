@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Les boucles
-parent: Bash
+parent: Bash - Mémo
 grand_parent: Linux
 nav_order: 2
 ---

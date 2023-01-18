@@ -1,6 +1,6 @@
 ---
 layout: default
-title: La substitution des commandes
+title: Substitution des commandes
 parent: Les Bases
 grand_parent: Linux
 nav_order: 5

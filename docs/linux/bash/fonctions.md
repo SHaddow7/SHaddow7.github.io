@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Les fonctions
-parent: Bash
+parent: Bash - Mémo
 grand_parent: Linux
-nav_order: 4
+nav_order: 5
 ---
 
 ## Les fonctions
@@ -20,7 +20,7 @@ nav_order: 4
 ### Définition des fonctions
 
 ```bash
-# Forme 1 : cette version est un bug pour les autres shell
+# Forme 1 :
 maFontion() {
     echo "hello $1"
 }
@@ -104,5 +104,3 @@ function usage {
     exit "$code_retour"
 }
 ```
-
-

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bash avancees
-parent: Bash
+parent: Bash - Mémo
 grand_parent: Linux
 has_toc: false
 nav_order: 6

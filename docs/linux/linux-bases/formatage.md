@@ -33,5 +33,5 @@ date -d @1623152000                              #  Convertis un timestamp UNIX 
 echo "Nombre de cpu : $(lscpu | grep ^CPU(s): | tr -s " " | cut -d" " -f2,2)"
 # Créer une archive contenant tous les fichers/répertoire de /home/stag
 # L'archive aura un format : archive_20230115-07-18.tar.gz
-tar -zcvf /tmp/archive_$(date +"%Y%m%d-%H-%M").tar.gz /home/stag
+tar -czf /tmp/archive_$(date +"%Y%m%d-%H-%M").tar.gz /home/stag
 ```
