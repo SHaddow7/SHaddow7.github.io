@@ -105,36 +105,4 @@ function usage {
 }
 ```
 
-#### Exemples - Quelques fonctions utiles
-
-```bash
-#!/bin/bash
-# Fonction qui décompresse un archive en fonction de son extension
-function decompresser_fichier {
-    local fichier=$1
-    local code_erreur=81
-    local code_retour=80
-
-    if [[ -f "$fichier" ]]; then
-        case $fichier in
-          *.tar.bz2) tar xvjf "$fichier" ;;
-          *.tar.gz) tar xvzf "$fichier" ;;
-          *.bz2) bunzip2 "$fichier" ;;
-          *.gz) gunzip "$fichier" ;;
-          *.tar) tar xvf "$fichier" ;;
-          *.tbz2) tar xvjf "$fichier" ;;
-          *.tgz) tar xvzf "$fichier" ;;
-          *.zip) unzip "$fichier" ;;
-          *) echo "Le fichier '$fichier' ne peut pas être extraite" ;;
-        esac
-    else
-        echo "Le fichier '$fichier' n'est pas valide"
-        exit $code_erreur
-    fi
-
-    return $code_retour
-}
-```
-
-
 
