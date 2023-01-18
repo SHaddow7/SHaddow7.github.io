@@ -96,7 +96,7 @@ function usage {
     local nom_programme=$(basename "$0")
 
     echo -e "${msg_err}"
-    echo -e "USAGE : ${nom_programme} ${arg_attendu}\n" >$2
+    echo -e "USAGE : ${nom_programme} ${arg_attendu}\n" >&2
 
     [ -n "$msg_cmp" ] && echo -e "${msg_cmp}"
 
