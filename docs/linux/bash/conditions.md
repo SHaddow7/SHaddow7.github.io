@@ -105,13 +105,13 @@ esac
 | Opérateurs |                        Exemples                        | Descriptions                                |
 | :--------: | :----------------------------------------------------: | :------------------------------------------ |
 |     -e     | <span style='font-size:18px'>`[[ -e Fichier ]]`</span> | Vrai, si fichier **existe**                 |
-|     -f     | <span style='font-size:18px'>`[[ -f Fichier ]]`</span> | Vrai, si fichier **ordinaire**              |
+|     -f     | <span style='font-size:18px'>`[[ -f Fichier ]]`</span> | Vrai, si fichier **ordinaire** et **existe**|
 |     -d     | <span style='font-size:18px'>`[[ -d Fichier ]]`</span> | Vrai, si fichier est **répertoire**         |
 |     -h     | <span style='font-size:18px'>`[[ -h Fichier ]]`</span> | Vrai, si fichier est un **lien symbolique** |
 |     -r     | <span style='font-size:18px'>`[[ -r Fichier ]]`</span> | Vrai, si fichier est **lue**                |
 |     -w     | <span style='font-size:18px'>`[[ -w Fichier ]]`</span> | Vrai, si fichier peut être **écrite**       |
 |     -x     | <span style='font-size:18px'>`[[ -x Fichier ]]`</span> | Vrai, si fichier est **exécuter**           |
-|     -s     | <span style='font-size:18px'>`[[ -s Fichier ]]`</span> | Vrai, si fichier a une taille > 0           |
+|     -s     | <span style='font-size:18px'>`[[ -s Fichier ]]`</span> | Vrai, si fichier n'est pas vide             |
 
 #### Exemples - Tests sur des fichiers
 
