@@ -13,6 +13,7 @@ nav_order: 6
 date                                             #  Lundi 09 janvier 2023 20:52 ...
 date +"%A"                                       #  Lundi
 date +"%B"                                       #  Janvier
+date +"%u"                                       #  Le jour de la semaine, (1: Lundi à 7: Dimanche)
 date -d "2000-11-22 09:10:15"                    #  Permet de changer la date de l'os
 date +"Annee: %Y, Mois: %m, Jour: %d"            #  Annee: 2023, Mois: 01, Jour: 09
 date "+DATE: %D%nHEURE: %T"                      #  DATE: 09/01/23 \n HEURE: 20:56:..
