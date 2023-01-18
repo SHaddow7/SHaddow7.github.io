@@ -120,14 +120,11 @@ function decompresser_fichier {
           *.tar.bz2) tar xvjf "$fichier" ;;
           *.tar.gz) tar xvzf "$fichier" ;;
           *.bz2) bunzip2 "$fichier" ;;
-          *.rar) unrar x "$fichier" ;;
           *.gz) gunzip "$fichier" ;;
           *.tar) tar xvf "$fichier" ;;
           *.tbz2) tar xvjf "$fichier" ;;
           *.tgz) tar xvzf "$fichier" ;;
           *.zip) unzip "$fichier" ;;
-          *.Z) uncompress "$fichier" ;;
-          *.7z) 7z x "$fichier" ;;
           *) echo "Le fichier '$fichier' ne peut pas être extraite" ;;
         esac
     else
