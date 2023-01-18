@@ -16,6 +16,9 @@
 - [ ] Modifier test sur les fichiers
 - [ ] Ajouter les opérateurs pour les chaînes
 - [ ] Ajouter une partie flashcard
+- [ ] Ajouter des exemples de fonctions utiles en bash
+
+
 
 ### Propre à java
 
