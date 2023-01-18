@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Planificateur de tâches
+title: Planification de tâches
 parent: Linux
 nav_order: 6
 ---

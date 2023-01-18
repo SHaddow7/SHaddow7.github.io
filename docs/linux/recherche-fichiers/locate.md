@@ -39,4 +39,8 @@ locate -b "/home"
 locate -r "exemple"
 ```
 
-> Les fichiers qui ont été récemment créer ne serait pas encore enregistrer dans la base de données de Locate. La base de données de locate est mise à jour au moin une fois par jour. Il est possible de mettre à jour cette base de données en utilisant la commade : `updatedb`
+{: .note}
+
+> Les fichiers qui ont été récemment créer ne serait pas encore enregistrer dans la base de données de Locate.
+>
+> La base de données de locate est mise à jour au moins une fois par jour. Il est possible de mettre à jour cette base de données en utilisant la commande `updatedb`
