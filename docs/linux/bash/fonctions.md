@@ -83,24 +83,27 @@ maFontion
 ```bash
 #!/bin/bash
 
-# Fonctions : Usage
-#   s1 : code retour
-#   s2 : argument attendu
-#   s3 : message d'erreur
-#   s4 : message complémentaire
+# Fonction d'Usage
+# $1 : code_retour
+# $2 : argument_attendu
+# $3 : message_erreur
+# $4 : msg_complementaire
 function usage {
+    local nomprog=$(basename "$0")
     local code_retour=$1
     local arg_attendu=$2
     local msg_err=$3
     local msg_cmp=$4
-    local nom_programme=$(basename "$0")
 
-    echo -e "${msg_err}"
-    echo -e "USAGE : ${nom_programme} ${arg_attendu}\n" >&2
+    echo -e "$nomprog : $msg_err\n" >&2
+    echo -e "USAGE : $nomprog $arg_attendu\n" >&2
 
-    [ -n "$msg_cmp" ] && echo -e "${msg_cmp}"
+    [ -n "$msg_cmp" ] && echo -e "$msg_cmp" >&2
 
-    # code retour
     exit "$code_retour"
 }
+
+
+
+
 ```
