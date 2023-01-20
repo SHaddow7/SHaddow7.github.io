@@ -1,10 +1,7 @@
 ---
 layout: default
 title: Wireshark - Mémo
-# nav_order: 5
 parent: Réseaux
-has_children: true
-has_toc: true
 ---
 
 # Wireshark - Mémo
