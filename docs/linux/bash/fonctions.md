@@ -102,8 +102,4 @@ function usage {
 
     exit "$code_retour"
 }
-
-
-
-
 ```
