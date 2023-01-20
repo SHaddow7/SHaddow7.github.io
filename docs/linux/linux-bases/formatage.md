@@ -26,7 +26,7 @@ date -d @1623152000                              #  Convertis un timestamp UNIX 
                                                  #  mar. 08 juin 2021 07:33:20 EDT
 ```
 
-## Exemples de formatages
+### Exemples de formatages
 
 ```bash
 # Afficher le nombre de cpu
