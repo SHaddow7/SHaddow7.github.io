@@ -6,7 +6,11 @@ grand_parent: Linux
 nav_order: 2
 ---
 
-## La sécurité des fichiers : les droits
+# La sécurité des fichiers : les droits
+
+## chmod
+
+---
 
 {: .note }
 
@@ -72,24 +76,36 @@ chmod -­R a+rx rép/
 > chmod u=rwx,g=rwx,o=rwx fic
 > ```
 
-## umask et chown
+## umask
+
+---
+
+{: .note }
+
+> La commande `umask` permet de définir les permissions par défaut pour les nouveaux fichiers et répertoires créés dans un système de fichiers.
+>
+> Le masque qui est mis en argument permet de déterminer les permissions qui ne seront pas accordées aux nouveaux fichiers et aux répertoires.
+
+#### Syntaxe
 
 ```bash
-# Changement du propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
-chown nom_utilisateur [fic | rep]
+# Syntaxe
+umask [ DROITS ]
+```
+
+#### Exemples
+
+```bash
+umask       #  Affiche le masque actuel en notation octale
 ```
 
 ```bash
-# Positionne des droits sur les actions de l’utilisateur durant sa session.
-umask [ droits ]
-
-# Exemples
-umask       #  Affiche le masque actuel en notation octale
-
 umask 000   #  ( ne fait rien )
 umask 022   #  ( rw-r—-r-- )
 umask 027   #  ( rw-r----- )
+```
 
+```bash
 umask u-rx  #  Retire les droits de lecture et d'exécution pour le propriétaire
 umask g-wx  #  Retire les droits de modification et d'exécution pour le groupe
 umask o-rw  #  Retire les droits de modification et de lecture pour les autres utilisateurs
@@ -99,3 +115,12 @@ umask o-rw  #  Retire les droits de modification et de lecture pour les autres u
 
 > Il est important de noter que la commande "umask" ne modifie pas les permissions des fichiers et répertoires existants, mais uniquement celles des nouveaux fichiers et répertoires créés par la suite.
 > Par défaut, les droits pour utilisateur sont à 777 (rwxrwxrwx) pour les répertoire, 666 (-wx-wx-wx) pour les fichiers.
+
+## chown
+
+---
+
+```bash
+# Changement du propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
+chown nom_utilisateur [fic | rep]
+```
