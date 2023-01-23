@@ -31,7 +31,7 @@ ls [ OPTIONS ] # Liste les fichiers «ordinaires» dans le rép. courant
 
 ```bash
 mkdir rép                     # Créer un répertoire
-mkdir ­-p rép1/rép2            # Créer des répertoires imbriqués
+mkdir -p rép1/rép2            # Créer des répertoires imbriqués et ne génére pas d'erreur 
 ```
 
 #### Exemples - cd
@@ -51,7 +51,7 @@ cd ~                          # Revenir au répertoire courrant
 cp [-r] source destination    # copie de fichiers
 cp fichier_orig fichier_dest  # Copier un fichier vers un autre
 cp fichier1 fichier2 rép      # Copier des fichiers dans un rep.
-cp ­-r rép_orig rép_dest       # Copier des répertoires entiers (rec.)
+cp -r rép_orig rép_dest       # Copier des répertoires entiers (rec.)
 ```
 
 #### Exemples - mv
@@ -65,7 +65,7 @@ mv fichier_orig fichier_dest  # Renommer un fichier, lien ou  répertoire
 ```bash
 rm [-r] fichier           # Effacer un ou plusieurs fichiers
 rm fichier1 fichier2      # Supprimer des fichiers ou des liens
-rm ­-rf rép                # Supprimer un répertoire non vide (force)
+rm -rf rép                # Supprimer un répertoire non vide (force)
 rmdir rép                 # Supprimer un répertoire (remove dir)
 ```
 
