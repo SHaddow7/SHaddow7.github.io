@@ -77,21 +77,22 @@ pstree [-p] [-l] [-s]
 
 ## Intéraction avec des processus
 
+### Quelques commandes
+
+```bash
+nohup       #  Permet de continuer à utiliser un processus même après avoir fermé le terminal.
+htop        #  Classement en direct des processus
+top         #  Classement en direct des processus
+free        #  Affiche la mémoire libre
+vmstat n    #  Affiche la mémoire virtuelle toutes les n secs
+```
+
 ### Identifiants d'un processus
 
 ```bash
 echo $BASHPID  #  Affiche l'identifiant (PID) du processus actuel de Bash.
 echo $$        #  Affiche l'identifiant (PID) du processus en cours d'exécution.
 echo $PPID     #  Affiche l'identifiant (PID) du processus parent du processus en cours d'exécution.
-```
-
-### Obtenir des informations sur les processus
-
-```bash
-htop        #  Classement en direct des processus
-top         #  Classement en direct des processus
-free        #  Affiche la mémoire libre
-vmstat n    #  Affiche la mémoire virtuelle toutes les n secs
 ```
 
 ### kill / pkill / etc .. - Terminer un processus

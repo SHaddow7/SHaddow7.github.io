@@ -31,13 +31,13 @@
 
 # Processus
 
-- [ ] Faire une partie pstree, htop, top, free, vmstat n
-- [ ] plstree -pls $$
-- [ ] Mettre une définition du pstree
-- [ ] ex : plstree -pls [ processus_id ]
-- [ ] Mettre la syntaxe bg et fg
+- [x] Faire une partie pstree, htop, top, free, vmstat n
+- [x] plstree -pls $$
+- [x] Mettre une définition du pstree
+- [x] ex : plstree -pls [ processus_id ]
+- [x] Mettre la syntaxe bg et fg
 - [ ] Ajouter des exemples avec le renvoie des résultats vers un fichier.log
-- [ ] Ajouter le signal 15
+- [x] Ajouter le signal 15
 - [ ] %2 Remplace la commande fg et jobs
 
 # Personnel
