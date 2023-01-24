@@ -1,4 +1,4 @@
-# quels sont les points à ajouter ? (sur le site)
+# Quels sont les points à ajouter ? (sur le site)
 
 - [ ] Ajouter l'argument -i de GREP
 - [ ] Revoir la syntaxe du CHMOD
@@ -33,3 +33,8 @@
 - [ ] Ajouter des exemples avec le renvoie des résultats vers un fichier.log
 - [ ] Ajouter le signal 15
 - [ ] %2 Remplace la commande fg et jobs
+
+# Personnel
+
+- [ ] Ajouter les exemples de la creation d'un ps personnaliser
+
