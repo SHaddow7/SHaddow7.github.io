@@ -1,10 +1,10 @@
 # quels sont les points à ajouter ? (sur le site)
 
-- [ ] ajouter l'argument -i de GREP
+- [ ] Ajouter l'argument -i de GREP
 - [ ] Revoir la syntaxe du CHMOD
-- [ ] sd
-- [ ] sd
-- [ ] sd
+- [ ] Faire un script pour le décalage des arguments
+- [ ] Expression régulière, ajouter des exemples plus explicite
+- [ ] Ajout des méta caractères de bash
 - [ ] sd
 - [ ] sd
 - [ ] sdds
