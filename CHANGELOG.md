@@ -21,6 +21,13 @@
 - [ ] Creer un fichier : >fichier.txt
 - [ ] note - à ajouter : si un fichier existe, on se refère au droits du fichiers
 - [ ] Ajout des exemples pour creer un nouveau fichier, 
+- [ ] Ajouter "pidof" pour les processus
+- [ ] Ajouter les options de ECHO, READ
+- [ ] Exemple de lecutr des fleches de directions (a part)
+- [ ] Intéractivité de grep pour le test des ER
+- [ ] # -------- ID du processus ppp ----- > utiliser dans les exemples et dans le scripts
+- [ ] Lister tous les meta caractères de BASH
+- [ ] (A|B) -> [AB] (A utiliser uniquement sur les motifs !!!)
 
 
 # Processus
