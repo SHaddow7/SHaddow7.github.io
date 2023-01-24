@@ -29,4 +29,7 @@
 - [ ] plstree -pls $$
 - [ ] Mettre une définition du pstree
 - [ ] ex : plstree -pls [ processus_id ]
-- [ ] 
+- [ ] Mettre la syntaxe bg et fg 
+- [ ] Ajouter des exemples avec le renvoie des résultats vers un fichier.log
+- [ ] Ajouter le signal 15
+- [ ] %2 Remplace la commande fg et jobs
