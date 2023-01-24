@@ -86,7 +86,7 @@ chmod -­R a+rx rép/
 >
 > Le masque qui est mis en argument permet de déterminer les permissions qui ne seront pas accordées aux nouveaux fichiers et aux répertoires.
 >
-> Par défaut, les droits pour utilisateur sont à 777 (rwxrwxrwx) pour les répertoire, 666 (rw-rw-rw-) pour les fichiers.
+> Par défaut, les droits pour les répertoires sont à 777 (rwxrwxrwx) et 666 (rw-rw-rw-) pour les fichiers.
 
 
 #### Syntaxe
