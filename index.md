@@ -6,9 +6,11 @@ nav_order: 1
 
 # Le raccourcis
 
-Ce site a été conçu pour synthétiser toutes les notions vues en cours et sert également de mémento.
+Bienvenue sur Le raccourcis, ce site a été conçue pour synthétiser certaines notions qui ont été vues en cours et sert également de mémento.
+
+Vous trouverez quelques commandes/exemples/techniques qui peuvent être utiles.
 
 ---
 
 {: .note }
-Attention, ce site web est toujours en cours de construction. Si certains commandes ou définitions que j'ai mis ne sont pas correct n'hésiter pas à faire remonter.
+Attention, ce site web est toujours en cours de construction. Si certains commandes ou définitions que j'ai mis ne sont pas correct n'hésiter pas à faire remonter sur le discord.

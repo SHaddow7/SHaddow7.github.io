@@ -17,6 +17,7 @@ grep [OPTIONS] MOTIF [FICHIER...]
 grep [OPTIONS] [-e MOTIF | -f FICHIER] [FICHIER...]
 
 # Options
+#    -E : Permet d'utiliser des expressions régulières étendues
 #    -i : Recherche un terme en ignorant la casse
 #    -r : Recherche récursive
 #    -v : Inverse la recherche

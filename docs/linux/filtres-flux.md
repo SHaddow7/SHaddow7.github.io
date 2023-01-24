@@ -74,21 +74,21 @@ wc -l fichier.txt | cut -d" " -f1,1  #  2 - Affiche uniquement le nombre de lign
 cut [OPTIONS] fichier
 
 # Options
-#    -c : ensemble de caractères ou une plage de caractères
-#    -d : délimiteur qui sera utilisé (par défaut "TAB")
-#    -f : ensemble de champs ou une plage de champs
-#    -b : ensemble d'octets ou une plage d'octets
+#    -c : Ensemble de caractères ou une plage de caractères
+#    -d : Délimiteur qui sera utilisé (par défaut "TAB")
+#    -f : Ensemble de champs ou une plage de champs
+#    -b : Ensemble d'octets ou une plage d'octets
 ```
 
 #### Exemples
 
 ```bash
-cut -d ":" -f 1,3 fichier.txt  # Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
-cut fichier.txt -f 1,3         # Afficher le 1er et le 3ème champs
-cut fichier.txt -f -4          # Afficher du 1er au 4ème champs
+cut -d ":" -f 1,3 fichier.txt  #  Afficher les 1er et 3e champs en utilisant ":" comme délimiteur
+cut fichier.txt -f 1,3         #  Afficher le 1er et le 3ème champs
+cut fichier.txt -f -4          #  Afficher du 1er au 4ème champs
 
-echo "L rem i sum" | cut -d ' ' -f 2   # Utilise le caractère ' ' comme délimiteur et affiche le 2e champs
-echo 'drüberspringen' | cut -b 5,9,13  # Selectionne les 5e, 9e et 13e octets
+echo "L rem i sum" | cut -d ' ' -f 2   #  Utilise le caractère ' ' comme délimiteur et affiche le 2e champs
+echo 'drüberspringen' | cut -b 5,9,13  #  Selectionne les 5e, 9e et 13e octets
 ```
 
 ### Uniq
@@ -120,7 +120,7 @@ sort chemin/fichier | uniq -c #  Afficher le nombre d'occurrences de chaque lign
 
 {: .note }
 
-> `sort` : tri des lignes d’un fichier sur des critères de tri donné
+> `sort` - permer de trier des lignes d’un fichier sur des critères de tri donné.
 
 ```shell
 # Syntaxe
@@ -137,16 +137,16 @@ sort [ -r ] [ -o fic_out ] [ -t ca r] [ -k num_champ[n] ] fic.txt
 #### Exemples
 
 ```bash
-sort fic.txt                  # Trie un fichier dans l'ordre croissant
-sort ­-u fic.txt               # Affiche qu'une fois les lignes identiques
-sort -r fic.txt               # Trie un fichier dans l'ordre inverse
-sort -b fic.txt               # Trie un fichier en ignorant les espaces blancs de début et de fin
-sort -f fic.txt               # Trie un fichier en ignorant la casse
-sort -k 2 file.txt            # Trie un fichier en fonction du 2e champ (délimité par un espace)
-sort -k 2,2 -r fic.txt        # Trie un fichier en fonction du 2e champ dans l'ordre inverse
-sort -n -t":" -k4,4 fic.txt   # Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
-sort fic.txt | uniq           # Trie un fichier et supprimer les lignes en double
-sort -f fic.txt | uniq        # Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
+sort fic.txt                  #  Trie un fichier dans l'ordre croissant
+sort ­-u fic.txt               #  Affiche qu'une fois les lignes identiques
+sort -r fic.txt               #  Trie un fichier dans l'ordre inverse
+sort -b fic.txt               #  Trie un fichier en ignorant les espaces blancs de début et de fin
+sort -f fic.txt               #  Trie un fichier en ignorant la casse
+sort -k 2 file.txt            #  Trie un fichier en fonction du 2e champ (délimité par un espace)
+sort -k 2,2 -r fic.txt        #  Trie un fichier en fonction du 2e champ dans l'ordre inverse
+sort -n -t":" -k4,4 fic.txt   #  Trie numérique sur un fichier en fonction du 4eme champ, délimité par ":"
+sort fic.txt | uniq           #  Trie un fichier et supprimer les lignes en double
+sort -f fic.txt | uniq        #  Trie un fichier et fusionner les lignes qui ne diffèrent que par la casse
 ```
 
 ### Tee

@@ -9,7 +9,7 @@ nav_order: 3
 
 {: .note }
 
-> La commande `ps` permet de retrouver toutes les informations utiles sur un processus.
+> `ps` - permet de retrouver toutes les informations utiles sur un processus.
 
 ```bash
 # Syntaxe
@@ -140,4 +140,4 @@ echo $PPID
 
 ## Liens
 
-[Liste des signaux]([http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm](https://doc.lagout.org/programmation/unix/Signaux%20sous%20Linux.pdf))
+[Liste des signaux](<[http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm](https://doc.lagout.org/programmation/unix/Signaux%20sous%20Linux.pdf)>)

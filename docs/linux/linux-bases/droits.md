@@ -8,6 +8,18 @@ nav_order: 2
 
 # La sécurité des fichiers : les droits
 
+## Numéros d'autorisation de fichier
+
+| Permissions | Valeurs | Descriptions                                            |
+| :---------: | :-----: | ------------------------------------------------------- |
+|    `rwx`    |    7    | Accorder tous les droits lecture / écriture / exécution |
+|    `rw-`    |    6    | Accorder uniquement les droits de lecture / écriture    |
+|    `r-x`    |    5    | Lecture, exécution                                      |
+|    `r--`    |    4    | Lecture ( read )                                        |
+|    `-w-`    |    2    | Ecriture ( write )                                      |
+|    `--x`    |    1    | Exécution ( execute )                                   |
+|    `---`    |    0    | Aucun accès                                             |
+
 ## chmod
 
 ---
@@ -15,10 +27,16 @@ nav_order: 2
 {: .note }
 
 > La commande `chmod` permet de changer des permissions à l’aide de la notation de texte
+>
+> Il est conseiller d’écrire les permissions sous ce format :
+>
+> ```bash
+> chmod u=rwx,g=rwx,o=rwx fic
+> ```
 
 ```bash
 # Syntaxe :
-chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] fic
+chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] Fichier / Repertoire
 
 # Options
 #    -r : (Récursif) inclut les mêmes droits dans les sous répertoires
@@ -30,6 +48,7 @@ chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] fic
 #### Exemples - Ajouter des permissions
 
 ```bash
+chmod -­R a+rx rép/             #  Rend le répertoire et tous les fichiers qu'il contient accessibles à tous
 chmod u=rwx,g=rwx,o=rwx fic    #  Attribut tous les droits (lecture/écriture/exécution) à tous (u, g, o)
 chmod u+w fic                  #  Ajouter droits en écriture au propriétaire
 chmod g+r fic                  #  Ajouter droits en lecture au groupe du fichier
@@ -43,38 +62,10 @@ chmod u=rw,a+x fic             #  Attribut les droits de lecture/écriture au pr
 #### Exemples - Supprimer les permissions
 
 ```bash
-chmod u-rx fic  # Retire les droits de lecture et d'exécution pour le propriétaire
-chmod g-wx fic  # Retire les droits de modification et d'exécution pour le groupe
-chmod o= fic    # Retire toutes les droits pour les autres utilisateurs
+chmod u-rx fic  #  Retire les droits de lecture et d'exécution pour le propriétaire
+chmod g-wx fic  #  Retire les droits de modification et d'exécution pour le groupe
+chmod o= fic    #  Retire toutes les droits pour les autres utilisateurs
 ```
-
-#### Exemples - Autres
-
-```bash
-# Rendre le répertoire et tous les fichiers qu'il contient accessibles
-# par tous les utilisateurs (recursive)
-chmod -­R a+rx rép/
-```
-
-#### Numéros d'autorisation de fichier
-
-| Permissions | Valeurs | Descriptions                                            |
-| :---------: | :-----: | ------------------------------------------------------- |
-|    `rwx`    |    7    | Accorder tous les droits lecture / écriture / exécution |
-|    `rw-`    |    6    | Accorder uniquement les droits de lecture / écriture    |
-|    `r-x`    |    5    | Lecture, exécution                                      |
-|    `r--`    |    4    | Lecture ( read )                                        |
-|    `-w-`    |    2    | Ecriture ( write )                                      |
-|    `--x`    |    1    | Exécution ( execute )                                   |
-|    `---`    |    0    | Aucun accès                                             |
-
-{: .note }
-
-> Pour les débutants, il est conseiller d’écrire les permissions sous ce format :
->
-> ```bash
-> chmod u=rwx,g=rwx,o=rwx fic
-> ```
 
 ## umask
 
@@ -82,24 +73,27 @@ chmod -­R a+rx rép/
 
 {: .note }
 
-> La commande `umask` permet de définir les permissions par défaut pour les nouveaux fichiers et répertoires créés dans un système de fichiers.
+> `umask` - permet de définir les permissions par défaut pour les nouveaux fichiers et répertoires créés dans un système de fichiers. Elle permet de spécifier les permissions qui seront masquées ou retirées des permissions par défaut lors de la création de nouveaux fichiers et répertoires.
 >
-> Le masque qui est mis en argument permet de déterminer les permissions qui ne seront pas accordées aux nouveaux fichiers et aux répertoires.
+> Par défaut, les droits pour les répertoires sont à `777 (rwxrwxrwx)` et `666 (rw-rw-rw-)` pour les fichiers.
 >
-> Par défaut, les droits pour les répertoires sont à 777 (rwxrwxrwx) et 666 (rw-rw-rw-) pour les fichiers.
-
+> Il est important de noter que la commande "umask" ne modifie pas les permissions des fichiers et répertoires existants, mais uniquement celles des nouveaux fichiers et répertoires créés par la suite.
 
 #### Syntaxe
 
 ```bash
 # Syntaxe
-umask [ DROITS ]
+umask [ OPTIONS ] [ MASQUE ]
 ```
 
 #### Exemples
 
 ```bash
-umask       #  Affiche le masque actuel en notation octale
+umask                      #  Affiche le masque actuel en notation octale
+umask -S                   #  Affiche le masque actuel en forme symbolique
+umask -S u=rwx,g=rwx,o=rx  #  Retire les droits de lecture/écriture/exécution pour le propriétaire,
+                           #  Retire les droits de lecture/écriture/exécution pour le groupe,
+                           #  Retire les droits de lecture/exécution pour les autres utilisateurs
 ```
 
 ```bash
@@ -114,15 +108,14 @@ umask g-wx  #  Retire les droits de modification et d'exécution pour le groupe
 umask o-rw  #  Retire les droits de modification et de lecture pour les autres utilisateurs
 ```
 
-{: .note }
-
-> Il est important de noter que la commande "umask" ne modifie pas les permissions des fichiers et répertoires existants, mais uniquement celles des nouveaux fichiers et répertoires créés par la suite.
-
 ## chown
 
 ---
 
+{: .note }
+
+> `chown` - permet de changer le propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
+
 ```bash
-# Changement du propriétaire du ou des fichiers ou répertoires listés dans la commande "chown".
-chown nom_utilisateur [fic | rep]
+chown nom_utilisateur [FICHIER | REPERTOIRE]
 ```

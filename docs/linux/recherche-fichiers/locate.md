@@ -10,6 +10,8 @@ grand_parent: Linux
 {: .note }
 
 > `locate` - permet de rechercher rapidement des fichiers et des répertoires sur votre système par leur nom.
+>
+> Les fichiers qui ont été récemment crée ne sont pas automatiquement enregistrés dans la base de données de Locate. Il est possible de mettre à jour cette base de données en utilisant la commande `updatedb`.
 
 ```bash
 # Syntaxe
@@ -26,21 +28,12 @@ locate [ OPTIONS ] Fichier
 #### Exemples
 
 ```bash
-locate "*bar*"   # Recherche rapide dans tout système
-locate ".conf"   # Recherche tous les fichiers avec l’extension .conf
-locate "*.extf"  # Recherche tous les fichiers avec une extension particulière
-locate fichier*  # Trouve les fichiers qui commencent par le mot fichier
+locate "*bar*"   #  Recherche les fichiers qui contiennent le terme "bar" dans leur nom de fichier
+locate ".conf"   #  Recherche tous les fichiers avec l’extension ".conf" dans leur nom de fichier
+locate "*.extf"  #  Recherche tous les fichiers avec l’extension ".extf" dans leur nom de fichier
+locate fichier*  #  Recherche tous les fichiers qui commencent par le mot "fichier"
 
-#  Trouve tous les répertoires qui portent le nom "documents"
-locate -d documents
-#  Trouve tous les répertoires et fichiers qui sont dans le répertoire "/home"
-locate -b "/home"
-#  Trouve tous les fichiers et répertoires qui comporte le mot "exemple" dans leur nom
-locate -r "exemple"
+locate -d documents  #  Trouve tous les répertoires qui portent le nom "documents"
+locate -b "/home"    #  Trouve tous les répertoires et fichiers qui sont dans le répertoire "/home"
+locate -r "exemple"  #  Trouve tous les fichiers et répertoires qui comporte le mot "exemple" dans leur nom
 ```
-
-{: .note}
-
-> Les fichiers qui ont été récemment créer ne serait pas encore enregistrer dans la base de données de Locate.
->
-> La base de données de locate est mise à jour au moins une fois par jour. Il est possible de mettre à jour cette base de données en utilisant la commande `updatedb`

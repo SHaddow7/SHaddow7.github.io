@@ -4,41 +4,30 @@
 - [ ] Revoir la syntaxe du CHMOD
 - [ ] Faire un script pour le décalage des arguments
 - [ ] Expression régulière, ajouter des exemples plus explicite
-- [ ] Ajout des méta caractères de bash
-- [ ] ER + ER BASH
-- [ ] Revoir la Syntaxe du CHMOD et des liens symbolique
-- [ ] CHMOD [-R] [OPTIONS] Fichier / Repertoire
+- [x] Ajout des méta caractères de bash
+- [x] ER + ER BASH
+- [x] Revoir la Syntaxe du CHMOD et des liens symbolique
+- [x] CHMOD [-R] [OPTIONS] Fichier / Repertoire
 - [ ] Ajouter un exemple chmod : chmod +100 fic / répertoire
-- [ ] def umask : par defaut quand on creer un rep (rwx){3} = (777) et quand on creer un fichier 
-- [ ] Mettre une note : pour umask
+- [ ] def umask : par defaut quand on creer un rep (rwx){3} = (777) et quand on creer un fichier
+- [x] Mettre une note : pour umask
 - [ ] Ajouter la nouvelle version
 - [ ] Mettre une aide à la page d'accueil du site
-- [ ] UMASK : Laisser l'execution au proprietaire donc rwx --- --- (ex)
-- [ ] Exemples : umask go= # suppression des droits fichiers / repertoire pour le groupe et les utilisateurs
+- [x] UMASK : Laisser l'execution au proprietaire donc rwx --- --- (ex)
+- [x] Exemples : umask go= # suppression des droits fichiers / repertoire pour le groupe et les utilisateurs
 - [ ] Mettre un sitemap sur le site
 - [ ] Améliorer la recherche dynamique
-- [ ] Ajouter l'option -S de la commande umask
-- [ ] Creer un fichier : >fichier.txt
+- [x] Ajouter l'option -S de la commande umask
+- [x] Creer un fichier : >fichier.txt
 - [ ] note - à ajouter : si un fichier existe, on se refère au droits du fichiers
-- [ ] Ajout des exemples pour creer un nouveau fichier, 
+- [ ] Ajout des exemples pour creer un nouveau fichier,
 - [ ] Ajouter "pidof" pour les processus
 - [ ] Ajouter les options de ECHO, READ
 - [ ] Exemple de lecutr des fleches de directions (a part)
 - [ ] Intéractivité de grep pour le test des ER
 - [ ] # -------- ID du processus ppp ----- > utiliser dans les exemples et dans le scripts
-- [ ] Lister tous les meta caractères de BASH
+- [x] Lister tous les meta caractères de BASH
 - [ ] (A|B) -> [AB] (A utiliser uniquement sur les motifs !!!)
-
-Les types de fichiers
-    – : regular file.
-    d : directory.
-    c : character device file.
-    b : block device file.
-    s : local socket file.
-    p : named pipe.
-    l : symbolic link.
-
-
 
 # Processus
 
@@ -46,7 +35,7 @@ Les types de fichiers
 - [ ] plstree -pls $$
 - [ ] Mettre une définition du pstree
 - [ ] ex : plstree -pls [ processus_id ]
-- [ ] Mettre la syntaxe bg et fg 
+- [ ] Mettre la syntaxe bg et fg
 - [ ] Ajouter des exemples avec le renvoie des résultats vers un fichier.log
 - [ ] Ajouter le signal 15
 - [ ] %2 Remplace la commande fg et jobs
@@ -54,5 +43,4 @@ Les types de fichiers
 # Personnel
 
 - [ ] Ajouter les exemples de la creation d'un ps personnaliser
-- [ ] creer un generateur d'expression réguliere 
-
+- [ ] creer un generateur d'expression réguliere
