@@ -85,6 +85,9 @@ chmod -­R a+rx rép/
 > La commande `umask` permet de définir les permissions par défaut pour les nouveaux fichiers et répertoires créés dans un système de fichiers.
 >
 > Le masque qui est mis en argument permet de déterminer les permissions qui ne seront pas accordées aux nouveaux fichiers et aux répertoires.
+>
+> Par défaut, les droits pour utilisateur sont à 777 (rwxrwxrwx) pour les répertoire, 666 (rw-rw-rw-) pour les fichiers.
+
 
 #### Syntaxe
 
@@ -114,7 +117,6 @@ umask o-rw  #  Retire les droits de modification et de lecture pour les autres u
 {: .note }
 
 > Il est important de noter que la commande "umask" ne modifie pas les permissions des fichiers et répertoires existants, mais uniquement celles des nouveaux fichiers et répertoires créés par la suite.
-> Par défaut, les droits pour utilisateur sont à 777 (rwxrwxrwx) pour les répertoire, 666 (-wx-wx-wx) pour les fichiers.
 
 ## chown
 
