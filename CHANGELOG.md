@@ -1,7 +1,7 @@
 # quels sont les points à ajouter ? (sur le site)
 
-- [ ] z
-- [ ] sd
+- [ ] ajouter l'argument -i de GREP
+- [ ] Revoir la syntaxe du CHMOD
 - [ ] sd
 - [ ] sd
 - [ ] sd
