@@ -29,6 +29,16 @@
 - [ ] Lister tous les meta caractères de BASH
 - [ ] (A|B) -> [AB] (A utiliser uniquement sur les motifs !!!)
 
+Les types de fichiers
+    – : regular file.
+    d : directory.
+    c : character device file.
+    b : block device file.
+    s : local socket file.
+    p : named pipe.
+    l : symbolic link.
+
+
 
 # Processus
 
