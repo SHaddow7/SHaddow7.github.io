@@ -54,4 +54,5 @@ Les types de fichiers
 # Personnel
 
 - [ ] Ajouter les exemples de la creation d'un ps personnaliser
+- [ ] creer un generateur d'expression réguliere 
 
