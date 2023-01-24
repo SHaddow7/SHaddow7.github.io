@@ -9,6 +9,7 @@ exclude:
   - README.md
   - TODO.md
   - assets
+  - CHANGELOG.md
 
 # Enable or disable the site search
 # Supports true (default) or false
