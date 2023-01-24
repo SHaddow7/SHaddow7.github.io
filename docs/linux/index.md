@@ -62,7 +62,8 @@ date               #  Affiche la date du jour
 cal                #  Affiche le calendrier
 uptime             #  Affiche la disponibilité
 whoami             #  Affiche le nom de l'utilisateur
-who                #  Affiche qui est connecté
+who                #  Affiche tous les utilisateurs connectés sur le système
+w                  #  Affiche tous les utilisateurs connectés et les processus leur appartenant
 uname -a           #  Informations du noyau
 cat /proc/cpuinfo  #  Informations sur le cpu
 df -h              #  Espace disque libre
