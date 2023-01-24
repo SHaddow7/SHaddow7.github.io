@@ -129,14 +129,15 @@ echo $PPID
 
 ## Quelques signaux
 
-| Numéro | Descriptions                           | Forme 1 | Forme 2  |
-| ------ | -------------------------------------- | ------- | -------- |
-| 1      | Instruction (HANG UP) - Fin de session | SIGHUP  |          |
-| 2      | Interruption d'un processu             | SIGINT  | Ctrl + C |
-| 9      | Termine violemment un processus        | SIGKILL |          |
-| 18     | Continuer un processus mis en pause    | SIGCONT |          |
-| 19     | Demande de suspension imbloquable      | SIGSTOP | Ctrl + Z |
+| Numéro | Descriptions                             | Forme 1 | Forme 2  |
+| ------ | ---------------------------------------- | ------- | -------- |
+| 1      | Instruction (HANG UP) - Fin de session   | SIGHUP  |          |
+| 2      | Interruption d'un processus              | SIGINT  | Ctrl + C |
+| 9      | Termine violemment un processus          | SIGKILL |          |
+| 15     | Permet d’arrêter proprement un processus | SIGTERM |          |
+| 18     | Continuer un processus mis en pause      | SIGCONT |          |
+| 19     | Demande de suspension imbloquable        | SIGSTOP | Ctrl + Z |
 
 ## Liens
 
-[Liste des signaux](http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm)
+[Liste des signaux]([http://patatos.over-blog.com/article-liste-des-signaux-unix-47601760.htm](https://doc.lagout.org/programmation/unix/Signaux%20sous%20Linux.pdf))
