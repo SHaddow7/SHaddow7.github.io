@@ -36,8 +36,8 @@ chmod g+r fic                  #  Ajouter droits en lecture au groupe du fichier
 chmod o+x fic                  #  Ajouter droits d'exécution aux autres utilisateurs
 chmod a+rw fic                 #  Ajouter droits lecture / écriture à tous (all)
 chmod 777 fic                  #  Attribut tous les droits sur fic à tous (forme octal)
-chmod u=rw,a+x fic             #  Attribut les droits de lecture/écriture au propriétaire (o)
-                               #  et ajoute droit d'exécution à tous
+chmod u=rw,a+x fic             #  Attribut les droits de lecture/écriture au propriétaire (u)
+                               #  et ajoute droit d'exécution à tous (a)
 ```
 
 #### Exemples - Supprimer les permissions
