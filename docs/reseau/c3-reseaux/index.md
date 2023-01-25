@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2 - Réseaux
+title: 3 - Réseaux
 parent: Réseaux
 has_children: true
 has_toc: false
@@ -14,6 +14,27 @@ has_toc: false
 > RFC - Publiés par l’IETF (Internet Engineering Task Force), le RFC est un ensemble de textes officiels soumis à commentaires qui définissent Internet.
 
 ## Principes IP v4
+
+#### Principe 
+
+#### Calcul d'adresse de réseau et de Broadcast
+
+#### Les classes d'adresses
+
+#### Les types d'adresses
+
+#### Les adresses réservées
+
+#### Les adresses privées
+
+#### Attribution des adresses publiques
+
+#### Le CIDR
+
+#### Le masque hors-classes
+
+#### Autres
+
 
 ## Masques de sous-réseaux
 
