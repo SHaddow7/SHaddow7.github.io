@@ -93,18 +93,11 @@ Il est important de noter que les adaptateurs GBIC et SFP doivent être compatib
 
 ### Les connectiques
 
-Il existe plusieurs connecteurs utilisés pour connecter des dispositifs de réseau utilisant des fibres optiques, voici quelques exemples couramment utilisés:
-
-Connecteur SC (Subscriber Connector) : Il s'agit d'un connecteur à simple fente qui est souvent utilisé pour les applications de courte distance. Il est facile à utiliser et à installer.
-
-Connecteur LC (Lucent Connector) : Il s'agit d'un connecteur à simple fente qui est souvent utilisé pour les applications de courte distance. Il est plus petit que le connecteur SC et peut être utilisé dans des espaces de montage restreints.
-
-Connecteur ST (Straight-tip) : Il s'agit d'un connecteur à simple fente qui est souvent utilisé pour les applications de courte distance. Il est facile à utiliser et à installer.
-
-Connecteur FC (Fiber Channel) : Il s'agit d'un connecteur à baïonnette qui est souvent utilisé pour les applications à haut débit. Il est plus difficile à installer que les connecteurs à simple fente.
-
-Connecteur MTP/MPO (Multiple-fiber Termination Push-on/pull-off) : Il s'agit d'un connecteur à multiples fentes qui est souvent utilisé pour les applications à haut débit. Il permet de connecter plusieurs fibres optiques simultanément.
-
-Connecteur SFP (Small Form-factor Pluggable) : Il s'agit d'un connecteur modulaire qui est souvent utilisé pour les applications à haut débit. Il est compatible avec les commutateurs et les routeurs qui prennent en charge les modules SFP.
-
-Il est important de noter que les connecteurs de fibre optique doivent être compatibles avec les types de fibres optiques utilisées pour garantir une transmission de données stable et fiable.
+| Connectiques         | Type connecteur         | Descriptions                             |
+| -------------------- | ----------------------- | ---------------------------------------- |
+| `Connecteur SC`      | simple fente            | pour les applications de courte distance |
+| `Connecteur LC`      | simple fente            | pour les applications de courte distance |
+| `Connecteur ST`      | simple fente            | pour les applications de courte distance |
+| `Connecteur FC`      | connecteur à baïonnette | pour les applications à haut débit       |
+| `Connecteur MTP/MPO` | multiples fentes        | pour les applications à haut débit       |
+| `Connecteur SFP `    | modulaire               | pour les applications à haut débit       |
