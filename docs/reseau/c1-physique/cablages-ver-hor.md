@@ -7,22 +7,22 @@ grand_parent: Réseaux
 
 # Les cablages
 
-## Les câblages verticaux, horizontaux
+## Câblages verticaux, horizontaux
 
 ---
 
-#### Définition
-
 {: .note}
 
-Les câblages verticaux et horizontaux font référence à l’emplacement géographique des câbles dans un bâtiment ou un immeuble. Il est important de noter que les câblages verticaux et horizontaux sont étroitement liés et qu’ils doivent être correctement conçus pour garantir une bonne connectivité réseau dans tout le bâtiment.
+Les câblages verticaux et horizontaux font référence à l’emplacement géographique des câbles dans un bâtiment ou un immeuble.
 
 ### Câblage vertical - Local Technique d'Immeuble (LTI)
 
+{:.mt-4}
 Les LTI sont utilisés pour relier les différents étages d'un bâtiment entre eux. Il se compose généralement d'un **câble principal** qui relie le rez-de-chaussée à l'étage supérieur, et **de câbles secondaires** qui relient les différents locaux à ce câble principal.
 
 ### Câblage horizontal - Local Technique d'Étage (LTE)
 
+{:.mt-4}
 Et les LTE sont utilisés pour relier les différents locaux d'un étage d'un bâtiment entre eux. Il se compose généralement d'un câble principal qui relie le local de commutation (généralement une salle de serveur) aux différents postes de travail et aux équipements réseau.
 
 ## Coeur de réseau
@@ -30,8 +30,6 @@ Et les LTE sont utilisés pour relier les différents locaux d'un étage d'un b�
 ---
 
 Le coeur de réseau est la partie d'un réseau qui gère les principales fonctions de transport de données. Il s'agit généralement de l'endroit où les données sont acheminées à travers le réseau pour atteindre leur destination finale. Il est souvent situé au centre du réseau et est généralement constitué d'équipements de commutation et de routage de haut niveau, tels que les **commutateurs** et les **routeurs**.
-
-Le coeur de réseau est le lieu où la plupart des flux de données sont acheminées, il est donc généralement conçu pour être très rapide et fiable. Il est souvent équipé de câbles de fibre optique pour garantir des débits élevés, et est conçu pour gérer des volumes de trafic importants. Il est également souvent protégé par des équipements de sécurité pour protéger les données contre les accès non autorisés.
 
 ## Brassage
 
@@ -46,6 +44,8 @@ Les commutateurs de brassage sont souvent utilisés pour connecter des réseaux 
 Il est à noter que le brassage est souvent utilisé comme une technique de connectivité pour les réseaux de petite et moyenne taille, mais pour les grandes entreprises, les équipements de commutation de niveau 3 (commutateur L3) sont utilisés pour connecter les différents VLANs entre eux et permettre un routage inter-VLAN.
 
 ## Le câblage cuivre
+
+---
 
 ```plaintext
 # Type de câble    -    F/UTP
@@ -65,6 +65,8 @@ F  /  U  TP
 
 ## Connecteurs RJ45
 
+---
+
 | Type de raccordement | Plots    |
 | :------------------- | :------- |
 | 10BaseT              | 1-2, 3-6 |
@@ -72,6 +74,8 @@ F  /  U  TP
 | 1000BaseT            | tous     |
 
 ## Catégorie de câble
+
+---
 
 | Classe | Catégorie | Bande passante | Débit maximum          | Distance maximum |
 | ------ | --------- | -------------- | ---------------------- | ---------------- |

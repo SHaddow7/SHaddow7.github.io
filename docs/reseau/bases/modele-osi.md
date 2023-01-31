@@ -37,7 +37,7 @@ Découpage en 7 couches en retenant les principes suivants :
 |    2    | Liaison de Données | Communication de nœud à nœud       | MPLS           | Adresse MAC    |
 |    1    | Physique           | Bits bruts sur le support physique | TIA-323-F      | N/A            |
 
-### L'encapsulation
+### L'encapsulation - A détailler
 
 - Quand les données sont envoyées à la couche inférieure, chaque
   couche ajoute son entête/suffixe.
