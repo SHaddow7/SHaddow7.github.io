@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1 - Liaison Physique
+title: Configuration sur Linux
 parent: 3 - Réseaux
 grand_parent: Réseaux
 has_toc: false
