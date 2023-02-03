@@ -14,40 +14,40 @@ Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre p
 
 ## Type de transmission
 
-| Types de transmissions                          | Description                                         |
-| :---------------------------------------------- | --------------------------------------------------- |
-| <span style='font-size:18px'>`Unicast`</span>   | Transmission entre une machine et une (seule) autre |
-| <span style='font-size:18px'>`Broadcast`</span> | Transmission entre une machine et toutes les autres |
-| <span style='font-size:18px'>`Multicast`</span> | Transmission entre une machine et plusieurs autres  |
+| Types de transmissions                 | Description                                         |
+| :------------------------------------- | --------------------------------------------------- |
+| <span class='fs-18'>`Unicast`</span>   | Transmission entre une machine et une (seule) autre |
+| <span class='fs-18'>`Broadcast`</span> | Transmission entre une machine et toutes les autres |
+| <span class='fs-18'>`Multicast`</span> | Transmission entre une machine et plusieurs autres  |
 
 ## Sens de transmission
 
-| Types de transmissions                                        | Description                                             |
-| :------------------------------------------------------------ | ------------------------------------------------------- |
-| <span style='font-size:18px'>`Simplex`</span>                 | Une station ne peut qu'émettre et l'autre que recevoir. |
-| <span style='font-size:18px'>`Half-Duplex`</span>             | Chaque station peut émettre, mais pas en même temps     |
-| <span style='font-size:18px'>`Full-Duplex (ou Duplex)`</span> | Chaque station peut émettre et recevoir en même temps.  |
+| Types de transmissions                               | Description                                             |
+| :--------------------------------------------------- | ------------------------------------------------------- |
+| <span class='fs-18'>`Simplex`</span>                 | Une station ne peut qu'émettre et l'autre que recevoir. |
+| <span class='fs-18'>`Half-Duplex`</span>             | Chaque station peut émettre, mais pas en même temps     |
+| <span class='fs-18'>`Full-Duplex (ou Duplex)`</span> | Chaque station peut émettre et recevoir en même temps.  |
 
 ## Topologies de réseaux
 
-| Topologies                                               | Descriptions    |
-| :------------------------------------------------------- | --------------- |
-| <span style='font-size:18px'>`En boucle / anneau`</span> |                 |
-| <span style='font-size:18px'>`En étoile`</span>          | le plus utilisé |
-| <span style='font-size:18px'>`En bus`</span>             |                 |
-| <span style='font-size:18px'>`En maillage`</span>        |                 |
-| <span style='font-size:18px'>`Hiérarchique`</span>       |                 |
+| Topologies                                      | Descriptions    |
+| :---------------------------------------------- | --------------- |
+| <span class='fs-18'>`En boucle / anneau`</span> |                 |
+| <span class='fs-18'>`En étoile`</span>          | le plus utilisé |
+| <span class='fs-18'>`En bus`</span>             |                 |
+| <span class='fs-18'>`En maillage`</span>        |                 |
+| <span class='fs-18'>`Hiérarchique`</span>       |                 |
 
 ## Types de réseaux
 
 {: .pt-4 }
-<span style='font-size:18px'>`Local Area Network (LAN)`</span> :
+<span class='fs-18'>`Local Area Network (LAN)`</span> :
 Réseau local limité à un seul site géographique, dans une entreprise. Toutes les machines de ce réseau sont reliées directement via des commutateurs (switches).
 
-<span style='font-size:18px'>`Wide Area Network (WAN)`</span> :
+<span class='fs-18'>`Wide Area Network (WAN)`</span> :
 Réseau grande distance, par opposition au LAN. Constitué de plusieurs LAN reliés entre eux par des routeurs (Ex. : Internet, Renater, RIE,...).
 
-<span style='font-size:18px'>`Metropolitan Area Network (MAN)`</span> :
+<span class='fs-18'>`Metropolitan Area Network (MAN)`</span> :
 Réseau de LANs reliés et distants de quelques kilomètres. Le but étant de relier les différents sites en très haut débit.
 
 ## Commutation

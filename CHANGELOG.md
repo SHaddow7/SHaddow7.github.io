@@ -1,4 +1,4 @@
-# Quels sont les points à ajouter ? (sur le site)
+# Linux
 
 - [ ] Ajouter l'argument -i de GREP
 - [ ] Revoir la syntaxe du CHMOD
@@ -28,9 +28,6 @@
 - [ ] # -------- ID du processus ppp ----- > utiliser dans les exemples et dans le scripts
 - [x] Lister tous les meta caractères de BASH
 - [ ] (A|B) -> [AB] (A utiliser uniquement sur les motifs !!!)
-
-# Processus
-
 - [x] Faire une partie pstree, htop, top, free, vmstat n
 - [x] plstree -pls $$
 - [x] Mettre une définition du pstree
@@ -40,19 +37,34 @@
 - [x] Ajouter le signal 15
 - [ ] %2 Remplace la commande fg et jobs
 
-# Personnel
-
-- [ ] Ajouter les exemples de la creation d'un ps personnaliser
-- [ ] creer un generateur d'expression réguliere
-
 # RESEAU
 
-- [] Ajouter des parties sur le réseau
-- [] Ajouter une partie définition
-- [] Ajouter une partie sur le modèle OSI , TCP/IP
-- [] Les types de réseaux : LAN, WAN, WLAN, etc.
-- [] Les protocoles de communication réseau : TCP/IP, DHCP, DNS, etc.
-- [] La sécurité des réseaux : pare-feu, cryptage, authentification, etc.
-- [] Les différents types d'architectures réseau : client-serveur, pair à pair, etc.
-- [] Refaire l'architecture de la partie réseau
-- []
+- [x] Supprimer le sommaire dans la page des généralité reseau
+- [ ] Ajouter des parties sur le réseau
+- [ ] Ajouter une partie définition
+- [ ] Ajouter une partie sur le modèle OSI , TCP/IP
+- [ ] Les types de réseaux : LAN, WAN, WLAN, etc.
+- [ ] Les protocoles de communication réseau : TCP/IP, DHCP, DNS, etc.
+- [ ] La sécurité des réseaux : pare-feu, cryptage, authentification, etc.
+- [ ] Les différents types d'architectures réseau : client-serveur, pair à pair, etc.
+- [ ] Refaire l'architecture de la partie réseau
+- [ ] Refonte des styles de callout
+- [x] Terminer généralité/Définitions
+- [ ] Refonte de la partie fibre optique
+- [x] Refonte du wifi
+- [ ] Refonte de la couche 2
+- [ ] Refonte de la couche 3
+- [ ] faire la couche 4
+- [ ] Refonte des codes
+- [ ] Refonte de la partie "fibre optique"
+- [x] Refonte de la partie "arp-icmp"
+- [x] Refonte de la partie "routage"
+- [ ] Refonte de la partie "c2-donnees"
+- [ ] Refonte de la partie "couche-1"
+- [ ] Faire de la partie "Configuration linux"
+- [ ] Faire de la partie "c4-transport"
+- [ ] Ajout d'une partie "Configuration linux"
+- [ ] Ajout d'une partie "fragmentation"
+- [x] Ajout d'une partie "TCP"
+- [x] Ajout d'une partie "UDP"
+- [x] Ajout d'une partie "QUIC"

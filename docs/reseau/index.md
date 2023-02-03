@@ -2,9 +2,7 @@
 layout: default
 title: Réseaux
 has_children: true
+has_toc: true
 ---
-
-{: .warning }
-En cours d'écriture et de réécriture.
 
 # Le réseau
