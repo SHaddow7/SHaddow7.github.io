@@ -13,3 +13,4 @@ vendor/
 # ignore data
 TODO.md
 docs/tests/*
+docs/reseau/c7/*

@@ -8,13 +8,17 @@ grand_parent: Réseaux
 
 # Modèle TCP-IP
 
-### Principes
+## Principes
+
+---
 
 {: .note }
 
 > Le modèle TCP-IP, adopté par Arpanet en 1983, est une simplification du modèle OSI.
 
-### Les protocoles les plus courants
+## Les protocoles les plus courants
+
+---
 
 | Couches | Noms         | Ex. protocoles                        | Regroupe    |
 | :-----: | :----------- | ------------------------------------- | ----------- |

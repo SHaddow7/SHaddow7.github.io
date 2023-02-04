@@ -13,15 +13,6 @@ nav_order: 3
 
 ---
 
-- protocole de google, repris par l'IETF en 2013
-- destiné à remplacer TCP
-- fonctionne sur UDP mais en mode connecté
-- fusionne transport et chiffrement
-- Protocole détaché du système d'exploitation, géré par l'application (navigateur, serveur...)
-- multiplexing
-- Identifiant de connexion
-- https://quicwg.org/
-
 QUIC (Quick UDP Internet Connections) est un protocole de transport rapide et sécurisé conçu pour remplacer TCP. Il a été développé par Google et est intégré à la plupart des navigateurs web actuels. Les principes fondamentaux de QUIC incluent :
 
 Connexion rapide et fiabilité : QUIC utilise un ID de connexion unique pour établir une session, ce qui permet une connexion plus rapide et une récupération plus facile en cas de perte de paquets.
@@ -35,6 +26,15 @@ Amélioration de la qualité de service : QUIC utilise des mécanismes de contr�
 Prise en charge de la mobilité : QUIC prend en charge la mobilité en permettant une transition en douceur entre les réseaux lorsque l'utilisateur se déplace.
 
 Ces principes ont été conçus pour offrir des performances et une sécurité supérieures à celles de TCP, ainsi qu'une expérience plus fluide pour les utilisateurs finaux.
+
+- protocole de google, repris par l'IETF en 2013
+- destiné à remplacer TCP
+- fonctionne sur UDP mais en mode connecté
+- fusionne transport et chiffrement
+- Protocole détaché du système d'exploitation, géré par l'application (navigateur, serveur...)
+- multiplexing
+- Identifiant de connexion
+- https://quicwg.org/
 
 ## Usages
 

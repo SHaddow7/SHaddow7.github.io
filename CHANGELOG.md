@@ -68,3 +68,4 @@
 - [x] Ajout d'une partie "TCP"
 - [x] Ajout d'une partie "UDP"
 - [x] Ajout d'une partie "QUIC"
+- [ ] Terminer la partie liaison de données

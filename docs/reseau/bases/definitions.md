@@ -8,6 +8,8 @@ grand_parent: Réseaux
 
 ## Définitions
 
+---
+
 {:.mt-4 }
 Débit - Parfois appelé bande passante par abus de langage, il définit le volume maximal d'informations pouvant transiter sur le réseau exprimé en bits par seconde.
 

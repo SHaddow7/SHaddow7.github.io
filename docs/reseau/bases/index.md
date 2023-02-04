@@ -14,6 +14,8 @@ Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre p
 
 ## Type de transmission
 
+---
+
 | Types de transmissions                 | Description                                         |
 | :------------------------------------- | --------------------------------------------------- |
 | <span class='fs-18'>`Unicast`</span>   | Transmission entre une machine et une (seule) autre |
@@ -22,6 +24,8 @@ Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre p
 
 ## Sens de transmission
 
+---
+
 | Types de transmissions                               | Description                                             |
 | :--------------------------------------------------- | ------------------------------------------------------- |
 | <span class='fs-18'>`Simplex`</span>                 | Une station ne peut qu'émettre et l'autre que recevoir. |
@@ -29,6 +33,8 @@ Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre p
 | <span class='fs-18'>`Full-Duplex (ou Duplex)`</span> | Chaque station peut émettre et recevoir en même temps.  |
 
 ## Topologies de réseaux
+
+---
 
 | Topologies                                      | Descriptions    |
 | :---------------------------------------------- | --------------- |
@@ -39,6 +45,8 @@ Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre p
 | <span class='fs-18'>`Hiérarchique`</span>       |                 |
 
 ## Types de réseaux
+
+---
 
 {: .pt-4 }
 <span class='fs-18'>`Local Area Network (LAN)`</span> :
@@ -51,6 +59,8 @@ Réseau grande distance, par opposition au LAN. Constitué de plusieurs LAN reli
 Réseau de LANs reliés et distants de quelques kilomètres. Le but étant de relier les différents sites en très haut débit.
 
 ## Commutation
+
+---
 
 ### Commutation de circuits
 

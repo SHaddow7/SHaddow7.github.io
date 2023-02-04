@@ -96,7 +96,7 @@ Les ports TCP peuvent prendre les états suivants :
 
 ---
 
-Champs de l'entête TCP :
+### Champs de l'entête TCP
 
 | Champs                | Descriptions                                                 |
 | --------------------- | ------------------------------------------------------------ |
@@ -106,15 +106,19 @@ Champs de l'entête TCP :
 | Numéro d'acquittement | 32 bits indiquant le prochain numéro de séquence attendu     |
 | Taille de l'entête    | 4 bits indiquant la longueur de l'entête en mots de 4 octets |
 
-Drapeaux :
+### Drapeaux
 
-- ECN : Signale de la congestion
-- URG : Signale la présence de donnée urgentes, localisation donnée par le pointeur de donnée urgente
-- ACK : Acquittement de la bonne réception des données
-- PUSH : Indique au récepteur de délivrer les données aux couches supérieures sans attendre le remplissage des buffers
-- RST : Réinitialisation de la connexion
-- SYN : Demande de connexion
-- FIN : Fin de l'échange
+| Champs | Descriptions                                                                                                  |
+| ------ | ------------------------------------------------------------------------------------------------------------- |
+| ECN    | Signale de la congestion                                                                                      |
+| URG    | Signale la présence de donnée urgentes, localisation donnée par le pointeur de donnée urgente                 |
+| ACK    | Acquittement de la bonne réception des données                                                                |
+| PUSH   | Indique au récepteur de délivrer les données aux couches supérieures sans attendre le remplissage des buffers |
+| RST    | Réinitialisation de la connexion                                                                              |
+| SYN    | Demande de connexion                                                                                          |
+| FIN    | Fin de l'échange                                                                                              |
+
+### Les autres champs
 
 | Champs                       | Descriptions                                                       |
 | ---------------------------- | ------------------------------------------------------------------ |

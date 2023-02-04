@@ -10,12 +10,17 @@ has_toc: false
 
 ## Défintions
 
+---
+
 {: .definition}
+
 > RFC - Publiés par l’IETF (Internet Engineering Task Force), le RFC est un ensemble de textes officiels soumis à commentaires qui définissent Internet.
 
 ## Principes IP v4
 
-#### Principe 
+---
+
+#### Principe
 
 #### Calcul d'adresse de réseau et de Broadcast
 
@@ -34,7 +39,6 @@ has_toc: false
 #### Le masque hors-classes
 
 #### Autres
-
 
 ## Masques de sous-réseaux
 

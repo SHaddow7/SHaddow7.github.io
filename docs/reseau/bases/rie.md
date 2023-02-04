@@ -10,6 +10,8 @@ grand_parent: Réseaux
 
 ## Principes
 
+---
+
 - Constituer un réseau commun aux services de l'État.
 - Indépendance vis à vis d'Internet.
 - Mutualisation de l'infrastructure → baisse des coûts.

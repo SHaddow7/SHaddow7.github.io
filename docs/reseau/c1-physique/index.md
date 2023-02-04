@@ -10,6 +10,8 @@ has_toc: false
 
 ## Principes
 
+---
+
 ### **Support de transmission**
 
 Les supports de transmission sont les médias physiques utilisés pour transmettre des données à travers un réseau. Les exemples courants de supports de transmission incluent :

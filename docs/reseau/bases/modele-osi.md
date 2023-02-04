@@ -8,6 +8,8 @@ grand_parent: Réseaux
 
 ## Le modèle OSI - Open Systems Interconnection
 
+---
+
 ### Principes
 
 L' ISO (International Standards Organisation) publie le modèle en 1978
