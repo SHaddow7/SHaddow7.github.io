@@ -1,17 +1,28 @@
 ---
 layout: default
-title: Le Wifi
+title: Wifi
 parent: 1 - Liaison Physique
 grand_parent: Réseaux
+nav_order: 5
 ---
 
 # Le Wifi
+
+Cette partie est à titre de culture générale.
 
 {:.mt-4}
 
 Le Wi-Fi a été développé dans les années 90 et est une technologie de communication sans fil qui permet de connecter différents appareils à un réseau local ou à Internet. Il utilise les ondes radio pour transmettre et recevoir des données à des vitesses élevées.
 
 Il a considérablement facilité la connectivité en permettant aux utilisateurs de se connecter à Internet sans être liés à un câble physique, offrant ainsi une plus grande flexibilité et mobilité.
+
+## Le wifi à la DGFIP
+
+- Le PC tente de se connecter au réseau sans fil (SSID) diffusé par la borne
+- La demande d'authentification du PC est relayée au contrôleur WIFI par la borne
+- Le contrôleur WIFI demande au serveur RADIUS d'authentifier le certificat du PC
+- Le serveur RADIUS vérifie que le certificat ne figure pas dans la liste des certificats révoqués
+- Si le certificat est reconnu valide, le PC est autorisé à se connecter au réseau DGFIP
 
 ## Quelques normes Wi-Fi
 

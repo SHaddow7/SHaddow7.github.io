@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MAC
+title: Adresse MAC
 parent: 2 - Liaison Données
 grand_parent: Réseaux
 has_toc: false

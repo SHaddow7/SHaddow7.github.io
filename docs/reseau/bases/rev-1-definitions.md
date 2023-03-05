@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Définitions
-# nav_order: 1
+nav_order: 2
 parent: Généralités
 grand_parent: Réseaux
 ---

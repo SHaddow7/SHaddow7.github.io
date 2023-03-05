@@ -9,6 +9,8 @@ has_toc: false
 
 # Généralités
 
+## Réseau
+
 Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre pour assurer les communications entre ordinateurs, stations de travail et terminaux informatiques. Il utilise un médium de communication pour faire voyager les informations. Plusieurs réseaux peuvent être connectés entre eux pour créer des réseaux de réseaux.
 {: .p-4 }
 
@@ -77,6 +79,10 @@ Réseau de LANs reliés et distants de quelques kilomètres. Le but étant de re
 > {: .m-2 }
 
 ### Commutation d'étiquettes
+
+{: .definition}
+
+> Technique de routage qui consiste à ajouter une étiquette à chaque paquet de données, qui indique le chemin à suivre pour atteindre sa destination. Cette étiquette permet aux équipements de commutation de router les paquets plus rapidement et plus efficacement que les méthodes traditionnelles de routage IP.
 
 ```plaintext
     • MPLS Multiple Protocol Label Switching

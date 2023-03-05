@@ -4,6 +4,7 @@ title: IPV6
 parent: 3 - Réseaux
 grand_parent: Réseaux
 has_toc: false
+nav_order: 5
 ---
 
 ## L'adresse IP v6
