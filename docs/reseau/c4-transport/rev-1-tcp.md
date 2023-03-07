@@ -13,7 +13,9 @@ nav_order: 1
 
 ---
 
-Le protocole TCP (Transmission Control Protocol) est un protocole de transport de données utilisé pour **établir une communication fiable entre des applications sur un réseau**.
+Le protocole TCP (Transmission Control Protocol) est inclus dans la couche 4, a couche transport. Le TCP est un protocole de transport de données utilisé pour **établir une communication fiable entre des applications sur un réseau**.
+
+Ainsi, TCP joue un rôle crucial dans l'établissement, le maintien et la terminaison des connexions entre des applications communicantes sur un réseau de données.
 
 Il permet également :
 
@@ -24,11 +26,11 @@ Il permet également :
 - Permet le contrôle de flux en cas de congestion.
 - Gérer la correction des erreurs, la gestion des flux de données et la gestion des connexions entre les terminaux.
 
-## Usages
+## Les usages
 
 ---
 
-Les usages les plus courants du protocole TCP incluent le transfert de fichiers, les applications de messagerie, les services de courrier électronique et la navigation web (ex : HTTP, FTP, SMB, etc...).
+Les usages les plus courants du protocole TCP incluent le transfert de fichiers, les applications de messagerie, les services de courrier électronique et la navigation web (ex : HTTP, FTP, SMB, etc…).
 
 ## Les ports
 
@@ -88,9 +90,9 @@ Un numéro de séquence est un identificateur utilisé dans le protocole TCP pou
 
 Les ports TCP peuvent prendre les états suivants :
 
-- ESTABLISHED : La session est active.
-- TIME_WAIT : Session fermée, en attente de paquets en retard.
-- CLOSE_WAIT : Session fermée, en attente de confirmation.
+- **ESTABLISHED** : La session est active.
+- **TIME_WAIT** : Session fermée, en attente de paquets en retard.
+- **CLOSE_WAIT** : Session fermée, en attente de confirmation.
 
 ## Entête TCP
 
@@ -108,15 +110,15 @@ Les ports TCP peuvent prendre les états suivants :
 
 ### Drapeaux
 
-| Champs | Descriptions                                                                                                  |
-| ------ | ------------------------------------------------------------------------------------------------------------- |
-| ECN    | Signale de la congestion                                                                                      |
-| URG    | Signale la présence de donnée urgentes, localisation donnée par le pointeur de donnée urgente                 |
-| ACK    | Acquittement de la bonne réception des données                                                                |
-| PUSH   | Indique au récepteur de délivrer les données aux couches supérieures sans attendre le remplissage des buffers |
-| RST    | Réinitialisation de la connexion                                                                              |
-| SYN    | Demande de connexion                                                                                          |
-| FIN    | Fin de l'échange                                                                                              |
+| Champs | Descriptions                                                                                              |
+| ------ | --------------------------------------------------------------------------------------------------------- |
+| ECN    | Signale de la congestion                                                                                  |
+| URG    | Signale la présence de donnée urgentes, localisation donnée par le pointeur de donnée urgente             |
+| ACK    | Acquittement de la bonne réception des données                                                            |
+| PUSH   | le récepteur transmet les données reçues aux couches supérieures sans attendre le remplissage des buffers |
+| RST    | Réinitialisation de la connexion                                                                          |
+| SYN    | Demande de connexion                                                                                      |
+| FIN    | Fin de l'échange                                                                                          |
 
 ### Les autres champs
 
