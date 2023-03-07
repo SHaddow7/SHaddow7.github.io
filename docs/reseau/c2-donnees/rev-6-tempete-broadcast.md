@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Boucles, Tempêtes de broadcast
+title: Tempêtes de broadcast
 parent: 2 - Liaison Données
 grand_parent: Réseaux
 has_toc: false
