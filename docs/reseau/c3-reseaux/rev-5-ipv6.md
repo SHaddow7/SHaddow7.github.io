@@ -11,7 +11,7 @@ nav_order: 5
 
 ---
 
-L'adresse IP version 6 (IPv6) est une version plus récente de l'adresse IP, qui remplace l'adresse IP version 4 (IPv4). Son principe est de fournir une adresse unique pour chaque dispositif connecté à Internet, permettant ainsi de communiquer avec d'autres dispositifs sur le réseau. Une adresse IPv6 est composée de 128 bits, contrairement à une adresse IPv4 qui est composée de 32 bits. Les 128 bits sont divisés en 8 blocs de 16 bits, blocs de 4 chiffres, chacun représentant une valeur hexadécimale. Les blocs sont séparés par des deux-points (:) pour faciliter la lecture de l'adresse.
+L'adresse IP version 6 (IPv6) est une version plus récente de l'adresse IP, qui remplace l'adresse IP version 4 (IPv4). Son principe est de <b>fournir une adresse unique pour chaque dispositif connecté à Internet, permettant ainsi de communiquer avec d'autres dispositifs sur le réseau</b>. Une adresse IPv6 est composée de <b>128 bits</b>, contrairement à une adresse IPv4 qui est composée de 32 bits. Les 128 bits sont divisés en 8 blocs de 16 bits, blocs de 4 chiffres, chacun représentant une valeur hexadécimale. Les blocs sont séparés par des deux-points (:) pour faciliter la lecture de l'adresse.
 
 ```plaintext
 2001:0db8:0000:85a3:0000:0000:ac1f:8001

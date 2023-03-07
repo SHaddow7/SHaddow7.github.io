@@ -42,12 +42,12 @@ Exemple : 131.25.120.36 / 24
 ## Classes d'adresses
 
 | Classe | Bits de départ | Début     | Fin             | CIDR | Masque        | Machines |
-| ------ | -------------- | --------- | --------------- | ---- | ------------- | -------- |
-| A      | 0              | 0.0.0.0   | 127.255.255.255 | /8   | 255.0.0.0 16  | 777214   |
-| B      | 10             | 128.0.0.0 | 191.255.255.255 | /16  | 255.255.0.0   | 65534    |
-| C      | 110            | 192.0.0.0 | 223.255.255.255 | /24  | 255.255.255.0 | 254      |
-| D      | 1110           | 224.0.0.0 | 239.255.255.255 |      |               |          |
-| E      | 1111           | 240.0.0.0 | 255.255.255.255 |      |               |          |
+| :----: | -------------- | --------- | --------------- | ---- | ------------- | -------- |
+|   A    | 0              | 0.0.0.0   | 127.255.255.255 | /8   | 255.0.0.0     | 777214   |
+|   B    | 10             | 128.0.0.0 | 191.255.255.255 | /16  | 255.255.0.0   | 65534    |
+|   C    | 110            | 192.0.0.0 | 223.255.255.255 | /24  | 255.255.255.0 | 254      |
+|   D    | 1110           | 224.0.0.0 | 239.255.255.255 |      |               |          |
+|   E    | 1111           | 240.0.0.0 | 255.255.255.255 |      |               |          |
 
 ## Type d'adresses
 
@@ -83,16 +83,17 @@ Toutes les adresses qui ne sont ni réservées ni privées. Adresses routables e
 
 ---
 
-Pour chaque classe (A, B et C) des adresses sont dites privées.<br>
-Elles sont réservées à un usage privé et interne.<br>
-Elles ne sont pas routables sur Internet (Les routeurs doivent refuser)<br>
-Elles sont unique localement (sur le WAN interne) mais pas globalement sur le réseau mondial.
+Pour chaque classe (A, B et C) des adresses sont dites privées :
+
+- Elles sont réservées à un usage privé et interne.
+- Elles ne sont pas routables sur Internet (Les routeurs doivent refuser)
+- Elles sont unique localement (sur le WAN interne) mais pas globalement sur le réseau mondial.
 
 | Classe | Début       | Fin             |
-| ------ | ----------- | --------------- |
-| A      | 10.0.0.0    | 10.255.255.255  |
-| B      | 172.16.0.0  | 172.31.255.255  |
-| C      | 192.168.0.0 | 192.168.255.255 |
+| :----: | ----------- | --------------- |
+|   A    | 10.0.0.0    | 10.255.255.255  |
+|   B    | 172.16.0.0  | 172.31.255.255  |
+|   C    | 192.168.0.0 | 192.168.255.255 |
 
 ## Attribution des adresses publiques
 
@@ -108,6 +109,8 @@ Voici une liste exhausitive d'organisme qui attribuent des adresses publiques :
 - le Latin America and Caribbean Network Information Centre (LACNIC) pour l'Amérique latine et les Caraïbes.
 
 ## CIDR
+
+---
 
 Le CIDR (Classless Inter-Domain Routing) est un système d'adressage IP qui a remplacé le mécanisme des classes utilisé auparavant. Le CIDR utilise une notation avec des slash suivis d'un nombre qui indique le nombre de bits à 1 dans le masque de sous-réseau.
 
@@ -177,42 +180,39 @@ Le découpage se fait toujours en deux parties égales
 
 ---
 
-| CIDR | HostID | Masque        | Machines       |
-| ---- | ------ | ------------- | -------------- |
-| /14  | 18     | 255.252.0.0   | 218-2 = 262142 |
-| /15  | 17     | 255.254.0.0   | 217-2 = 131070 |
-| /16  | 16     | 255.255.0.0   | 216-2 = 65534  |
-| /17  | 15     | 255.255.128.0 | 215-2 = 32766  |
-| /18  | 14     | 255.255.192.0 | 214-2 = 16382  |
-| /19  | 13     | 255.255.224.0 | 213-2 = 8190   |
-| /20  | 12     | 255.255.240.0 | 212-2 = 4094   |
-| /21  | 11     | 255.255.248.0 | 211-2 = 2046   |
-| /22  | 10     | 255.255.252.0 | 210-2 = 1022   |
-| /23  | 9      | 255.255.254.0 | 29-2 = 510     |
-| /24  | 8      | 255.255.255.0 | 28-2 = 254     |
+| CIDR | HostID | Masque        | Machines                  |
+| :--: | ------ | ------------- | ------------------------- |
+| /14  | 18     | 255.252.0.0   | 2<sup>18</sup>-2 = 262142 |
+| /15  | 17     | 255.254.0.0   | 2<sup>17</sup>-2 = 131070 |
+| /16  | 16     | 255.255.0.0   | 2<sup>16</sup>-2 = 65534  |
+| /17  | 15     | 255.255.128.0 | 2<sup>15</sup>-2 = 32766  |
+| /18  | 14     | 255.255.192.0 | 2<sup>14</sup>-2 = 16382  |
+| /19  | 13     | 255.255.224.0 | 2<sup>13</sup>-2 = 8190   |
+| /20  | 12     | 255.255.240.0 | 2<sup>12</sup>-2 = 4094   |
+| /21  | 11     | 255.255.248.0 | 2<sup>11</sup>-2 = 2046   |
+| /22  | 10     | 255.255.252.0 | 2<sup>10</sup>-2 = 1022   |
+| /23  | 9      | 255.255.254.0 | 2<sup>9</sup>-2 = 510     |
+| /24  | 8      | 255.255.255.0 | 2<sup>8</sup>-2 = 254     |
 
 ## Entête IP v4
 
 ---
 
-<b>Version</b> : 4 bits indiquant la version (4)<br>
-<b>Longueur de l'entête</b> : 4 bits indiquant le nombre de mots de 4 octets composant l'entête<br>
-<b>TOS</b> : 8 bits permettant d'activer la QOS<br>
-<b>Version</b>Longueur totale : 16 bits indiquant le nombre total d'octets du paquet<br>
-<b>Identification</b> : 16 bits identifiant les fragments d'un même paquet<br>
-<b>Don't fragmen</b>t : 1 bit interdisant la fragmentation<br>
-<b>More fragments </b>: 1 bit indiquant que d'autres fragments suivent<br>
-<b>Fragment offset</b> : 13 bits indiquant la position du fragment en nombre de mots de 8 octets<br>
-<b>TTL</b> : 8 bits indiquant la durée de vie d'un paquet<br>
-<b>Protocole</b> : 8 bits indiquant le protocole de la couche supérieure (TCP, UDP, ICMP)<br>
-<b>Somme de contrôle</b> : 16 bits, calculée à partir de l'entête<br>
-<b>@ source</b> : 32 bits<br>
-<b>@ destination</b> : 32 bits<br>
-
-- Options :
-- Security
-- Record route
-- Timestamp
-- Traceroute
-
-<b>Bourrage</b> : Entre 0 et 7 bits à 0 pour obtenir une entête multiple de 32 bits<br>
+| Champs               | Descriptions                                                            |
+| -------------------- | ----------------------------------------------------------------------- |
+| Version              | 4 bits indiquant la version (4)                                         |
+| Longueur de l'entête | 4 bits indiquant le nombre de mots de 4 octets composant l'entête       |
+| TOS                  | 28 bits permettant d'activer la QOS                                     |
+| Longueur totale      | 16 bits indiquant le nombre total d'octets du                           |
+| Identification       | 16 bits identifiant les fragments d'un même paquet                      |
+| Don't fragment       | 1 bit interdisant la fragmentation                                      |
+| More fragments       | 1 bit indiquant que d'autres fragments suivent                          |
+| Fragment offset      | 13 bits indiquant la position du fragment en nombre de mots de 8 octets |
+| TTL                  | 8 bits indiquant la durée de vie d'un paquet                            |
+| Protocole            | 8 bits indiquant le protocole de la couche supérieure (TCP, UDP, ICMP)  |
+| Somme de contrôle    | 16 bits, calculée à partir de l'entête                                  |
+| Somme de contrôle    | 16 bits, calculée à partir de l'entête                                  |
+| @ source             | 32 bits                                                                 |
+| @ destination        | 32 bits                                                                 |
+| Options              | Security, Record route, Timestamp, Traceroute                           |
+| Bourrage             | Entre 0 et 7 bits à 0 pour obtenir une entête multiple de 32 bits       |
