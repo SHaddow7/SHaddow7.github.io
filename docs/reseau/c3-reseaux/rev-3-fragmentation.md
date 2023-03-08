@@ -13,9 +13,11 @@ nav_order: 3
 
 ---
 
-La fragmentation permet de passer outre les limites physique en décomposant un paquet de données trop grand pour le transmission sur le réseau en plusieurs paquets plus petits, qui peuvent être transmis et reconstruits à la destination. Chaque fragment contient deux informations dans l'en-tête, **son emplacement dans le paquet** (Déplacement - Fragement Offset) et s'avoir **s'il est le dernier fragment** (MF - More Fragment).
+La fragmentation **permet de passer outre les limites physique** en **décomposant un paquet de données trop grand** pour le transmission sur le réseau en plusieurs paquets plus petits, qui peuvent être transmis et reconstruits à la destination. Chaque fragment contient deux informations dans l'en-tête, **son emplacement dans le paquet** (Déplacement - Fragement Offset) et s'avoir **s'il est le dernier fragment** (MF - More Fragment).
 
-### Exemples de fragmentation
+## Exemples de fragmentation
+
+---
 
 #### Paquet d’origine :
 

@@ -13,7 +13,7 @@ nav_order: 5
 
 ---
 
-Le routage est un mécanisme qui **permet de déterminer le chemin que doivent suivre les paquets** pour arriver à destination. Le routeur assurera la fonction de routage en prenant en charge le réacheminement des paquets qui ne lui sont pas destinés. Chaque routeur détermine à quel voisin il transmet le paquet en fonction de l'adresse destinataire et de sa table de routage (le routage IP est fait pas à pas). Il faut noter qu'une machine ordinaire (Linux ou Windows) peut également se comporter comme un routeur.
+Le routage **permet de déterminer le chemin que doivent suivre les paquets** pour arriver à destination. Le routeur assurera la fonction de routage en prenant en charge le transport des paquets qui ne lui sont pas destinés. Chaque routeur détermine à quel voisin il transmet le paquet en fonction de l'adresse destinataire et de sa table de routage (le routage IP est fait pas à pas). Il faut noter qu'une machine ordinaire (Linux ou Windows) peut également se comporter comme un routeur.
 
 ## Table de routage
 

@@ -13,38 +13,39 @@ nav_order: 3
 
 ---
 
-QUIC (Quick UDP Internet Connections) est un protocole de transport rapide et sécurisé conçu pour remplacer TCP. Il a été développé par Google et est intégré à la plupart des navigateurs web actuels. Les principes fondamentaux de QUIC incluent :
+QUIC (Quick UDP Internet Connections) est un **protocole de transport rapide et sécurisé, fonctionnant sur UDP mais en mode connecté**. Il a été développé par Google, puis repris par l'IETF en 2013, le protocole QUIC a été conçu pour remplacer TCP et TLS pour les connexions internet. Il est important des noter qu'il est intégré à la plupart des navigateurs web actuels.
 
-Connexion rapide et fiabilité : QUIC utilise un ID de connexion unique pour établir une session, ce qui permet une connexion plus rapide et une récupération plus facile en cas de perte de paquets.
+- Protocole détaché du système d'exploitation, géré par l'application (navigateur, serveur...),
+- Usage du multiplexing,
+- Identifiant de connexion,
+- [https://quicwg.org/](https://quicwg.org/)
 
-Encryptage de bout en bout : QUIC utilise un encryptage de bout en bout pour protéger les données des utilisateurs contre la surveillance et la manipulation.
+## Principes fondamentaux de QUIC
 
-Gestion efficace des pertes : QUIC utilise des techniques telles que la récupération rapide et la diffusion multiple pour gérer efficacement les pertes de paquets.
+---
 
-Amélioration de la qualité de service : QUIC utilise des mécanismes de contrôle de congestion pour garantir une qualité de service constante, même en cas de congestion du réseau.
+Les principes fondamentaux de QUIC incluent :
 
-Prise en charge de la mobilité : QUIC prend en charge la mobilité en permettant une transition en douceur entre les réseaux lorsque l'utilisateur se déplace.
+**Connexion rapide et fiabilité** : QUIC utilise un ID de connexion unique pour établir une session, ce qui permet une connexion plus rapide et une récupération plus facile en cas de perte de paquets.
+
+**Encryptage de bout en bout** : QUIC utilise un encryptage de bout en bout pour protéger les données des utilisateurs contre la surveillance et la manipulation.
+
+**Gestion efficace des pertes** : QUIC utilise des techniques telles que la récupération rapide et la diffusion multiple pour gérer efficacement les pertes de paquets.
+
+**Amélioration de la qualité de service** : QUIC utilise des mécanismes de contrôle de congestion pour garantir une qualité de service constante, même en cas de congestion du réseau.
+
+**Prise en charge de la mobilité**: QUIC prend en charge la mobilité en permettant une transition en douceur entre les réseaux lorsque l'utilisateur se déplace.
 
 Ces principes ont été conçus pour offrir des performances et une sécurité supérieures à celles de TCP, ainsi qu'une expérience plus fluide pour les utilisateurs finaux.
-
-- protocole de google, repris par l'IETF en 2013
-- destiné à remplacer TCP
-- fonctionne sur UDP mais en mode connecté
-- fusionne transport et chiffrement
-- Protocole détaché du système d'exploitation, géré par l'application (navigateur, serveur...)
-- multiplexing
-- Identifiant de connexion
-- https://quicwg.org/
 
 ## Usages
 
 ---
 
-QUIC (Quick UDP Internet Connections) est un protocole de communication développé par Google qui a pour but d'améliorer les performances des connexions internet en utilisant l'UDP (User Datagram Protocol). Il a été conçu pour remplacer TCP (Transmission Control Protocol) et TLS (Transport Layer Security) pour les connexions internet, avec pour objectifs :
+- Réduire les temps de latence pour les connexions à distance,
+- Offrir une meilleure fiabilité et une meilleure résilience pour les connexions instables
+- Fournir une meilleure sécurité en utilisant la cryptographie
 
-de réduire les temps de latence pour les connexions à distance
-d'offrir une meilleure fiabilité et une meilleure résilience pour les connexions instables
-de fournir une meilleure sécurité en utilisant la cryptographie
 QUIC s'est avéré particulièrement utile pour les applications de temps réel nécessitant une forte performance et une fiabilité, telles que les applications de jeux en ligne, les services de streaming audio et vidéo, les applications de messagerie instantanée, les applications de collaboration en ligne, etc.
 
 - HTTP/2

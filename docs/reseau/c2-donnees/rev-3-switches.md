@@ -13,7 +13,7 @@ nav_order: 3
 
 ---
 
-Un commutateur est un équipement de réseau qui permet de connecter plusieurs dispositifs ensemble dans un réseau local. Il permet aux données de circuler entre ces dispositifs en utilisant des ports d'entrée et de sortie. Il permet également de filtrer et de transmettre les données à destination des dispositifs connectés, en utilisant l'adresse MAC de chaque dispositif.
+Un commutateur est un équipement de réseau qui **permet de connecter plusieurs dispositifs ensemble dans un réseau local**. Il permet aux données de circuler entre ces dispositifs en utilisant des ports d'entrée et de sortie. Il permet également de filtrer et de transmettre les données à destination des dispositifs connectés, en **utilisant l'adresse MAC de chaque dispositif**.
 
 ## Switchs HP-3Com
 

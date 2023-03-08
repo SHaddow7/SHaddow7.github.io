@@ -11,9 +11,9 @@ nav_order: 1
 
 ## Principes
 
-L'adresse IP v4 est utilisé pour identifier de manière unique chaque dispositif sur un réseau et permettre la communication entre eux. Elle est composée de 4 octets (allant de 0-255, 32 bits au total). Ce qui donne un total de 4 294 967 296 adresses possibles L'adresse IP v4 est généralement affichée avec 4 entiers décimaux séparés par des points, par exemple "192.168.0.1".
+L'adresse IP v4 est utilisé pour **identifier de manière unique chaque dispositif sur un réseau** et **permettre la communication entre eux**. Elle est composée de **4 octets** (allant de 0-255, 32 bits au total). Ce qui donne un total de 4 294 967 296 adresses possibles L'adresse IP v4 est généralement affichée avec 4 entiers décimaux séparés par des points, par exemple "192.168.0.1".
 
-L'adresse IP est généralement à un masque de sous-réseaux. Ce qui permet de le découper en deux partie : NetID, composé d'une suite de 1 et le HostID qui représente une suite de 0.
+L'adresse IP est généralement **associer à un masque de sous-réseaux**. Ce qui **permet de le découper en deux partie** : **NetID**, composé d'une suite de 1 et le **HostID** qui représente une suite de 0.
 
 L'association adresse/masque donne plusieurs informations importantes, notamment le nombre de machines adressables :
 
@@ -34,12 +34,14 @@ Représentation de l'adresse IP V4 :
 
 Exemple : 131.25.120.36 / 24
 
-- Adresse de réseau : 131.25.120.0
-- Adresse de broadcast : 131.25.120.255
-- Plage d'adresses : 131.25.120.1 131.25.120.254
-- Nombres de machines adressables : 2<sup>8</sup> - 2 = 254
+- **Adresse de réseau** : 131.25.120.0
+- **Adresse de broadcast** : 131.25.120.255
+- **Plage d'adresses** : 131.25.120.1 131.25.120.254
+- **Nombres de machines adressables** : 2<sup>8</sup> - 2 = 254
 
 ## Classes d'adresses
+
+---
 
 | Classe | Bits de départ | Début     | Fin             | CIDR | Masque        | Machines |
 | :----: | -------------- | --------- | --------------- | ---- | ------------- | -------- |
@@ -53,18 +55,11 @@ Exemple : 131.25.120.36 / 24
 
 ---
 
-### Adresses réservées
+**Adresses réservées**: Adresses particulières, réservées au fonctionnement du réseau.
 
-Adresses particulières, réservées au fonctionnement du réseau.
+**Adresses privées** : Adresses non routables, utilisables uniquement sur le réseau local. Uniques sur le réseau local, mais pas globalement. À choisir parmi les plages d'adresses privées en fonction du nombre de machines.
 
-### Adresses privées
-
-Adresses non routables, utilisables uniquement sur le réseau local. Uniques sur le réseau local, mais pas globalement.
-À choisir parmi les plages d'adresses privées en fonction du nombre de machines.
-
-### Adresses publiques
-
-Toutes les adresses qui ne sont ni réservées ni privées. Adresses routables et uniques sur Internet; Fournies par le Fournisseur d'Accès Internet (FAI)
+**Adresses publiques** : Toutes les adresses qui ne sont ni réservées ni privées. Adresses routables et uniques sur Internet; Fournies par le Fournisseur d'Accès Internet (FAI)
 
 ## Adresses réservées
 
@@ -112,7 +107,7 @@ Voici une liste exhausitive d'organisme qui attribuent des adresses publiques :
 
 ---
 
-Le CIDR (Classless Inter-Domain Routing) est un système d'adressage IP qui a remplacé le mécanisme des classes utilisé auparavant. Le CIDR utilise une notation avec des slash suivis d'un nombre qui indique le nombre de bits à 1 dans le masque de sous-réseau.
+Le CIDR (Classless Inter-Domain Routing) est un **système d'adressage IP qui a remplacé le mécanisme des classes** utilisé auparavant. Le CIDR utilise une **notation avec des slash suivis d'un nombre** qui indique le nombre de bits à 1 dans le masque de sous-réseau.
 
 Par exemple :
 
@@ -120,9 +115,9 @@ Par exemple :
 - /16 : 255.255.0.0
 - /8 : 255.0.0.0
 
-Le CIDR permet d'utiliser des masques de sous-réseau en dehors des classes traditionnelles, offrant ainsi plus de granularité pour la configuration des réseaux. Le CIDR introduit également le subnetting et le supernetting, qui permettent de diviser un réseau en sous-réseaux plus petits ou de regrouper plusieurs réseaux en un seul réseau plus grand.
+Le CIDR **permet d'utiliser des masques de sous-réseau en dehors des classes traditionnelles**, offrant ainsi plus de granularité pour la configuration des réseaux. Le CIDR introduit également le subnetting et le supernetting, qui permettent de diviser un réseau en sous-réseaux plus petits ou de regrouper plusieurs réseaux en un seul réseau plus grand.
 
-Le VLSM (Variable Length Subnet Mask) permet d'utiliser des masques de sous-réseau de longueurs variables, ce qui permet de créer des sous-réseaux de tailles différentes.
+Le VLSM (Variable Length Subnet Mask) **permet d'utiliser des masques de sous-réseau de longueurs variables**, ce qui permet de créer des sous-réseaux de tailles différentes.
 
 Par exemple :
 
