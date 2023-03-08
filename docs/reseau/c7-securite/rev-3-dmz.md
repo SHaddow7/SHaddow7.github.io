@@ -13,7 +13,7 @@ nav_order: 3
 
 ---
 
-La DMZ (zone démilitarisée) est un sous-réseau qui se situe entre un réseau interne (LAN) et un réseau externe (Internet) et qui permet de fournir des services à l'extérieur du réseau interne tout en assurant une protection contre les attaques de l'extérieur. La DMZ est une zone tampon entre le réseau interne et le réseau externe.
+La **DMZ (zone démilitarisée)** est un sous-réseau qui se situe entre un réseau interne (LAN) et un réseau externe (Internet) et qui **permet de fournir des services à l'extérieur du réseau interne tout en assurant une protection contre les attaques de l'extérieur**. La DMZ est une **zone tampon entre le réseau interne et le réseau externe**.
 
 ## Fonctionnement
 
@@ -40,12 +40,6 @@ La DMZ est un réseau isolé physiquement ou logiquement du réseau interne de l
 
 ---
 
-- Les serveurs de messagerie électronique sont souvent placés dans la DMZ pour permettre l'accès aux utilisateurs externes sans exposer le réseau interne.
-- Les serveurs Web sont également placés dans la DMZ pour fournir un accès à l'extérieur sans exposer le réseau interne.
-- Les systèmes de sécurité tels que les pare-feux, les VPN et les systèmes d'authentification sont également souvent placés dans la DMZ.
-
-## Mots-clés
-
----
-
-DMZ, réseau interne, réseau externe, serveur Web, serveur de messagerie électronique, sécurité, pare-feu, VPN, authentification.
+- Les **serveurs de messagerie** électronique sont souvent placés dans la DMZ pour permettre l'accès aux utilisateurs externes sans exposer le réseau interne.
+- Les **serveurs Web** sont également placés dans la DMZ pour fournir un accès à l'extérieur sans exposer le réseau interne.
+- Les **systèmes de sécurité** tels que les pare-feux, les VPN et les systèmes d'authentification sont également souvent placés dans la DMZ.

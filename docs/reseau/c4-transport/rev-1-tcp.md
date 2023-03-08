@@ -36,13 +36,17 @@ Les usages les plus courants du protocole TCP incluent le transfert de fichiers,
 
 ---
 
-Les ports sont des points d'accès numériques uniques utilisés pour **identifier un canal de communication sur une machine**. Chaque service ou application en réseau peut être associé à un numéro de port spécifique. Le numéro de port vient s'ajouter à l'adresse IP pour créer un couple appelé **"socket TCP"**. Les ports sont identifiés par un entier compris entre 0 et 65535, sachant que :
+Les ports sont des points d'accès numériques uniques utilisés pour **identifier un canal de communication sur une machine**. Chaque service ou application en réseau peut être associé à un numéro de port spécifique. **Le numéro de port vient s'ajouter à l'adresse IP** pour créer un couple appelé **"socket TCP"**. Les ports sont identifiés par un entier **compris entre 0 et 65535**.
 
-- les **port connus**, compris entre 0 et 1023 (réservés à des applications),
-- les **ports enregistrés**, compris entre 1024 et 49151,
-- les **ports dynamiques ou privés**, compris entre 49152 et 65535.
+Lorsqu'une demande de connexion réseau est effectuée, elle est dirigée vers le port approprié pour atteindre le service ou l'application souhaité. Les ports sont utilisés pour différencier les services sur un même hôte et pour établir des connexions fiables entre les ordinateurs.
 
-Lorsqu'une demande de connexion réseau est effectuée, elle est dirigée vers le port approprié pour atteindre le service ou l'application souhaité. Les ports sont utilisés pour différencier les services sur un même hôte et pour établir des connexions fiables entre les ordinateurs. Les protocoles tels que TCP et UDP utilisent des ports pour identifier les sessions réseau et transmettre les données. Les numéros de ports courants pour les services populaires comprennent 80 pour HTTP, 443 pour HTTPS, 21 pour FTP, etc.
+Les protocoles tels que TCP et UDP utilisent des ports pour identifier les sessions réseau et transmettre les données. Les numéros de ports courants pour les services populaires comprennent **80 pour HTTP**, **443 pour HTTPS**, **21 pour FTP**, etc.
+
+| Noms                           | Descriptions                                          |
+| ------------------------------ | ----------------------------------------------------- |
+| **port connus**                | compris entre 0 et 1023 (réservés à des applications) |
+| **ports enregistrés**          | compris entre 1024 et 49151                           |
+| **ports dynamiques ou privés** | compris entre 49152 et 65535                          |
 
 ## Ouverture de session (3 way handshake)
 
@@ -90,9 +94,11 @@ Un numéro de séquence est un identificateur utilisé dans le protocole TCP pou
 
 Les ports TCP peuvent prendre les états suivants :
 
-- **ESTABLISHED** : La session est active.
-- **TIME_WAIT** : Session fermée, en attente de paquets en retard.
-- **CLOSE_WAIT** : Session fermée, en attente de confirmation.
+| Etats           | Descriptions                                     |
+| --------------- | ------------------------------------------------ |
+| **ESTABLISHED** | La session est active.                           |
+| **TIME_WAIT**   | Session fermée, en attente de paquets en retard. |
+| **CLOSE_WAIT**  | Session fermée, en attente de confirmation.      |
 
 ## Entête TCP
 

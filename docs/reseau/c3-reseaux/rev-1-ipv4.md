@@ -96,12 +96,12 @@ Pour chaque classe (A, B et C) des adresses sont dites privées :
 
 Voici une liste exhausitive d'organisme qui attribuent des adresses publiques :
 
-- l'Internet Assigned Numbers Authority (IANA)
-- l'Internet Corporation for Assigned Names and Numbers (ICANN)
-- l'American Registry for Internet Numbers (ARIN) pour l'Amérique du Nord
-- le Réseaux IP Européens Network Coordination Centre (RIPE NCC) pour l'Europe, le Moyen-Orient et certaines parties de l'Asie centrale
-- l'Asia-Pacific Network Information Centre (APNIC) pour la région Asie-Pacifique
-- le Latin America and Caribbean Network Information Centre (LACNIC) pour l'Amérique latine et les Caraïbes.
+- l'Internet Assigned Numbers Authority **(IANA)**
+- l'Internet Corporation for Assigned Names and Numbers **(ICANN)**
+- l'American Registry for Internet Numbers **(ARIN)** pour l'Amérique du Nord
+- le Réseaux IP Européens Network Coordination Centre **(RIPE NCC)** pour l'Europe, le Moyen-Orient et certaines parties de l'Asie centrale
+- l'Asia-Pacific Network Information Centre **(APNIC)** pour la région Asie-Pacifique
+- le Latin America and Caribbean Network Information Centre **(LACNIC)** pour l'Amérique latine et les Caraïbes.
 
 ## CIDR
 

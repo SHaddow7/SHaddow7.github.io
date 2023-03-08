@@ -13,7 +13,9 @@ nav_order: 2
 
 ---
 
-Le protocole UDP (User Datagram Protocol) est un protocole de transport de données qui se distingue du protocole TCP par ses caractéristiques principales :
+Le protocole **UDP (User Datagram Protocol)** est un **protocole de transport de données léger et rapide**, qui **fonctionne en mode non connecté** et **ne garantit pas la fiabilité** de la transmission de données. UDP est particulièrement **adapté pour les applications qui requièrent une transmission rapide des données**, mais qui n'exigent pas une transmission de données fiable et ordonnée.
+
+Le protocole UDP se distingue du protocole TCP par ses caractéristiques principales :
 
 - **Introduit la notion de port UDP** : chaque message envoyé par UDP possède un numéro de port UDP qui permet à l'application destinataire de savoir à quelle application expéditrice le message est destiné.
 - **Réduit au maximum le traitement** : UDP est conçu pour réduire autant que possible le temps de traitement nécessaire à la transmission de données.
@@ -44,7 +46,3 @@ UDP est souvent utilisé pour les applications qui nécessitent une transmission
     |  Entête  Couche 2  |  Entête Couche 3  |  Couche 4 - Datagramme UDP  |  Suffixe  Couche 2  |
     └────────────────────┴───────────────────┴─────────────────────────────┴─────────────────────┴
 ```
-
-## Résumé
-
-En résumé, UDP est un protocole de transport de données léger et rapide, qui fonctionne en mode non connecté et ne garantit pas la fiabilité de la transmission de données. UDP est particulièrement adapté pour les applications qui requièrent une transmission rapide des données, mais qui n'exigent pas une transmission de données fiable et ordonnée.
