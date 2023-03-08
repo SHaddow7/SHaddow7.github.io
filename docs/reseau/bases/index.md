@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Généralités
-nav_order: 1
 parent: Réseaux
 has_children: true
 has_toc: false
@@ -11,7 +10,9 @@ has_toc: false
 
 ## Réseau
 
-Un **réseau** est l'ensemble des moyens matériels et logiciels mis en oeuvre pour assurer les communications entre ordinateurs, stations de travail et terminaux informatiques. Il utilise un médium de communication pour faire voyager les informations. Plusieurs réseaux peuvent être connectés entre eux pour créer des réseaux de réseaux.
+---
+
+Un **réseau** est l'**ensemble des moyens matériels et logiciels mis en oeuvre pour assurer les communications entre ordinateurs, stations de travail et terminaux informatiques**. Il utilise un médium de communication pour faire voyager les informations. Plusieurs réseaux peuvent être connectés entre eux pour créer des réseaux de réseaux.
 {: .p-4 }
 
 ## Type de transmission
@@ -83,13 +84,3 @@ Réseau de LANs reliés et distants de quelques kilomètres. Le but étant de re
 {: .definition}
 
 > Technique de routage qui consiste à ajouter une étiquette à chaque paquet de données, qui indique le chemin à suivre pour atteindre sa destination. Cette étiquette permet aux équipements de commutation de router les paquets plus rapidement et plus efficacement que les méthodes traditionnelles de routage IP.
-
-```plaintext
-    • MPLS Multiple Protocol Label Switching
-    • Ajout de labels supplémentaires (32 bits) aux datagrammes pour :
-    • Gérer plus facilement les différents types de trafics
-    • Apporter à IP un mode connecté
-    • Accélérer le traitement des datagrammes
-    • Permettre l'utilisation de différents protocoles de niveau 2 (ATM, Ethernet, PPP…)
-    • Utilisé par le RIE et les fournisseurs d'accès
-```

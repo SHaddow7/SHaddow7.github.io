@@ -34,4 +34,6 @@ Le **coeur de réseau** est la partie d'un réseau qui gère les principales fon
 
 ---
 
-Un **brassage** de réseau est une technique qui consiste à changer les ports physiques auxquels les câbles de réseau sont connectés sur un commutateur réseau. Cela permet de mélanger les connexions entre les différents ordinateurs et périphériques sur le réseau, afin de répartir équitablement la charge de travail et de minimiser les collisions de données qui peuvent survenir lorsqu'il y a un trafic important sur le réseau. Le brassage de réseau est également utilisé pour renforcer la sécurité en rendant plus difficile pour un pirate informatique de suivre la trace des données à travers le réseau.
+Un **brassage** de réseau est une technique qui consiste à changer les ports physiques auxquels les câbles de réseau sont connectés sur un commutateur réseau. Cela permet de mélanger les connexions entre les différents ordinateurs et périphériques sur le réseau, afin de répartir équitablement la charge de travail et de minimiser les collisions de données qui peuvent survenir lorsqu'il y a un trafic important sur le réseau.
+
+Le brassage de réseau est également utilisé pour renforcer la sécurité en rendant plus difficile pour un pirate informatique de suivre la trace des données à travers le réseau.

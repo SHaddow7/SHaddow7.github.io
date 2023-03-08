@@ -12,13 +12,13 @@ has_toc: false
 
 ---
 
-La couche 1 du modèle OSI est la couche physique, qui est chargée de la définition du support de transmission et des connecteurs. Les différents types de supports de transmission peuvent inclure :
+La couche 1 du modèle OSI est la couche physique, qui est **chargée de la définition du support de transmission et des connecteurs**. Les différents types de supports de transmission peuvent inclure :
 
 - le cuivre,
 - la fibre optique
 - et même l'air, utilisé par des technologies sans fil comme le Wi-Fi et le Bluetooth.
 
-La couche physique doit également prendre en compte les normes de connectivité, telles que l'application de la charte LAN à la DGFIP, afin de garantir que les différents dispositifs puissent communiquer entre eux de manière efficace et fiable.
+La couche physique doit également prendre en compte les normes de connectivité, telles que l'**application de la charte LAN à la DGFIP**, afin de **garantir que les différents dispositifs puissent communiquer entre eux de manière efficace et fiable**.
 
 En conclusion, la couche 1 est responsable de la transmission des données brutes sur le réseau, sans prendre en compte leur signification ou leur interprétation.
 
@@ -28,9 +28,9 @@ En conclusion, la couche 1 est responsable de la transmission des données brute
 
 Les supports de transmission sont les médias physiques utilisés pour transmettre des données à travers un réseau. Les exemples courants de supports de transmission incluent :
 
-- les câbles : les câbles Ethernet, les câbles coaxiaux, les câbles de fibre optique,
-- les ondes radio : WIFI, Bluetooth, ZIGBEE, etc.. (connection sans fil),
-- les signaux lumineux : les fibres optiques.
+- **les câbles** : les câbles Ethernet, les câbles coaxiaux, les câbles de fibre optique,
+- **les ondes radio** : WIFI, Bluetooth, ZIGBEE, etc.. (connection sans fil),
+- **les signaux lumineux** : les fibres optiques.
 
 ## **Connecteurs**
 
