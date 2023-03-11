@@ -17,18 +17,6 @@ L'adresse IP version 6 (IPv6) est une version plus récente de l'adresse IPv4. E
 
 Elle est composée de **128 bits**, contrairement à une adresse IPv4 qui est composée de 32 bits. Les 128 bits sont **divisés en 8 blocs de 16 bits**, blocs de 4 chiffres, chacun représentant une valeur hexadécimale. Les blocs sont **séparés par des deux-points (:)** pour faciliter la lecture de l'adresse.
 
-## Format des adresses IPv6
-
----
-
-Voici la composition des adresses IPv6 :
-
-```plaintext
-    2001:0db8:0000:85a3:0000:0000:ac1f:8001 / 64
-    ------------------- -------------------   --
-    ID RESEAU - 64b     ID HOTE - 64b         MASQUE
-```
-
 ## Avantages
 
 ---
@@ -43,6 +31,18 @@ Les quelques avantages que propose l'adresse IPv6s :
 - **Interdiction de fragmenter les paquets au niveau des routeurs** (simplification).
 - **Mécanisme de Qualité de Service** (QoS) intégré.
 - **Baromètre annuel ARCEP de transition vers l'IPV6**
+
+## Format des adresses IPv6
+
+---
+
+Voici la composition des adresses IPv6 :
+
+```plaintext
+    2001:0db8:0000:85a3:0000:0000:ac1f:8001 / 64
+    ------------------- -------------------   --
+    ID RESEAU - 64b     ID HOTE - 64b         MASQUE
+```
 
 ## Comment simplifier une adresse IPv6 ?
 
@@ -71,19 +71,17 @@ Une adresse IP v6 peut être simplifiée :
 
 ---
 
-Le domaine de validité en IPv6 **définit les adresses qui peuvent être utilisées** pour l'attribution à des dispositifs réseau.
-
-Il existe plusieurs types d'adresses IPv6, chacun ayant un domaine de validité différent.
+Le domaine de validité en IPv6 **définit les adresses qui peuvent être utilisées** pour l'attribution à des dispositifs réseau. Il existe plusieurs types d'adresses IPv6, chacun ayant un domaine de validité différent.
 
 ### LOCAL
 
-- Les adresses **link-local**, disposant du préfix **fe80::/10**, sont utilisées uniquement à l'intérieur d'un lien réseau, ne peuvent communiquer qu'avec les hôtes de ce même lien. Equivalent aux adresses **APIPA**.
+- Les adresses **link-local**, disposant du préfix **fe80::/10**, sont **utilisées uniquement à l'intérieur d'un lien réseau**, ne peuvent communiquer qu'avec les hôtes de ce même lien. Equivalent aux adresses **APIPA**.
 
-- Les adresses **unique local**, disposant du préfix **fc00::/7**, sont uniquement **utilisées à l'intérieur d'un réseau privé** et ne sont pas censées être routées sur Internet. Elles sont similaires aux adresses privées en IPv4 (comme 10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16), mais elles sont conçues pour une utilisation sur IPv6.
+- Les adresses **unique local**, disposant du préfix **fc00::/7**, sont uniquement **utilisées à l'intérieur d'un réseau privé** et **ne sont pas censées être routées sur Internet**. Elles sont similaires aux adresses privées en IPv4 (comme 10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16), mais elles sont conçues pour une utilisation sur IPv6.
 
 ### GLOBAL
 
-- Les adresses **globales uniques**, disposant du préfix **2000::/3**, peuvent être utilisées pour l'attribution à des dispositifs sur Internet. Equivalentaux adresses publiques IPv4.
+- Les adresses **globales uniques**, disposant du préfix **2000::/3**, peuvent être utilisées pour l'**attribution à des dispositifs sur Internet**. Equivalentaux adresses publiques IPv4.
 
 ### MULTICAST - _Culture générale_
 
@@ -102,7 +100,7 @@ Chacun de ces types d'adresses a un domaine de validité défini.
 
 ### A savoir
 
-Chaque hôte dispose, pour chaque interface, d'une **adresse link-local** pour communiquer avec le routeur, d'une **adresse globale** s'il est relié à un autre réseau (comme Internet) et éventuellement d'une adresse **unique locale** pour communiquer avec les autres hôtes sur le réseau privé.
+Chaque hôte dispose, pour chaque interface, d'une **adresse link-local pour communiquer avec le routeur**, d'une **adresse globale** s'il est **relié à un autre réseau (comme Internet)** et éventuellement d'une adresse **unique locale pour communiquer avec les autres hôtes sur le réseau privé**.
 
 ## Les adresses réservées
 
@@ -111,10 +109,10 @@ Chaque hôte dispose, pour chaque interface, d'une **adresse link-local** pour c
 Les adresses IPv6 incluent également des adresses réservées pour une utilisation spécifique. Par exemple, l'adresse ::1 est réservée pour l'utilisation en tant qu'adresse de bouclage local (loopback), et l'adresse :: est réservée pour la mise en réseau des dispositifs sans adresse.
 
 | Descriptions                     | adresses                                 | abrégée |
-| -------------------------------- | ---------------------------------------- | ------- |
-| Adresse nulle                    | 0000:0000:0000:0000:0000:0000:0000:0000  | ::      |
-| Adresse de bouclage              | 0000:0000:0000:0000:0000:0000:0000:0001  | ::1     |
-| Route par défaut                 |                                          | ::/0    |
+| -------------------------------- | ---------------------------------------- | :-----: |
+| Adresse nulle                    | 0000:0000:0000:0000:0000:0000:0000:0000  |   ::    |
+| Adresse de bouclage              | 0000:0000:0000:0000:0000:0000:0000:0001  |   ::1   |
+| Route par défaut                 |                                          |  ::/0   |
 | Découverte du routeur            | adresse de requête d'un routeur          | ff02::2 |
 | Découverte du routeur            | adresse pour la réponse du routeur       | ff02::1 |
 | Adresse IPv6 avec numéro de port | http://[2002:400:2a41:378::34a2:36]:8080 | ff02::1 |
