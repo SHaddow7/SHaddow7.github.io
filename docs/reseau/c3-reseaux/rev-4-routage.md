@@ -7,23 +7,23 @@ has_toc: false
 nav_order: 5
 ---
 
-## Routage
+# Routage
 
 ## Principes
 
 ---
 
-Le routage **permet de déterminer le chemin que doivent suivre les paquets** pour arriver à destination. Le routeur assurera la fonction de routage en prenant en charge le transport des paquets qui ne lui sont pas destinés. Chaque routeur détermine à quel voisin il transmet le paquet en fonction de l'adresse destinataire et de sa table de routage (le routage IP est fait pas à pas). Il faut noter qu'une machine ordinaire (Linux ou Windows) peut également se comporter comme un routeur.
+Le routage **permet de déterminer le chemin que doivent suivre les paquets** pour arriver à destination. Le routeur assurera la fonction de routage en **prenant en charge le transport des paquets qui ne lui sont pas destinés**. Chaque routeur détermine à quel voisin il transmet le paquet en fonction de l'adresse destinataire et de sa table de routage **(le routage IP est fait pas à pas)**. Il faut noter qu'une machine ordinaire (Linux ou Windows) peut également se comporter comme un routeur.
 
 ## Table de routage
 
 ---
 
-Chaque machine possède une table de routage qui **détermine l'action à entreprendre pour chaque paquet** en fonction de son adresse de destination. Cette table est utilisée en suivant un ordre allant du masque de sous-réseau le plus long (par exemple 255.255.255.0) au masque le plus court (0.0.0.0). Pour chaque entrée de la table, un opération ET logique est effectuée entre **l'adresse de destination** et le **masque**.
+Chaque machine contient une table de routage qui **détermine l'action à entreprendre pour chaque paquet** en fonction de son adresse de destination. Cette table est utilisée en suivant un ordre allant du masque de sous-réseau le plus long (par exemple 255.255.255.0) au masque le plus court (0.0.0.0).
 
-Si le résultat de l'opération ET logique est égal à l'adresse **réseau**, la ligne de la table de routage doit être utilisée soit en transmettant le paquet à la **passerelle** si elle est disponible, soit directement sur l'**interface** correspondante.
+Pour chaque entrée de la table, un opération ET logique est effectuée entre **l'adresse de destination** et le **masque**. Si le résultat de l'opération ET logique est égal à l'adresse **réseau**, la ligne de la table de routage doit être utilisée soit en transmettant le paquet à la **passerelle** si elle est disponible, soit directement sur l'**interface** correspondante.
 
-## Exemples de commandes
+## Commandes utiles à connaître (Linux)
 
 ---
 
@@ -44,9 +44,9 @@ route print    #  afficher la table de routage actuelle sur l'OS Windowss
 ```
 
 ```bash
-Traceroute
 # Permet d'envoyer des pings successifs en partant d'un TTL à 1 et en augmentant de 1 à chaque essai.
 # Permet de tracer la route empruntée par le paquet.
 # Permet de récupérer les adresses des routeurs intermédiaires.
 # (sauf s'ils sont configurés pour ne pas répondre)
+traceroute
 ```

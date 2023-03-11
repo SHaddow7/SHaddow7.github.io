@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 7
 ---
 
-# L'adresse IP v6
+# IPV6
 
 ## Principes
 

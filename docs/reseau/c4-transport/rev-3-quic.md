@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 3
 ---
 
-# Quick UDP Internet Connections (QUIC)
+# QUIC (Quick UDP Internet Connections)
 
 ## Principes
 

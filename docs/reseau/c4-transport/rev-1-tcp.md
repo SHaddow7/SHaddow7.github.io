@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# Transmission Control Protocol (TCP)
+# TCP (Transmission Control Protocol)
 
 ## Principes
 

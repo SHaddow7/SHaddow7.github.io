@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 2
 ---
 
-# User Datagram Protocol (UDP)
+# UDP (User Datagram Protocol)
 
 ## Principes
 
