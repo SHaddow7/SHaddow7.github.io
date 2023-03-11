@@ -65,14 +65,14 @@ Exemple : 131.25.120.36 / 24
 
 ---
 
-| Adresse                    | Début           | Fin             | CIDR | Masque          |
-| -------------------------- | --------------- | --------------- | ---- | --------------- |
-| Adresse nulle              | 0.0.0.0         | 0.0.0.0         | /32  | 255.255.255.255 |
-| Broadcast général          | 255.255.255.255 | 255.255.255.255 | /32  | 255.255.255.255 |
-| Bouclage (loopback)        | 127.0.0.0       | 127.255.255.255 | /8   | 255.0.0.0       |
-| Apipa (Autoconfigurée)     | 169.254.0.0     | 169.254.255.255 | /16  | 255.255.0.0     |
-| Multicast                  | 224.0.0.0       | 239.255.255.255 | /4   | 240.0.0.0       |
-| NAT à grande échelle (RIE) | 100.64.0.0      | 100.127.255.255 | /10  | 255.192.0.0     |
+| Adresse                               | Début           | Fin             | CIDR | Masque          |
+| ------------------------------------- | --------------- | --------------- | ---- | --------------- |
+| Adresse nulle                         | 0.0.0.0         | 0.0.0.0         | /32  | 255.255.255.255 |
+| Broadcast général                     | 255.255.255.255 | 255.255.255.255 | /32  | 255.255.255.255 |
+| Bouclage (loopback)                   | 127.0.0.0       | 127.255.255.255 | /8   | 255.0.0.0       |
+| [Apipa](#défintions) (Autoconfigurée) | 169.254.0.0     | 169.254.255.255 | /16  | 255.255.0.0     |
+| Multicast                             | 224.0.0.0       | 239.255.255.255 | /4   | 240.0.0.0       |
+| NAT à grande échelle (RIE)            | 100.64.0.0      | 100.127.255.255 | /10  | 255.192.0.0     |
 
 ## Adresses privées
 
@@ -165,12 +165,6 @@ Exemple : 131.25.120.36 / 255.255.224.0
 - Windows : SolarWinds IP Calculator
 - Web : ipcalc
 
-## Découpage de sous-réseaux (SubNetting)
-
----
-
-Le découpage se fait toujours en deux parties égales
-
 ## Exemples de masques
 
 ---
@@ -189,7 +183,7 @@ Le découpage se fait toujours en deux parties égales
 | /23  | 9      | 255.255.254.0 | 2<sup>9</sup>-2 = 510     |
 | /24  | 8      | 255.255.255.0 | 2<sup>8</sup>-2 = 254     |
 
-## Entête IP v4
+## Composition des champs de l'entête IP v4
 
 ---
 
@@ -211,3 +205,13 @@ Le découpage se fait toujours en deux parties égales
 | @ destination        | 32 bits                                                                 |
 | Options              | Security, Record route, Timestamp, Traceroute                           |
 | Bourrage             | Entre 0 et 7 bits à 0 pour obtenir une entête multiple de 32 bits       |
+
+## Défintions
+
+---
+
+**Adresse APIPA** : permet de configurer des adresses IP automatiquement et permettre aux machines Windows d'un même réseau informatique (par exemple un lien local Ethernet) de communiquer, même s'il n'existe aucune configuration manuelle ni automatique (DHCP).
+
+**SubNetting** : Consiste à découper un réseau en deux parties égales.
+
+**SuperNetting** : Consiste à combiner plusieurs sous-réseaux plus petits en un réseau plus grand.
