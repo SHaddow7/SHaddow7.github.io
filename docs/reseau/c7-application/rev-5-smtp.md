@@ -1,10 +1,10 @@
 ---
 layout: default
 title: SMTP
-parent: 7 - Couche
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: false
-# nav_order: 0
+nav_order: 5
 ---
 
 # SMTP

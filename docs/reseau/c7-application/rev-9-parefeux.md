@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Parefeu
-parent: 7 - Couche Sécurité
+title: PAREFEUX
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: true
-nav_order: 2
+nav_order: 9
 ---
 
-# Parefeu
+# Parefeux
 
 ## Principes
 
 ---
 
-Un pare-feu (firewall en anglais) est un dispositif de sécurité informatique qui **permet de filtrer le trafic réseau entrant et sortant d'un réseau privé en se basant sur des règles de sécurité prédéfinies**. Son but est de protéger le réseau des accès non autorisés et des attaques malveillantes en bloquant les connexions qui ne respectent pas les règles définies.
+Un pare-feu (firewall en anglais) est un système de sécurité informatique qui **permet de filtrer le trafic réseau entrant et sortant d'un réseau privé en se basant sur des règles de sécurité prédéfinies**. Son but est de protéger le réseau des accès non autorisés et des attaques malveillantes en bloquant les connexions qui ne respectent pas les règles définies.
 
 ## Fonctionnement
 
 ---
 
-Le pare-feu est placé entre le réseau privé et le réseau public (Internet). Il analyse le trafic réseau qui passe à travers lui et applique les règles de sécurité définies pour déterminer si une connexion doit être autorisée ou bloquée. Les règles de sécurité sont basées sur des critères tels que l'adresse IP, le port, le protocole, etc. Les pare-feu peuvent être configurés pour permettre uniquement le trafic entrant et sortant spécifique à une application, un protocole ou un port.
+Le pare-feu est placé entre le réseau privé et le réseau public (Internet). Il **analyse le trafic réseau** qui passe à travers lui et **applique les règles de sécurité définies** pour déterminer si une connexion doit être autorisée ou bloquée. **Les règles de sécurité** sont b**asées sur des critères** tels que l'**adresse IP**, le **port**, le **protocole**, etc. Les pare-feu peuvent être configurés pour permettre uniquement le trafic entrant et sortant spécifique à une application, un protocole ou un port.
 
 ## Avantages
 
@@ -47,7 +47,7 @@ Les fonctionnalités principales d'un pare-feu sont les suivantes :
 - **Protection contre les attaques de déni de service (DoS)** : le pare-feu peut être configuré pour bloquer le trafic provenant de sources malveillantes qui tentent de surcharger le réseau avec des requêtes excessives.
 - **Journalisation** : le pare-feu enregistre les informations sur les connexions réseau entrantes et sortantes, ce qui permet de surveiller et d'analyser le trafic réseau.
 
-## Types
+## Les types de parefeux
 
 ---
 
@@ -61,9 +61,9 @@ Il existe plusieurs types de pare-feu, notamment :
 
 ---
 
-- Protection des réseaux d'entreprise : Les pare-feu sont souvent utilisés pour protéger les réseaux d'entreprise contre les attaques de pirates informatiques.
-- Protection des serveurs web : Les pare-feu peuvent être utilisés pour protéger les serveurs web contre les attaques de déni de service (DDoS).
-- Protection des réseaux sans fil : Les pare-feu peuvent être utilisés pour protéger les réseaux sans fil des intrusions et des attaques
+- **Protection des réseaux d'entreprise** : Les pare-feu sont souvent utilisés pour protéger les réseaux d'entreprise contre les attaques de pirates informatiques.
+- **Protection des serveurs web** : Les pare-feu peuvent être utilisés pour protéger les serveurs web contre les attaques de déni de service (DDoS).
+- **Protection des réseaux sans fil** : Les pare-feu peuvent être utilisés pour protéger les réseaux sans fil des intrusions et des attaques
 
 ## Exemples
 

@@ -1,19 +1,29 @@
 ---
 layout: default
-title: Proxy
-parent: 7 - Couche Sécurité
+title: PROXYS
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: true
-nav_order: 1
+nav_order: 8
 ---
 
-# Le Proxy
+# PROXYS
 
 ## Principes
 
 ---
 
-Le proxy est un **serveur intermédiaire entre le client et le serveur**. Il permet de **gérer les flux de trafic entre ces deux éléments** en assurant diverses fonctions. Les proxys sont souvent utilisés pour améliorer les performances, la sécurité et la confidentialité des communications réseau.
+Le proxy (ou mandataire) est un **intermédiaire qui réalise une connexion indirect** entre le client et le serveur . Il permet de **gérer les flux de trafic entre ces deux éléments** en assurant diverses fonctions. Les proxys sont souvent utilisés pour améliorer les performances, la sécurité et la confidentialité des communications réseau.
+
+## Utilités
+
+---
+
+- **Accélération de la navigation** grâce à l'utilisation de caches et de la compression au niveau du proxy.
+- **Filtrage des accès**.
+- **Sécurisation** vis à vis de l'extérieur.
+- **Stockage des requêtes** dans un journal (Audit).
+- **Accès à un site** faisant l'objet de restrictions géographiques.
 
 ## Fonctionnement
 

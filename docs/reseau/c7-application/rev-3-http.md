@@ -1,33 +1,59 @@
 ---
 layout: default
 title: HTTP
-parent: 7 - Couche
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: false
-# nav_order: 0
+nav_order: 3
 ---
 
 # HTTP
 
-## Définition
+## Principes
 
 ---
 
-Le HTTP (Hypertext Transfer Protocol) est un protocole de communication client-serveur de la couche application <b>utilisé pour transférer des données sur le World Wide Web (WWW)</b>. Il est utilisé pour récupérer des ressources telles que des pages Web, des images et des vidéos à partir de serveurs Web.
+Le protocole HTTP (Hypertext Transfer Protocol) est basé sur un principe de requêt/réponse.
 
-## Définition - (+ approfondi)
+- **HTTP Request** : Un client établit une connexion TCP vers un serveur (port 80) et lui envoie une requête sous la forme d'une méthode, d'une URI, d'un protocole, suivi d'un message
+- **HTTP Response** : Le serveur répond par une **ligne d'état** (version de protocole + message de succès ou d'erreur) suivi d'un message contenant l'information souhaitée.
+
+## Requête HTTP
 
 ---
 
-Le HTTP est un protocole sans état, ce qui signifie que chaque demande envoyée par le client au serveur est traitée indépendamment des demandes précédentes. Par conséquent, chaque demande contient toutes les informations nécessaires pour traiter la demande, y compris les cookies, les en-têtes HTTP et les paramètres de requête.
+## Exemple de requête HTTP
 
-Le HTTP utilise des méthodes de requête pour définir l'action à effectuer sur les ressources du serveur. Les méthodes de requête les plus couramment utilisées sont GET, POST, PUT, DELETE, HEAD, OPTIONS et TRACE.
+---
 
-Le HTTP utilise des codes de statut pour indiquer l'état de la réponse du serveur à une demande du client. Les codes de statut les plus couramment utilisés sont 200 OK (la demande a réussi), 404 Not Found (la ressource demandée n'existe pas) et 500 Internal Server Error (une erreur s'est produite sur le serveur).
+```plaintext
+    GET / HTTP/1.1
+    Host: developper.mozilla.org    |  > Headers
+    Accept-language: fr             |
 
-Le HTTP utilise des en-têtes de requête et de réponse pour transmettre des informations supplémentaires sur la demande et la réponse. Les en-têtes HTTP peuvent inclure des informations telles que la langue préférée du client, le type de contenu de la réponse et la date et l'heure de la dernière modification de la ressource.
+    # Definitons
+    GET : La méthode
+    "/" : Le chemin
+    HTTP/1.1 : Version du protocole
+```
 
-Le HTTPS (HTTP Secure) est une version sécurisée du protocole HTTP qui utilise une couche de transport sécurisée (TLS/SSL) pour crypter les données envoyées entre le client et le serveur. Il est utilisé pour garantir que les données sensibles telles que les noms d'utilisateur et les mots de passe ne sont pas interceptées par des tiers.
+## Réponse HTTP
+
+---
+
+Une fois la requête reçue et interprétée, un serveur répond par un message HTTP de réponse.
+La première ligne d'une réponse HTTP consiste en une phrase comportant plusieurs éléments :
+
+- Le protocole, avec sa version
+- Un code de retour numérique
+- Un message décrivant la raison
+
+Les codes de retour sont rangés par catégories :
+**1xx** - **Information** : Non utilisé, pour usage futur
+**2xx** - **Succès** : L'action a été correctement reçue, interprétée, et exécutée.
+**3xx** - **Redirection** : Une décision supplémentaire doit être prise pour terminer la requête
+**4xx** - **Erreur Client** : La requête présente une erreur de forme et ne peut être satisfaite
+**5xx** - **Erreur Serveur** : La requête est valide, mais le serveur ne peut la satisfaire
 
 ## Principes de fonctionnement
 

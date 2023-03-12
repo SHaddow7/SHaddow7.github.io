@@ -13,14 +13,14 @@ nav_order: 3
 
 ---
 
-QUIC (Quick UDP Internet Connections) est un **protocole de transport rapide et sécurisé, fonctionnant sur UDP mais en mode connecté**. Il a été développé par Google, puis repris par l'IETF en 2013, le protocole QUIC a été conçu pour remplacer TCP et TLS pour les connexions internet. Il est important des noter qu'il est intégré à la plupart des navigateurs web actuels.
+**QUIC (Quick UDP Internet Connections)** est un protocole de la couche transport **dédier au transport rapide et sécurisé, fonctionnant sur UDP mais en mode connecté**. Il a été développé par Google, puis repris par l'IETF en 2013, le protocole QUIC a été **conçu pour remplacer TCP et TLS** pour les connexions internet. Il est conçu pour résoudre les problèmes de lenteur et de latence sur les réseaux en utilisant des techniques telles que la multiplexation multiple, la mise en cache des paquets et la correction d'erreurs. Il est important des noter qu'il est intégré à la plupart des navigateurs web actuels.
 
 - Protocole détaché du système d'exploitation, géré par l'application (navigateur, serveur...),
 - Usage du multiplexing,
 - Identifiant de connexion,
 - [https://quicwg.org/](https://quicwg.org/)
 
-## Principes fondamentaux de QUIC
+## Principes fondamentaux de QUIC - _Culture Générale_
 
 ---
 
@@ -36,18 +36,17 @@ Les principes fondamentaux de QUIC incluent :
 
 **Prise en charge de la mobilité**: QUIC prend en charge la mobilité en permettant une transition en douceur entre les réseaux lorsque l'utilisateur se déplace.
 
-Ces principes ont été conçus pour offrir des performances et une sécurité supérieures à celles de TCP, ainsi qu'une expérience plus fluide pour les utilisateurs finaux.
+Ces principes ont été conçus pour **offrir des performances** et **une sécurité supérieures à celles de TCP**, ainsi qu'une expérience plus fluide pour les utilisateurs finaux.
 
 ## Usages
 
 ---
 
-- Réduire les temps de latence pour les connexions à distance,
-- Offrir une meilleure fiabilité et une meilleure résilience pour les connexions instables
-- Fournir une meilleure sécurité en utilisant la cryptographie
+QUIC s'est avéré **utile pour les applications de temps réel** nécessitant une forte performance et une fiabilité, telles que les applications de jeux en ligne, les services de streaming audio et vidéo, les applications de messagerie instantanée, les applications de collaboration en ligne, etc.
 
-QUIC s'est avéré particulièrement utile pour les applications de temps réel nécessitant une forte performance et une fiabilité, telles que les applications de jeux en ligne, les services de streaming audio et vidéo, les applications de messagerie instantanée, les applications de collaboration en ligne, etc.
-
+- **Réduire les temps de latence** pour les connexions à distance,
+- **Offrir une meilleure fiabilité et une meilleure résilience** pour les connexions instables,
+- **Fournir une meilleure sécurité** en utilisant la cryptographie.
 - HTTP/2
 - HTTP/3
 
@@ -55,9 +54,13 @@ QUIC s'est avéré particulièrement utile pour les applications de temps réel 
 
 ---
 
-QUIC (Quick UDP Internet Connections) est un protocole de transport de données qui a été développé pour remplacer TCP et TLS sur les connexions internet. Il est conçu pour résoudre les problèmes de lenteur et de latence sur les réseaux en utilisant des techniques telles que la multiplexation multiple, la mise en cache des paquets et la correction d'erreurs.
+L'ouverture de session en QUIC est la première étape pour établir une connexion entre deux parties. Cela implique l'échange d'informations entre le client et le serveur afin de s'assurer que les deux parties peuvent communiquer correctement. Ce processus comporte plusieurs étapes tels que :
 
-L'ouverture de session en QUIC est la première étape pour établir une connexion entre deux parties. Cela implique l'échange d'informations entre le client et le serveur afin de s'assurer que les deux parties peuvent communiquer correctement. Ce processus comporte plusieurs étapes, notamment la négociation des paramètres de connexion, l'authentification et la vérification de la compatibilité. Une fois que ces étapes sont terminées avec succès, la session est considérée comme ouverte et les parties peuvent commencer à transmettre des données.
+- **la négociation des paramètres de connexion**,
+- **l'authentification**,
+- **la vérification de la compatibilité**.
+
+Une fois que ces étapes sont terminées avec succès, la session est considérée comme ouverte et les parties peuvent commencer à transmettre des données.
 
 ## Paquet QUIC
 
@@ -71,32 +74,3 @@ L'ouverture de session en QUIC est la première étape pour établir une connexi
         |         |  destination  |  packet  |  ACK    |  "GET /index"  |  "GET /index/img.png"  |
         └─────────┴───────────────┴──────────┴─────────┴────────────────┴────────────────────────┴
 ```
-
-## Récapitulatif des ports communs
-
----
-
-| Service      | Port               |
-| ------------ | ------------------ |
-| DOMAIN (DNS) | 53 / UDP, 53 / TCP |
-| SSH          | 22 / TCP           |
-| HTTP         | 80 / TCP           |
-| HTTPS        | 443 / TCP          |
-| FTP          | 20 / TCP, 21 / TCP |
-| POP3         | 110 / TCP          |
-| IMAP         | 143 / TCP          |
-| SMTP         | 25 / TCP           |
-| LDAP         | 389 / TCP          |
-
-## Recapitulatif des unité de données
-
----
-
-| Donnée     | Couche    | Protocol |
-| ---------- | --------- | -------- |
-| Bit        | Physique  |          |
-| Trame      | Liaison   | Ethernet |
-| Paquet     | Réseau    | IP       |
-| Cellule    | Réseau    | ATM      |
-| Segment    | Transport | TCP      |
-| Datagramme | Transport | UDP      |

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DHCP
-parent: 7 - Couche
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: true
 nav_order: 1

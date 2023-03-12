@@ -1,10 +1,10 @@
 ---
 layout: default
 title: DMZ
-parent: 7 - Couche Sécurité
+parent: 7 - Application
 grand_parent: Réseaux
 has_toc: true
-nav_order: 3
+nav_order: 10
 ---
 
 # DMZ
@@ -25,9 +25,9 @@ La DMZ est un réseau isolé physiquement ou logiquement du réseau interne de l
 
 ---
 
-- La DMZ permet de fournir des services à l'extérieur tout en maintenant une séparation entre le réseau interne et le réseau externe.
-- La DMZ offre une protection supplémentaire contre les attaques en isolant les machines exposées depuis Internet.
-- La DMZ permet de mieux contrôler les accès depuis l'extérieur en filtrant le trafic entrant et sortant.
+- **Fournir des services à l'extérieur** tout en maintenant une séparation entre le réseau interne et le réseau externe.
+- **Offrir une protection supplémentaire** contre les attaques en isolant les machines exposées depuis Internet.
+- Pemettre de **mieux contrôler les accès depuis l'extérieur** en filtrant le trafic entrant et sortant.
 
 ## Inconvénients
 

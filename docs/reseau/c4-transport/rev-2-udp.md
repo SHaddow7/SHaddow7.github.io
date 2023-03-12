@@ -13,7 +13,9 @@ nav_order: 2
 
 ---
 
-Le protocole **UDP (User Datagram Protocol)** est un **protocole de transport de données léger et rapide**, qui **fonctionne en mode non connecté** et **ne garantit pas la fiabilité** de la transmission de données. UDP est particulièrement **adapté pour les applications qui requièrent une transmission rapide des données**, mais qui n'exigent pas une transmission de données fiable et ordonnée.
+Le protocole **UDP (User Datagram Protocol)** est un **protocole de transport de données léger et rapide**, qui **fonctionne en mode non connecté** et **ne garantit pas la fiabilité** de la transmission de données.
+
+UDP est **adapté pour les applications qui requièrent une transmission rapide des données**, mais qui n'exigent pas une transmission de données fiable et ordonnée.
 
 Le protocole UDP se distingue du protocole TCP par ses caractéristiques principales :
 
@@ -28,14 +30,24 @@ Le protocole UDP se distingue du protocole TCP par ses caractéristiques princip
 
 ---
 
-UDP est souvent utilisé pour les applications qui nécessitent une transmission rapide de données, comme la Voix sur IP (TOIP), les protocoles de résolution de noms de domaine (DNS), la configuration automatique des adresses IP via DHCP et la supervision à distance de réseaux via le protocole SNMP.
+UDP est souvent utilisé pour les applications qui nécessitent une transmission rapide de données, tels que :
+
+- la Voix sur IP **TOIP**,
+- les protocoles de résolution de noms de domaine **DNS**,
+- la configuration automatique des adresses IP via **DHCP**,
+- la supervision à distance de réseaux via le protocole **SNMP**.
 
 ## Les ports
 
 ---
 
-- Le numéro de port vient s'ajouter à l'adresse IP pour créer un couple appelé "socket UDP".
-- Identique à TCP.
+- Le numéro de port vient s'ajouter à l'adresse IP pour créer un couple appelé "**socket UDP**".
+- Identique à TCP :<br>
+  a. Permet d'**identifier un canal de communication** sur une machine.<br>
+  b. Les **ports** sont identifiés par un entier compris entre **0 et 65535**.<br>
+  c. Les **port connus**, compris entre **0 et 1023** (réservés à des applications)<br>
+  d. Les **ports enregistrés**, compris entre **1024 et 49151**<br>
+  e. Les **ports dynamiques ou privés**, compris entre **49152 et 65535**<br>
 
 ## Entête UDP
 
@@ -46,3 +58,13 @@ UDP est souvent utilisé pour les applications qui nécessitent une transmission
     |  Entête  Couche 2  |  Entête Couche 3  |  Couche 4 - Datagramme UDP  |  Suffixe  Couche 2  |
     └────────────────────┴───────────────────┴─────────────────────────────┴─────────────────────┴
 ```
+
+### Champs de l'entête
+
+| Champs            | Descriptions                                          |
+| ----------------- | ----------------------------------------------------- |
+| Port source       | 16 bits                                               |
+| Port destination  | 16 bits                                               |
+| Taille            | 16 bits                                               |
+| Somme de contrôle | 16 bits, calculée à partir de l'entête et des données |
+| Donnees           | 32 bits                                               |
