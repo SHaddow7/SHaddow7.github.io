@@ -40,6 +40,8 @@ Le DHCP est essentiel pour la gestion efficace des adresses IP sur les réseaux.
 
 Le DHCP Realy **permet de joindre le serveur distant comme s'il était placé dans le réseau local**. Il est important de noter que **le coeur de réseau doit être configuré en "Relay DHCP"** pour prendre en charge les requêtes DHCP du réseau local et les envoyer au serveur distant.
 
+Le DHCP relay est utilisé lorsque le client et le serveur DHCP ne sont pas sur le même réseau local. Le paquet DHCP DISCOVER est envoyé au routeur, qui agit en tant que relais et transmet le paquet au serveur DHCP sur un autre réseau. Le serveur DHCP répond ensuite avec un paquet OFFER, qui est transmis de nouveau au client via le routeur.
+
 ## Fonctionnement
 
 ---
@@ -49,3 +51,24 @@ Le DHCP Realy **permet de joindre le serveur distant comme s'il était placé da
 2. Le serveur DHCP répond à la demande en envoyant une offre DHCP, qui contient la configuration IP proposée pour l’équipement de réseau. Si l’équipement de réseau accepte l’offre DHCP, il envoie une demande DHCP de confirmation au serveur DHCP pour finaliser la configuration IP.
 
 3. L’équipement de réseau utilise ensuite la configuration IP pour établir des connexions avec d’autres équipements de réseau sur le réseau, permettant à l’utilisateur d’accéder aux ressources et services disponibles.
+
+## Schéma simplifié du fonctionnement du DHCP
+
+---
+
+```lua
+        +------+                       +-----------+                     +------+
+        |      |    DHCP DISCOVER      |           |    DHCP OFFER       |      |
+        |      |   -------------------->   DHCP    <-------------------  |      |
+        |      |                       |  SERVER   |                     |      |
+        |      |                       |           |                     |      |
+        |      |                       +-----------+                     |      |
+        |      |                                                         |      |
+        |      |                       +-----------+                     |      |
+        |      |      DHCP REQUEST     |           |      DHCP ACK       |      |
+        |      |   -------------------->   DHCP    <-------------------  |      |
+        |      |                       |  CLIENT   |                     |      |
+        |      |                       |           |                     |      |
+        |      |                       +-----------+                     |      |
+        +------+                                                         +------+
+```

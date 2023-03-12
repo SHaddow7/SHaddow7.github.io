@@ -47,11 +47,11 @@ Les protocoles tels que TCP et UDP utilisent des ports pour identifier les sessi
 
 <br>
 
-| Noms                           | Descriptions                                              |
-| :----------------------------- | :-------------------------------------------------------- |
-| **Ports connus**               | compris entre **0 et 1023** (réservés à des applications) |
-| **Ports enregistrés**          | compris entre **1024 et 49151**                           |
-| **Ports dynamiques ou privés** | compris entre **49152 et 65535**                          |
+| Noms                           | Descriptions                                               |
+| :----------------------------- | :--------------------------------------------------------- |
+| **Ports connus**               | compris entre **0 et 1 023** (réservés à des applications) |
+| **Ports enregistrés**          | compris entre **1 024 et 49 151**                          |
+| **Ports dynamiques ou privés** | compris entre **49 152 et 65 535**                         |
 
 ## Ouverture de session (3 way handshake)
 

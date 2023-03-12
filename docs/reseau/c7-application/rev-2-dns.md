@@ -66,3 +66,47 @@ Les **serveurs DNS racines** gèrent les délégations pour les noms de domaine 
 2. Le serveur DNS répond à la requête en renvoyant l'adresse IP associée au nom de domaine. Si le serveur DNS ne dispose pas de l'adresse IP pour le nom de domaine, il renvoie une référence à un autre serveur DNS, qui peut résoudre la requête à un niveau plus bas dans la hiérarchie de domaines.
 
 3. Le navigateur utilise ensuite l'adresse IP pour établir une connexion avec le serveur Web associé au nom de domaine, permettant à l'utilisateur d'accéder au site Web.
+
+## Schéma simplifier du fonctionnemnt d'un DNS
+
+---
+
+```
+                            ┌─────────────┐
+                            │ Utilisateur │
+                            └──────┬──────┘
+                                   │ requête DNS
+                                   ▼
+                           ┌───────────────┐
+                           │ Résolveur DNS │
+                           └──────┬────────┘
+                                  │ requête DNS
+                                  ▼
+                       ┌────────────────────┐
+          ┌────────────│ Serveur DNS racine │────────────┐
+          │            └────────────────────┘            │
+          │                       │                      │
+          │                    Réponse DNS               │
+          │                       ▼                      │
+          │            ┌────────────────────┐            │
+          └────────────│ Serveur DNS de TLD │────────────┘
+                       └────────────────────┘
+                                  │
+                             Réponse DNS
+                                  ▼
+                       ┌────────────────────┐
+                       │Serveur DNS Autorité│
+                       └────────────────────┘
+                                  │
+                             Réponse DNS
+                                  ▼
+                      ┌─────────────────────┐
+                      │ Serveur DNS de zone │
+                      └─────────────────────┘
+                                  │
+                             Réponse DNS
+                                  ▼
+                              ┌───────┐
+                              │  IP   │
+                              └───────┘
+```

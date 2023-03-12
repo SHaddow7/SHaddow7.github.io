@@ -27,11 +27,18 @@ Le protocole HTTP (Hypertext Transfer Protocol) est basé sur un principe de req
 ---
 
 ```plaintext
-    GET / HTTP/1.1
-    Host: developper.mozilla.org    |  > Headers
-    Accept-language: fr             |
+    Navigateur <--> Serveur Web
 
-    # Definitons
+    Requête HTTP                                 Réponse HTTP
+    +------------------------------+             +-----------------------------+
+    |   GET /index.html HTTP/1.1   |             |   HTTP/1.1 200 OK           |
+    |   Host: www.example.com      |             |   Content-Type: text/html   |
+    +------------------------------+             +-----------------------------+
+```
+
+### Definitons
+
+```
     GET : La méthode
     "/" : Le chemin
     HTTP/1.1 : Version du protocole
