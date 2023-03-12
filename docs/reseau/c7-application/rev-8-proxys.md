@@ -25,7 +25,7 @@ Le proxy (ou mandataire) est un **intermédiaire qui réalise une connexion indi
 - **Stockage des requêtes** dans un journal (Audit).
 - **Accès à un site** faisant l'objet de restrictions géographiques.
 
-## Fonctionnement
+## Fonctionnement - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
@@ -37,7 +37,7 @@ Il existe plusieurs types de proxy, chacun ayant des fonctions et des configurat
 - **Le proxy de messagerie** : utilisé pour gérer les flux de messagerie, il peut être configuré pour filtrer les messages ou pour bloquer l'accès à certains domaines.
 - **Le proxy transparent** : utilisé pour rediriger tout le trafic réseau à travers le proxy sans que l'utilisateur ait à modifier sa configuration réseau.
 
-## Avantages et inconvénients
+## Avantages et inconvénients - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
@@ -52,7 +52,7 @@ Cependant, les proxys ont également des inconvénients, tels que :
 - **Dépendance au proxy** : si le proxy est hors ligne ou tombe en panne, les clients ne pourront pas accéder aux ressources.
 - **Complexité** : la configuration et la gestion des proxys peuvent être complexes, nécessitant des connaissances techniques spécifiques.
 
-## Exemples d'utilisation
+## Exemples d'utilisation - <span class="culture-gen">_Culture générale_</span>
 
 ---
 

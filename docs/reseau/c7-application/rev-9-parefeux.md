@@ -21,7 +21,7 @@ Un pare-feu (firewall en anglais) est un système de sécurité informatique qui
 
 Le pare-feu est placé entre le réseau privé et le réseau public (Internet). Il **analyse le trafic réseau** qui passe à travers lui et **applique les règles de sécurité définies** pour déterminer si une connexion doit être autorisée ou bloquée. **Les règles de sécurité** sont b**asées sur des critères** tels que l'**adresse IP**, le **port**, le **protocole**, etc. Les pare-feu peuvent être configurés pour permettre uniquement le trafic entrant et sortant spécifique à une application, un protocole ou un port.
 
-## Avantages
+## Avantages - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
@@ -29,7 +29,7 @@ Le pare-feu est placé entre le réseau privé et le réseau public (Internet). 
 - **Contrôle** : Les règles de sécurité du pare-feu permettent de contrôler le trafic réseau entrant et sortant du réseau privé.
 - **Confidentialité** : Les pare-feu peuvent être utilisés pour masquer les adresses IP des ordinateurs du réseau privé pour améliorer la confidentialité.
 
-## Inconvénients
+## Inconvénients - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
@@ -47,7 +47,7 @@ Les fonctionnalités principales d'un pare-feu sont les suivantes :
 - **Protection contre les attaques de déni de service (DoS)** : le pare-feu peut être configuré pour bloquer le trafic provenant de sources malveillantes qui tentent de surcharger le réseau avec des requêtes excessives.
 - **Journalisation** : le pare-feu enregistre les informations sur les connexions réseau entrantes et sortantes, ce qui permet de surveiller et d'analyser le trafic réseau.
 
-## Les types de parefeux
+## Les types de parefeux - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
@@ -57,7 +57,7 @@ Il existe plusieurs types de pare-feu, notamment :
 - **Pare-feu de niveau applicatif** : il analyse le trafic de la couche applicative et peut bloquer ou autoriser les connexions en fonction du contenu de la requête ou de la réponse.
 - **Pare-feu de nouvelle génération** : il combine plusieurs techniques de sécurité (pare-feu de filtrage de paquets, pare-feu de niveau applicatif, inspection SSL/TLS, prévention des intrusions, etc.) pour offrir une protection plus complète contre les menaces informatiques.
 
-## Exemples d'utilisation
+## Exemples d'utilisation - <span class="culture-gen">_Culture générale_</span>
 
 ---
 
