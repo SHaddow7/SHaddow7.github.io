@@ -13,7 +13,7 @@ nav_order: 3
 
 ---
 
-Le protocole HTTP (Hypertext Transfer Protocol) est basé sur un principe de requêt/réponse.
+Le protocole HTTP (Hypertext Transfer Protocol) est basé sur un principe de requête/réponse.
 
 - **HTTP Request** : Un client établit une connexion TCP vers un serveur (port 80) et lui envoie une requête sous la forme d'une méthode, d'une URI, d'un protocole, suivi d'un message
 - **HTTP Response** : Le serveur répond par une **ligne d'état** (version de protocole + message de succès ou d'erreur) suivi d'un message contenant l'information souhaitée.
